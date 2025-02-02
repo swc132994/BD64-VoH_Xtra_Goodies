@@ -47,7 +47,6 @@ VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.NOAUTOFIRE
-+WEAPON.NOAUTOAIM
 	States
 	{
 	Spawn:
@@ -94,7 +93,6 @@ Obituary "%o caught %k's grenade."
 Tag "Grenade Launcher"
 +INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.NOAUTOFIRE
-+WEAPON.NOAUTOAIM
 +WEAPON.ALT_USES_BOTH
 -WEAPON.AMMO_CHECKBOTH
 	States

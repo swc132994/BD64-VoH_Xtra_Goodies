@@ -46,7 +46,6 @@ Tag "Walther WA 2000"
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOAUTOAIM
 +WEAPON.NOAUTOFIRE
 +WEAPON.NOALERT
 	States
@@ -130,7 +129,6 @@ Inventory.PickupMessage "You got The Walther WA 2000!"
 Inventory.PickupSound "WPICK"
 Tag "Walther WA 2000"
 +INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOAUTOAIM
 +WEAPON.NOAUTOFIRE
 +WEAPON.NOALERT
 	States

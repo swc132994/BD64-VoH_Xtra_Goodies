@@ -50,7 +50,6 @@ Tag "Flamethrower"
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOAUTOAIM
 	States
 	{
 	Spawn:
@@ -221,7 +220,6 @@ Tag "Flamethrower"
 VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 Inventory.ForbiddenTo "64DoomPlayer"
 +INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOAUTOAIM
 +WEAPON.ALT_USES_BOTH
 -WEAPON.AMMO_CHECKBOTH
 	States

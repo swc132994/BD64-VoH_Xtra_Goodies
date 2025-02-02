@@ -45,7 +45,6 @@ Tag "Nailgun"
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOAUTOAIM
 	States
 	{
 	Spawn:
@@ -99,7 +98,6 @@ Inventory.PickupMessage "You got the NailGun!"
 Obituary "%o was nailed by %k."
 Tag "Nailgun"
 +INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOAUTOAIM
 +WEAPON.ALT_USES_BOTH
 -WEAPON.AMMO_CHECKBOTH
 -WEAPON.NOAUTOFIRE
