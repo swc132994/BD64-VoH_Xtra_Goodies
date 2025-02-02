@@ -97,7 +97,7 @@ Speed 9
 Damage 1
 Alpha 0.67
 RenderStyle Add
-DamageType "Fire"
+DamageType "Flames"
 SeeSound "Flamethrower/Fire"
 DeathSound "Flamethrower/Hit"
 Decal "SmallerScorch"

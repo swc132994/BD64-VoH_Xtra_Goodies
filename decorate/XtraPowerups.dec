@@ -259,7 +259,7 @@ Tag "Ultra Sphere"
 ACTOR 64RedArmor : BasicArmorPickup
 {
 Scale 0.92
-DamageFactor "Fire",0.125
+DamageFactor "Flames",0.125
 Armor.SavePercent 66.66666
 Armor.Saveamount 300
 Tag "Red Armour"

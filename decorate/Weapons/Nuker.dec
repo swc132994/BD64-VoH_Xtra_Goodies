@@ -382,7 +382,7 @@ Height 4
 Speed 20
 Damage 5
 DamageType "Plasma"
-DamageType "Fire"
+DamageType "Flames"
 Obituary "%o was charred by a Nuclear Heatwave."
 +MISSILE
 +NOBLOCKMAP
