@@ -88,6 +88,14 @@ script "NukelauncherSpawnerACS" (void)
 	}
 }
 
+script "NukelauncherSpawnerACS_2" (void)
+{
+	if(GetCvar("NuclearMissile_Spawner_Cvar") == 0)
+	{
+		SetActorState(0,"Spawn2");
+	}
+}
+
 script "Striker12ACS" Enter
 {
 	if(GetCvar("Striker12Cvar") == 1)
