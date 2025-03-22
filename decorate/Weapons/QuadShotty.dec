@@ -35,6 +35,7 @@ actor 64QuadShotgun : DoomWeapon
 {
 Scale 0.9
 Weapon.SlotNumber 3
+Weapon.SelectionOrder 350
 Weapon.AmmoType "64BlueShell"
 Weapon.AmmoUse 4
 Weapon.AmmoGive 4
@@ -155,6 +156,7 @@ actor 64QuadShotgunTACTICAL : Brutal64Weapon
 {
 Scale 0.9
 Weapon.SlotNumber 3
+Weapon.SelectionOrder 350
 Weapon.AmmoType "64BlueShell"
 Weapon.AmmoUse1 2
 Weapon.AmmoGive1 4

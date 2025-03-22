@@ -35,7 +35,7 @@ Actor 64NadeLauncher : DoomWeapon
 {
 Scale 0.8
 Weapon.SlotNumber 5
-Weapon.SelectionOrder 1500
+Weapon.SelectionOrder 2550
 Weapon.AmmoType "RocketAmmo"
 Weapon.AmmoUse 1
 Weapon.AmmoGive 2
@@ -110,7 +110,7 @@ Actor 64NadeLauncherTACTICAL : Brutal64Weapon
 {
 Scale 0.8
 Weapon.SlotNumber 5
-Weapon.SelectionOrder 1500
+Weapon.SelectionOrder 2550
 Weapon.AmmoType1 "RocketAmmo"
 Weapon.AmmoUse1 1
 Weapon.AmmoGive1 2

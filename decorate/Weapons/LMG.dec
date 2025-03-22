@@ -127,7 +127,7 @@ Actor 64LMG : DoomWeapon
 {
 Scale 0.85
 Weapon.SlotNumber 4
-Weapon.SelectionOrder 5
+Weapon.SelectionOrder 750
 Weapon.AmmoUse1 1
 Weapon.AmmoGive1 40
 Weapon.AmmoType1 "Clip"
@@ -194,7 +194,7 @@ Actor 64LMGTactical : Brutal64Weapon
 {
 Scale 0.85
 Weapon.SlotNumber 4
-Weapon.SelectionOrder 5
+Weapon.SelectionOrder 750
 Weapon.AmmoType1 "64HighCaliberBox"
 Weapon.AmmoUse1 1
 Weapon.AmmoGive1 40

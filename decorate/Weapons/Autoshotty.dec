@@ -48,7 +48,7 @@ Actor 64AssaultShotgun : DoomWeapon
 {
 Scale 0.87
 Weapon.SlotNumber 3
-Weapon.SelectionOrder 1300
+Weapon.SelectionOrder 1350
 Weapon.AmmoType "64BlueShell"
 Weapon.AmmoUse 1
 Weapon.AmmoGive 10
@@ -126,7 +126,7 @@ Actor 64Protecta : DoomWeapon
 {
 Scale 0.87
 Weapon.SlotNumber 3
-Weapon.SelectionOrder 1300
+Weapon.SelectionOrder 1350
 Weapon.AmmoType "64BlueShell"
 Weapon.AmmoUse 1
 Weapon.AmmoGive 12
@@ -193,7 +193,7 @@ Actor 64AssaultShotgunTACTICAL : Brutal64Weapon
 {
 Scale 0.87
 Weapon.SlotNumber 3
-Weapon.SelectionOrder 1301
+Weapon.SelectionOrder 1350
 Weapon.AmmoType1 "64BlueShell"
 Weapon.AmmoUse1 1
 Weapon.AmmoGive1 10
@@ -474,7 +474,7 @@ Actor 64ProtectaTACTICAL : Brutal64Weapon
 {
 Scale 0.87
 Weapon.SlotNumber 3
-Weapon.SelectionOrder 1301
+Weapon.SelectionOrder 1350
 Weapon.AmmoType1 "64BlueShell"
 Weapon.AmmoUse1 1
 Weapon.AmmoGive1 12
