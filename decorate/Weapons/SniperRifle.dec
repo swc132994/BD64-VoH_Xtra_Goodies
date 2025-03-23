@@ -2,7 +2,7 @@ Actor SniperRifleSpawner : CustomInventory
  {
  Scale 0.82
  Tag "Sniper Rifle"
- Inventory.PickupMessage "You got The Walther WA 2000!"
+ Inventory.PickupMessage "You got The Walther WA 2000! (Slot 4)"
  Inventory.PickupSound "WPICK"
  States
 	{
@@ -35,12 +35,13 @@ Actor 64SniperRifle : DoomWeapon
 {
 Scale 0.82
 Weapon.SlotNumber 4
+Weapon.SlotPriority 10
 Weapon.SelectionOrder 900
 Weapon.AmmoType "Clip"
 Weapon.AmmoUse 5
 Weapon.AmmoGive 30
 Obituary "%o's brain was splattered by %k's Walther WA 2000"
-Inventory.PickupMessage "You got The Walther WA 2000!"
+Inventory.PickupMessage "You got The Walther WA 2000! (Slot 4)"
 Inventory.PickupSound "WPICK"
 Tag "Walther WA 2000"
 VisibleToPlayerClass "64DoomPlayer"
@@ -117,6 +118,7 @@ Actor 64SniperRifleTACTICAL : Brutal64Weapon
 {
 Scale 0.82
 Weapon.SlotNumber 4
+Weapon.SlotPriority 10
 Weapon.SelectionOrder 900
 Weapon.AmmoType1 "64HighCaliberBox"
 Weapon.AmmoUse1 1
@@ -125,7 +127,7 @@ Weapon.AmmoType2 "SniperAmmo"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 0
 Obituary "%o's brain was splattered by %k's Walther WA 2000"
-Inventory.PickupMessage "You got The Walther WA 2000!"
+Inventory.PickupMessage "You got The Walther WA 2000!  (Slot 4)"
 Inventory.PickupSound "WPICK"
 Tag "Walther WA 2000"
 +INVENTORY.RESTRICTABSOLUTELY

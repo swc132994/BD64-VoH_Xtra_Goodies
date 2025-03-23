@@ -2,7 +2,7 @@ Actor RuinerSpawner : CustomInventory
 {
 scale 0.8
 Tag "Ruiner"
-Inventory.PickupMessage "You feel like it is watching you..."
+Inventory.PickupMessage "You feel like it is watching you... (Slot 8)"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -35,10 +35,11 @@ Actor 64Ruiner : DoomWeapon
 {
 Scale 0.8
 Weapon.SlotNumber 8
+Weapon.SlotPriority 500
 Weapon.AmmoType "Cell"
 Weapon.AmmoUse 1
 Weapon.AmmoGive 20
-Inventory.PickupMessage "You feel like it is watching you..."
+Inventory.PickupMessage "You feel like it is watching you... (Slot 8)"
 Inventory.Icon WSBOA0
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
@@ -95,13 +96,14 @@ ACTOR 64RuinerTACTICAL : Brutal64Weapon
 {
 Scale 0.8
 Weapon.SlotNumber 8
+Weapon.SlotPriority 500
 Weapon.AmmoType1 "SoulAmmo"
 Weapon.AmmoUse1 1
 Weapon.AmmoGive1 10
 Weapon.AmmoType2 "DemonEssence"
 Weapon.AmmoUse2 5
 Weapon.AmmoGive2 0
-Inventory.PickupMessage "You feel like it is watching you..."
+Inventory.PickupMessage "You feel like it is watching you... (Slot 8)"
 Tag "Ruiner"
 +INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.NOALERT

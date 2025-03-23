@@ -2,7 +2,7 @@ Actor RevolverSpawner : CustomInventory
 {
 Scale 0.87
 Tag "Double-Action Revolver"
-Inventory.PickupMessage "You got the Double-Action Revolver!"
+Inventory.PickupMessage "You got the Double-Action Revolver! (Slot 2)"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -35,11 +35,12 @@ Actor 64Revolver : DoomWeapon
 {
 Scale 0.87
 Weapon.SlotNumber 2
+Weapon.SlotPriority 10
 Weapon.SelectionOrder 1300
 Weapon.AmmoUse 1
 Weapon.AmmoGive 6
 Weapon.AmmoType "64SpeedloaderAmmo"
-Inventory.PickupMessage "You got the Double-Action Revolver!"
+Inventory.PickupMessage "You got the Double-Action Revolver! (Slot 2)"
 Obituary "%o was picked off by %k's Double-Action Revolver."
 Tag "Double-Action Revolver"
 VisibleToPlayerClass "64DoomPlayer"
@@ -127,6 +128,7 @@ Actor 64RevolverTactical : Brutal64Weapon
 {
 Scale 0.87
 Weapon.SlotNumber 2
+Weapon.SlotPriority 10
 Weapon.SelectionOrder 1300
 Weapon.AmmoUse1 1
 Weapon.AmmoGive1 12
@@ -134,7 +136,7 @@ Weapon.AmmoType1 "64SpeedloaderAmmo"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 0
 Weapon.AmmoType2 "RevolverAmmo"
-Inventory.PickupMessage "You got the Double-Action Revolver!"
+Inventory.PickupMessage "You got the Double-Action Revolver! (Slot 2)"
 Obituary "%o was picked off by %k's Double-Action Revolver."
 Tag "Double-Action Revolver"
 Inventory.ForbiddenTo "64DoomPlayer"

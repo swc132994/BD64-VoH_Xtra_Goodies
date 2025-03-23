@@ -2,7 +2,7 @@ Actor BFG10kSpawner : CustomInventory
 {
 Scale 1.0
  Tag "BFG 10000"
-Inventory.Pickupmessage "You got the BFG10000!  Hell,yes!"
+Inventory.Pickupmessage "You got the BFG10000! Kaching! (Slot 7)"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -35,13 +35,14 @@ Actor 64BFG10K : DoomWeapon
 {
 Scale 1.0
 Weapon.SlotNumber 7
+Weapon.SlotPriority 100
 Weapon.Selectionorder 2800
 Weapon.AmmoType "Cell"
 Weapon.AmmoUse 5
 Weapon.AmmoGive 40
 Weapon.Kickback 100
 Inventory.PickupSound "WPICK"
-Inventory.Pickupmessage "You got the BFG10000! Kaching!"
+Inventory.Pickupmessage "You got the BFG10000! Kaching! (Slot 7)"
 Obituary "%o was blasted by %k's BFG10K"
 Tag "BFG 10000"
 VisibleToPlayerClass "64DoomPlayer"
@@ -219,13 +220,14 @@ Actor 64BFG10KTactical : Brutal64Weapon
 {
 Scale 1.0
 Weapon.SlotNumber 7
+Weapon.SlotPriority 100
 Weapon.Selectionorder 2800
 Weapon.AmmoType "Cell"
 Weapon.AmmoUse 5
 Weapon.AmmoGive 40
 Weapon.Kickback 100
 Inventory.PickupSound "WPICK"
-Inventory.Pickupmessage "You got the BFG10000! kaching!"
+Inventory.Pickupmessage "You got the BFG10000! kaching! (Slot 7)"
 Obituary "%o was blasted by %k's BFG10K"
 Tag "BFG 10000"
 +INVENTORY.RESTRICTABSOLUTELY
