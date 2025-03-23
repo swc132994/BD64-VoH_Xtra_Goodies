@@ -2,7 +2,7 @@ Actor FlamerWeaponSpawner : CustomInventory
 {
 scale 0.7
 Tag "Flamethrower"
-Inventory.PickupMessage "You got the flamethrower!"
+Inventory.PickupMessage "You got the flamethrower!  (Slot 9)"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -40,10 +40,11 @@ Actor 64Flamethrower : DoomWeapon
 {
 scale 0.7
 Weapon.SlotNumber 9
+Weapon.SlotPriority 10
 Weapon.AmmoType "SawGas"
 Weapon.AmmoGive 50
 Weapon.AmmoUse 1
-Inventory.PickupMessage "You got the flamethrower!"
+Inventory.PickupMessage "You got the flamethrower! (Slot 9)"
 Inventory.PickupSound "WPICK"
 Obituary "%o was cremated by %k's flamethrower."
 Tag "Flamethrower"
@@ -210,10 +211,11 @@ Actor 64FlamethrowerTACTICAL : Brutal64Weapon
 {
 scale 0.7
 Weapon.SlotNumber 9
+Weapon.SlotPriority 10
 Weapon.AmmoType "SawGas"
 Weapon.AmmoGive 300
 Weapon.AmmoUse 1
-Inventory.PickupMessage "You got the flamethrower!"
+Inventory.PickupMessage "You got the flamethrower! (Slot 9)"
 Inventory.PickupSound "WPICK"
 Obituary "%o was cremated by %k's flamethrower."
 Tag "Flamethrower"

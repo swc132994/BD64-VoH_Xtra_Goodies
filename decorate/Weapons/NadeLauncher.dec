@@ -2,7 +2,7 @@ Actor NadeLauncherSpawner : CustomInventory
 {
 scale 0.8
 Tag "Grenade Launcher"
-Inventory.PickupMessage "You got the grenade launcher!"
+Inventory.PickupMessage "You got the grenade launcher! (Slot 5)"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -35,12 +35,13 @@ Actor 64NadeLauncher : DoomWeapon
 {
 Scale 0.8
 Weapon.SlotNumber 5
+Weapon.SlotPriority 100
 Weapon.SelectionOrder 2550
 Weapon.AmmoType "RocketAmmo"
 Weapon.AmmoUse 1
 Weapon.AmmoGive 2
 Inventory.PickupSound "WPICK"
-Inventory.PickupMessage "You got the grenade launcher!"
+Inventory.PickupMessage "You got the grenade launcher! (Slot 5)"
 Obituary "%o caught %k's grenade."
 Tag "Grenade Launcher"
 VisibleToPlayerClass "64DoomPlayer"
@@ -110,6 +111,7 @@ Actor 64NadeLauncherTACTICAL : Brutal64Weapon
 {
 Scale 0.8
 Weapon.SlotNumber 5
+Weapon.SlotPriority 100
 Weapon.SelectionOrder 2550
 Weapon.AmmoType1 "RocketAmmo"
 Weapon.AmmoUse1 1
@@ -118,7 +120,7 @@ Weapon.AmmoType2 "PestilenceAmmo"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 0
 Inventory.PickupSound "WPICK"
-Inventory.PickupMessage "You got the grenade launcher!"
+Inventory.PickupMessage "You got the grenade launcher! (Slot 5)"
 Obituary "%o caught %k's grenade."
 Tag "Grenade Launcher"
 +INVENTORY.RESTRICTABSOLUTELY

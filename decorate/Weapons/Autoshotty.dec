@@ -2,7 +2,7 @@ Actor AssaultShotgunSpawner : CustomInventory	// Replaces Shotgun		//replaced by
 {
 Scale 0.87
 Tag "Assault Shotgun"
-Inventory.PickupMessage "You got the Assault Shotgun!"
+Inventory.PickupMessage "You got the Assault Shotgun! (Slot 3)"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -48,6 +48,7 @@ Actor 64AssaultShotgun : DoomWeapon
 {
 Scale 0.87
 Weapon.SlotNumber 3
+Weapon.SlotPriority 750
 Weapon.SelectionOrder 1350
 Weapon.AmmoType "64BlueShell"
 Weapon.AmmoUse 1
@@ -55,7 +56,7 @@ Weapon.AmmoGive 10
 Obituary "%o got shot into pieces by %k's Assault Shotgun"
 Tag "Assault Shotgun"
 VisibleToPlayerClass "64DoomPlayer"
-Inventory.PickupMessage "You got the Assault Shotgun!"
+Inventory.PickupMessage "You got the Assault Shotgun! (Slot 3)"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
 Weapon.SisterWeapon "64Protecta"
@@ -126,6 +127,7 @@ Actor 64Protecta : DoomWeapon
 {
 Scale 0.87
 Weapon.SlotNumber 3
+Weapon.SlotPriority 750
 Weapon.SelectionOrder 1350
 Weapon.AmmoType "64BlueShell"
 Weapon.AmmoUse 1
@@ -133,7 +135,7 @@ Weapon.AmmoGive 12
 Obituary "%o got shot into pieces by %k's Striker-12"
 Tag "Striker-12"
 VisibleToPlayerClass "64DoomPlayer"
-Inventory.PickupMessage "You got the Striker-12!"
+Inventory.PickupMessage "You got the Striker-12! (Slot 3)"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
 Weapon.SisterWeapon "64AssaultShotgun"
@@ -185,7 +187,7 @@ Inventory.Amount 0
 Inventory.MaxAmount 10
 Ammo.BackpackAmount 0
 Ammo.BackpackMaxAmount 10
-Inventory.Icon "shota0"
+Inventory.Icon "ASGPA0"
 +IGNORESKILL
 }
 
@@ -193,6 +195,7 @@ Actor 64AssaultShotgunTACTICAL : Brutal64Weapon
 {
 Scale 0.87
 Weapon.SlotNumber 3
+Weapon.SlotPriority 100
 Weapon.SelectionOrder 1350
 Weapon.AmmoType1 "64BlueShell"
 Weapon.AmmoUse1 1
@@ -200,7 +203,7 @@ Weapon.AmmoGive1 10
 Weapon.AmmoType2 "AssaultShotgunAmmo"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 10
-Inventory.PickupMessage "You got the Assault Shotgun!"
+Inventory.PickupMessage "You got the Assault Shotgun! (Slot 3)"
 Obituary "%o got shot into pieces by %k's Assault Shotgun"
 Tag "Assault Shotgun"
 +INVENTORY.RESTRICTABSOLUTELY
@@ -466,7 +469,7 @@ Inventory.Amount 0
 Inventory.MaxAmount 12
 Ammo.BackpackAmount 0
 Ammo.BackpackMaxAmount 12
-Inventory.Icon "shota0"
+Inventory.Icon "SK12F0"
 +IGNORESKILL
 }
 
@@ -474,6 +477,7 @@ Actor 64ProtectaTACTICAL : Brutal64Weapon
 {
 Scale 0.87
 Weapon.SlotNumber 3
+Weapon.SlotPriority 100
 Weapon.SelectionOrder 1350
 Weapon.AmmoType1 "64BlueShell"
 Weapon.AmmoUse1 1
@@ -481,7 +485,7 @@ Weapon.AmmoGive1 12
 Weapon.AmmoType2 "ProtectaAmmo"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 12
-Inventory.PickupMessage "You got the Striker-12!"
+Inventory.PickupMessage "You got the Striker-12! (Slot 3)"
 Obituary "$OB_MPSHOTGUN"
 Tag "Striker-12"
 +INVENTORY.RESTRICTABSOLUTELY

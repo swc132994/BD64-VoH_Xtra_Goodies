@@ -2,7 +2,7 @@ Actor QuadShotWeaponSpawner : CustomInventory
 {
 scale 0.9
 Tag "Ultra Shotgun"
-inventory.pickupmessage "You got the Ultra Shotgun!"
+inventory.pickupmessage "You got the Ultra Shotgun! (Slot 3)"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -35,13 +35,14 @@ actor 64QuadShotgun : DoomWeapon
 {
 Scale 0.9
 Weapon.SlotNumber 3
+Weapon.SlotPriority 1000
 Weapon.SelectionOrder 350
 Weapon.AmmoType "64BlueShell"
 Weapon.AmmoUse 4
 Weapon.AmmoGive 4
 Tag "Ultra Shotgun"
 obituary "%o was obliterated by %k's Ultra Shotgun!"
-inventory.pickupmessage "You got the Ultra Shotgun!"
+inventory.pickupmessage "You got the Ultra Shotgun! (Slot 3)"
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
@@ -156,6 +157,7 @@ actor 64QuadShotgunTACTICAL : Brutal64Weapon
 {
 Scale 0.9
 Weapon.SlotNumber 3
+Weapon.SlotPriority 1000
 Weapon.SelectionOrder 350
 Weapon.AmmoType "64BlueShell"
 Weapon.AmmoUse1 2
@@ -165,7 +167,7 @@ Weapon.AmmoUse2 2
 Weapon.AmmoGive2 0
 Tag "Ultra Shotgun"
 obituary "%o was obliterated by %k's Ultra Shotgun!"
-inventory.pickupmessage "You got the Ultra Shotgun!"
+inventory.pickupmessage "You got the Ultra Shotgun! (Slot 3)"
 +INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.NOAUTOFIRE
 	states

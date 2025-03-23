@@ -2,7 +2,7 @@ Actor RevenantLauncherSpawner : CustomInventory
 {
 scale 0.82
 Tag "Heatseeker Missile Launcher"
-Inventory.PickupMessage "You got the Heatseeker Missile Launchers!"
+Inventory.PickupMessage "You got the Heatseeker Missile Launchers! (Slot 9)"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -34,13 +34,14 @@ Inventory.PickupSound "WPICK"
 ACTOR 64HeatseekerLauncher : DoomWeapon
 {
 Scale 0.82
-Weapon.SelectionOrder 8000
 Weapon.SlotNumber 9
+Weapon.SlotPriority 10
+Weapon.SelectionOrder 8000
 Weapon.BobRangeX 0
 Weapon.AmmoType "RocketAmmo"
 Weapon.AmmoUse 1
 Weapon.AmmoGive 4
-Inventory.PickupMessage "You got the Heatseeker Launchers!"
+Inventory.PickupMessage "You got the Heatseeker Launchers! (Slot 9)"
 Inventory.PickupSound "WPICK"
 Tag "Heatseeker Launcher"
 VisibleToPlayerClass "64DoomPlayer"
@@ -196,8 +197,9 @@ Speed 22
 ACTOR 64HeatseekerLauncherTACTICAL : Brutal64Weapon
 {
 Scale 0.82
-Weapon.SelectionOrder 8000
 Weapon.SlotNumber 9
+Weapon.SlotPriority 1
+Weapon.SelectionOrder 8000
 Weapon.BobRangeX 0
 Weapon.AmmoType1 "RocketAmmo"
 Weapon.AmmoUse1 1
@@ -205,7 +207,7 @@ Weapon.AmmoGive1 4
 Weapon.AmmoType2 "PestilenceAmmo"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 0
-Inventory.PickupMessage "You got the Heatseeker Launchers!"
+Inventory.PickupMessage "You got the Heatseeker Launchers! (Slot 9)"
 Inventory.PickupSound "WPICK"
 Tag "Heatseeker Launcher"
 +INVENTORY.RESTRICTABSOLUTELY

@@ -2,7 +2,7 @@ Actor LMGSpawner : CustomInventory
 {
 Scale 0.82
 Tag "Light Machinegun"
-Inventory.PickupMessage "You got the Light Machinegun!"
+Inventory.PickupMessage "You got the Light Machinegun! (Slot 4)"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -127,6 +127,7 @@ Actor 64LMG : DoomWeapon
 {
 Scale 0.85
 Weapon.SlotNumber 4
+Weapon.SlotPriority 900
 Weapon.SelectionOrder 750
 Weapon.AmmoUse1 1
 Weapon.AmmoGive1 40
@@ -134,7 +135,7 @@ Weapon.AmmoType1 "Clip"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 0
 Weapon.AmmoType2 "RocketAmmo"
-Inventory.PickupMessage "You got the Light Machinegun!"
+Inventory.PickupMessage "You got the Light Machinegun! (Slot 4)"
 Tag "Light Machinegun"
 Obituary "%o was picked off by %k's Light Machinegun."
 VisibleToPlayerClass "64DoomPlayer"
@@ -194,6 +195,7 @@ Actor 64LMGTactical : Brutal64Weapon
 {
 Scale 0.85
 Weapon.SlotNumber 4
+Weapon.SlotPriority 900
 Weapon.SelectionOrder 750
 Weapon.AmmoType1 "64HighCaliberBox"
 Weapon.AmmoUse1 1
@@ -203,7 +205,7 @@ Weapon.AmmoUse2 1
 Weapon.AmmoGive2 0
 Tag "Light Machinegun"
 Obituary "%o was picked off by %k's Light Machinegun."
-Inventory.PickupMessage "You got the Light Machinegun!"
+Inventory.PickupMessage "You got the Light Machinegun! (Slot 4)"
 Inventory.PickupSound "WPICK"
 Inventory.forbiddento "64DoomPlayer"
 VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"

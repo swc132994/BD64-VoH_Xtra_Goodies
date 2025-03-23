@@ -2,7 +2,7 @@ Actor NailgunSpawner : CustomInventory
 {
 scale 0.82
 Tag "Nailgun"
-Inventory.PickupMessage "You got the NailGun!"
+Inventory.PickupMessage "You got the NailGun! (Slot 6)"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -34,12 +34,13 @@ Inventory.PickupSound "WPICK"
 Actor 64Nailgun : DoomWeapon
 {
 Scale 0.82
+Weapon.SlotNumber 6
+Weapon.SlotPriority 100
 Weapon.AmmoUse 1
 Weapon.AmmoGive 25
 Weapon.AmmoType "64NailAmmo"
-Weapon.SlotNumber 6
 Inventory.PickupSound "WPICK"
-Inventory.PickupMessage "You got the NailGun!"
+Inventory.PickupMessage "You got the NailGun! (Slot 6)"
 Obituary "%o was nailed by %k."
 Tag "Nailgun"
 VisibleToPlayerClass "64DoomPlayer"
@@ -89,12 +90,13 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 Actor 64NailgunTACTICAL : Brutal64Weapon
 {
 Scale 0.82
+Weapon.SlotNumber 6
+Weapon.SlotPriority 100
 Weapon.AmmoUse1 1
 Weapon.AmmoGive1 25
 Weapon.AmmoType1 "64NailAmmo"
-Weapon.SlotNumber 6
 Inventory.PickupSound "WPICK"
-Inventory.PickupMessage "You got the NailGun!"
+Inventory.PickupMessage "You got the NailGun! (Slot 6)"
 Obituary "%o was nailed by %k."
 Tag "Nailgun"
 +INVENTORY.RESTRICTABSOLUTELY
