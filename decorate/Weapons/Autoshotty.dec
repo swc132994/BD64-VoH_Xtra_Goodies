@@ -131,7 +131,7 @@ Weapon.SlotPriority 750
 Weapon.SelectionOrder 1350
 Weapon.AmmoType "64BlueShell"
 Weapon.AmmoUse 1
-Weapon.AmmoGive 12
+Weapon.AmmoGive 0
 Obituary "%o got shot into pieces by %k's Striker-12"
 Tag "Striker-12"
 VisibleToPlayerClass "64DoomPlayer"
@@ -202,7 +202,7 @@ Weapon.AmmoUse1 1
 Weapon.AmmoGive1 10
 Weapon.AmmoType2 "AssaultShotgunAmmo"
 Weapon.AmmoUse2 1
-Weapon.AmmoGive2 10
+Weapon.AmmoGive2 0
 Inventory.PickupMessage "You got the Assault Shotgun! (Slot 3)"
 Obituary "%o got shot into pieces by %k's Assault Shotgun"
 Tag "Assault Shotgun"
@@ -481,10 +481,10 @@ Weapon.SlotPriority 100
 Weapon.SelectionOrder 1350
 Weapon.AmmoType1 "64BlueShell"
 Weapon.AmmoUse1 1
-Weapon.AmmoGive1 12
+Weapon.AmmoGive1 0
 Weapon.AmmoType2 "ProtectaAmmo"
 Weapon.AmmoUse2 1
-Weapon.AmmoGive2 12
+Weapon.AmmoGive2 0
 Inventory.PickupMessage "You got the Striker-12! (Slot 3)"
 Obituary "$OB_MPSHOTGUN"
 Tag "Striker-12"
