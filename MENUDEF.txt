@@ -79,7 +79,7 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 	Option "Chainsaw Spawner =","Chainsaw_Spawner_Cvar","ChainsawNew_Spawner_Value"
 		StaticText "Chainsaw by Default",1
 		StaticText ""
-	Option "Chaingun Spawner =","Chaingun_Spawner_Cvar","Chaingun_Spawner_Value"
+	Option "Chaingun Spawner =","Chaingun_Spawner_Cvar","Chaingun_Spawner_Value_Extra"
 		StaticText "Chaingun by Default",1
 		StaticText ""
 	Option "Shotgun Spawner =","Revolver_Spawner_Cvar","Revolver_Spawner_Value"
@@ -91,10 +91,10 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 	Option "Rocket Launcher Spawner =","Immolator_Spawner_Cvar","Immolator_Spawner_Value"
 		StaticText "Rocket Luancher by Default",1
 		StaticText ""
-	Option "Plasmagun Spawner =","GaussCannon_Spawner_Cvar","GaussCannon_Spawner_Value"
+	Option "Plasmagun Spawner =","GaussCannon_Spawner_Cvar","PlasmaRifle_Spawner_Value_Extra"
 		StaticText "Plasmagun by Default",1
 		StaticText ""
-	Option "BFG9000 Spawner =","BFG_Spawner_Cvar","BFG_Spawner_Value"
+	Option "BFG9000 Spawner =","BFG_Spawner_Cvar","BFG_Spawner_Value_Extra"
 		StaticText "BFG9000 by Default",1
 		StaticText ""
 	Option "Extra Ammo Spawner =","ExtraAmmo_Spawner_Cvar","ExtraAmmo_Spawner_Value"
@@ -103,7 +103,7 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 		StaticText "Enable Nuke Launchers to spawn alongside Invulnerability",1
 		StaticText "and Nuclear Warheads alongside Rockets/Rocket Crates",1
 		StaticText ""
-	Option "Enable NukeLauncher =","NuclearMissile_Spawner_Cvar","YesOrNo"
+	Option "Enable NukeLauncher =","NuclearMissile_Spawner_Cvar","YesNo"
 }
 
 OptionMenu "BrutalDoom64Item/WeaponOptions"
@@ -115,42 +115,42 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 	StaticText " "
 	StaticText "---------------------------- Weapons Functions ------------------------------",1
 		StaticText " "
-	Option "Enable Traditional Shotgun/SSG Animations =","VWeaponCvar","YesOrNo"
+	Option "Enable Traditional Shotgun/SSG Animations =","VWeaponCvar","YesNo"
 		StaticText "Show classic Doom 64 Shotgun/SSG animations (classical mode).",1
 		StaticText "Show traditional shotgun pump animation (modern/tactical mode).",1
 		StaticText ""
-	Option "Enable Weapon Warm Up Animations =","WeaponsWarmUpCvar","YesOrNo"
+	Option "Enable Weapon Warm Up Animations =","WeaponsWarmUpCvar","YesNo"
 		StaticText "Show weapon warm up animations on first pickup (tactical/modern modes ONLY).",1
 		StaticText ""
-	Option "Classic Style Chainsaw for Tactical/Modern =","VanillaChainsawCvar","YesOrNo"
-	Option "Classic Style Chaingun for Tactical/Modern =","ClassicChaingunCvar","YesOrNo"
-	Option "Classic Style Rocket Launcher for Tactical/Modern =","ClassicRLCvar","YesOrNo"
+	Option "Classic Style Chainsaw for Tactical/Modern =","VanillaChainsawCvar","YesNo"
+	Option "Classic Style Chaingun for Tactical/Modern =","ClassicChaingunCvar","YesNo"
+	Option "Classic Style Rocket Launcher for Tactical/Modern =","ClassicRLCvar","YesNo"
 		StaticText "Options to switch between classic or modernised weapons.",1
 		StaticText ""
-	Option "Skip Weapon Reload Sequences (Press \"Apply Changes\") =","NoReloadCvar","YesOrNo"
+	Option "Skip Weapon Reload Sequences (Press \"Apply Changes\") =","NoReloadCvar","YesNo"
 		StaticText "Skip weapon reload animation sequences (tactical/modern modes ONLY).",1
 		StaticText ""
-	Option "Low Ammo SFX =","LowAmmoSFX","YesOrNo"
+	Option "Low Ammo SFX =","LowAmmoSFX","YesNo"
 		StaticText "Allows you to toggle the sound warning when ammo is too low.",1
 		StaticText "(tactical/modern modes ONLY)",1
 		StaticText ""
-	Option "Switch to Fists on Berserk Pickup =","BerserkSwitchFistsCvar","YesOrNo"
+	Option "Switch to Fists on Berserk Pickup =","BerserkSwitchFistsCvar","YesNo"
 		StaticText "Option to disable switching to fists on berserk pickup.",1
 		StaticText ""
-	Option "Striker-12 as Alternative of Assault Shotgun =","Striker12Cvar","YesOrNo"
+	Option "Striker-12 as Alternative of Assault Shotgun =","Striker12Cvar","YesNo"
 		StaticText "Switch between Stiker-12 or Assault Shotgun"
 		StaticText ""
 		StaticText "--------------------------- Weapons & Items Skins -----------------------------",1
 		StaticText " "
-	Option "Alternative Laser Skin =","AlternativeLaserSkinCvar","YesOrNo"
+	Option "Alternative Laser Skin =","AlternativeLaserSkinCvar","YesNo"
 	Option "Item Sprites Pickups =","AlternativeAmmoPickupSpritesCvar","AlternativeAmmoPickupSpritesValue"
 	Option "Alternative Healing Kits & Berserk Pickups =","CensoredHealing_Cvar","CensoredHealing_Value"
-	Option "Alpha Build Item Pickups =","AlphaPickupCvar","YesOrNo"
+	Option "Alpha Build Item Pickups =","AlphaPickupCvar","YesNo"
 		StaticText "Options for alternative or some alpha build looks for items & weapons.",1
 		StaticText ""
 		StaticText "-------------------------------------- Other -----------------------------------",1
 		StaticText " "
-	Option "Start with Flashlight/Torch =","FlashlightStartCvar","YesOrNo"
+	Option "Start with Flashlight/Torch =","FlashlightStartCvar","YesNo"
 }
 
 //XTRA WEAPON & AMMO VALUES
