@@ -13,3 +13,18 @@
 #INCLUDE "Decorate/Weapons/ExpRevLauncher.dec"
 #INCLUDE "Decorate/XtraPowerups.dec"
 #INCLUDE "Decorate/XtraSpawners.dec"
+
+//Monsters Xtra
+ACTOR 64PestilenceXtra : 64Pestilence Replaces 64Pestilence
+{
+DropItem "DemonEssenceSpawner"
+DropItem "PestilenceAmmo"
+DropItem "PestilenceAmmo"
+}
+
+ACTOR 64RevenantXtra : 64Revenant Replaces 64Revenant
+{
+DropItem "DemonEssenceSpawner"
+DropItem "HeatSeekerAmmo"
+DropItem "HeatSeekerAmmo"
+}
