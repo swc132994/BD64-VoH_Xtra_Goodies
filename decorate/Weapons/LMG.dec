@@ -129,12 +129,12 @@ Scale 0.85
 Weapon.SlotNumber 4
 Weapon.SlotPriority 900
 Weapon.SelectionOrder 750
-Weapon.AmmoUse1 1
-Weapon.AmmoGive1 40
-Weapon.AmmoType1 "Clip"
-Weapon.AmmoUse2 1
-Weapon.AmmoGive2 0
-Weapon.AmmoType2 "RocketAmmo"
+Weapon.AmmoUse 1
+Weapon.AmmoGive 40
+Weapon.AmmoType "64HighCaliberBox"
+//Weapon.AmmoUse2 1
+//Weapon.AmmoGive2 0
+//Weapon.AmmoType2 "RocketAmmo"
 Inventory.PickupMessage "You got the Light Machinegun! (Slot 4)"
 Tag "Light Machinegun"
 Obituary "%o was picked off by %k's Light Machinegun."
@@ -171,7 +171,7 @@ Inventory.forbiddento "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
 		GLRG A 1
 		TNT1 A 0 A_Refire
 		Goto Ready
-	AltFire:
+/*	AltFire:
 		TNT1 A 0 A_PlaySound("assaultrifle/grenade",CHAN_WEAPON)
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_GunFlash
@@ -187,7 +187,7 @@ Inventory.forbiddento "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
 		AGFR C 1 A_Light0
 		AGFR D 1
 		GLRG A 20
-		Goto Ready
+		Goto Ready*/
 	}
 }
 

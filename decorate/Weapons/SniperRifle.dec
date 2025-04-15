@@ -37,7 +37,7 @@ Scale 0.82
 Weapon.SlotNumber 4
 Weapon.SlotPriority 10
 Weapon.SelectionOrder 900
-Weapon.AmmoType "Clip"
+Weapon.AmmoType "64HighCaliberBox"
 Weapon.AmmoUse 5
 Weapon.AmmoGive 30
 Obituary "%o's brain was splattered by %k's Walther WA 2000"
