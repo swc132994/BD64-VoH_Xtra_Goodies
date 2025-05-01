@@ -2,7 +2,7 @@ Actor SniperRifleSpawner : CustomInventory
  {
  Scale 0.82
  Tag "Sniper Rifle"
- Inventory.PickupMessage "You got The Walther WA 2000! (Slot 4)"
+ Inventory.PickupMessage "You got The Sniper Rifle! (Slot 4)"
  Inventory.PickupSound "WPICK"
  States
 	{
@@ -40,10 +40,10 @@ Weapon.SelectionOrder 900
 Weapon.AmmoType "64HighCaliberBox"
 Weapon.AmmoUse 5
 Weapon.AmmoGive 30
-Obituary "%o's brain was splattered by %k's Walther WA 2000"
-Inventory.PickupMessage "You got The Walther WA 2000! (Slot 4)"
+Obituary "%o's brain was splattered by %k's Sniper Rifle"
+Inventory.PickupMessage "You got The Sniper Rifle! (Slot 4)"
 Inventory.PickupSound "WPICK"
-Tag "Walther WA 2000"
+Tag "Sniper Rifle"
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
@@ -126,10 +126,10 @@ Weapon.AmmoGive1 30
 Weapon.AmmoType2 "SniperAmmo"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 0
-Obituary "%o's brain was splattered by %k's Walther WA 2000"
-Inventory.PickupMessage "You got The Walther WA 2000!  (Slot 4)"
+Obituary "%o's brain was splattered by %k's Sniper Rifle"
+Inventory.PickupMessage "You got The Sniper Rifle!  (Slot 4)"
 Inventory.PickupSound "WPICK"
-Tag "Walther WA 2000"
+Tag "Sniper Rifle"
 +INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.NOAUTOFIRE
 +WEAPON.NOALERT

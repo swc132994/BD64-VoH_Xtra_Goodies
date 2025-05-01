@@ -239,6 +239,7 @@ Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 		TNT1 A 0 A_Raise
 		Wait
 	SelectBulletMode:
+		TNT1 A 0 A_Print("Bullet Mode",2)
 		GLRG A 1 Offset(0,33)
 		GLRG A 1 Offset(0,34)
 		GLRG A 2 Offset(0,35) A_TakeInventory("SwitchingGrenade",1)
@@ -490,7 +491,6 @@ Weapon.SisterWeapon "64LMGTactical"
 		Wait
 	GoToBulletMode:
 		TNT1 A 0 A_TakeInventory("WeaponSpecialAction",1)
-		TNT1 A 0 A_Print("Regular Mode")
 		TNT1 A 0 A_GiveInventory("SwitchingGrenade",1)
 		TNT1 A 0 A_SelectWeapon("64LMGTactical")
 		Goto Ready
