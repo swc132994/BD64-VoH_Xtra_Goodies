@@ -172,7 +172,7 @@ Tag "Biological Suit"
 Actor BioSuitFeet : PowerupGiver
 {
 Powerup.Type "IronFeet"
-Powerup.Duration -120
+Powerup.Duration -60
 Powerup.Color "Green",0.1
 Inventory.MaxAmount 0
 Inventory.PickupMessage ""
@@ -196,7 +196,7 @@ DamageFactor "Plasma",0.125
 Actor BioSuitProtector : PowerupGiver
 {
 Powerup.Type "BioSuitProtection"
-Powerup.Duration -120
+Powerup.Duration -60
 Inventory.MaxAmount 0
 Inventory.PickupMessage ""
 +INVENTORY.AUTOACTIVATE
