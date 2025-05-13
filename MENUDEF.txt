@@ -109,7 +109,7 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 OptionMenu "BrutalDoom64Item/WeaponOptions"
 {
 	Title "Other Item/Weapon Options"
-	StaticText "Some changes are not initialized automatically", 1
+	StaticText "Some changes are not initialized automatically",1
 	StaticText "Press \"Apply Changes\" for the changes to take effect",1
 	Command "Apply Changes","PukeName BD64Respawn"
 	StaticText " "
@@ -117,14 +117,13 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 		StaticText " "
 	Option "Enable Traditional Shotgun/SSG Animations =","VWeaponCvar","YesNo"
 		StaticText "Show classic Doom 64 Shotgun/SSG animations (classical mode).",1
-		StaticText "Show traditional shotgun pump animation (modern/tactical mode).",1
 		StaticText ""
 	Option "Enable Weapon Warm Up Animations =","WeaponsWarmUpCvar","YesNo"
 		StaticText "Show weapon warm up animations on first pickup (tactical/modern modes ONLY).",1
 		StaticText ""
-	Option "Classic Style Chainsaw for Tactical/Modern =","VanillaChainsawCvar","YesNo"
-	Option "Classic Style Chaingun for Tactical/Modern =","ClassicChaingunCvar","YesNo"
-	Option "Classic Style Rocket Launcher for Tactical/Modern =","ClassicRLCvar","YesNo"
+	Option "Classic Look Chainsaw for Tactical/Modern =","VanillaChainsawCvar","YesNo"
+	Option "Classic Look Chaingun for Tactical/Modern =","ClassicChaingunCvar","YesNo"
+	Option "Classic Look Rocket Launcher for Tactical/Modern =","ClassicRLCvar","YesNo"
 		StaticText "Options to switch between classic or modernised weapons.",1
 		StaticText ""
 	Option "Skip Weapon Reload Sequences (Press \"Apply Changes\") =","NoReloadCvar","YesNo"
@@ -141,7 +140,7 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 		StaticText "Switch between Stiker-12 or Assault Shotgun"
 		StaticText ""
 		StaticText "--------------------------- Weapons & Items Skins -----------------------------",1
-		StaticText " "
+		StaticText ""
 	Option "Alternative Laser Skin =","AlternativeLaserSkinCvar","YesNo"
 	Option "Item Sprites Pickups =","AlternativeAmmoPickupSpritesCvar","AlternativeAmmoPickupSpritesValue"
 	Option "Alternative Healing Kits & Berserk Pickups =","CensoredHealing_Cvar","CensoredHealing_Value"
@@ -149,7 +148,7 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 		StaticText "Options for alternative or some alpha build looks for items & weapons.",1
 		StaticText ""
 		StaticText "-------------------------------------- Other -----------------------------------",1
-		StaticText " "
+		StaticText ""
 	Option "Start with Flashlight/Torch =","FlashlightStartCvar","YesNo"
 }
 
