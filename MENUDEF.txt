@@ -50,6 +50,7 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 		StaticText ""
 	Option "Power-up spawner =","WpnPower_Spawner_Cvar","WpnPower_Spawner_Value"
 		StaticText "Power-up by Default",1
+		StaticText "(For D64 maps it is recommended to leave set to Power-ups)",1
 		StaticText ""
 		StaticText "Extra Power-ups Options",1
 		StaticText ""

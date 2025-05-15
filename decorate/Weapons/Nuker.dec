@@ -511,24 +511,6 @@ actor 64BlindingNuclearFlares : CustomInventory
 	}
 }
 
-ACTOR 64NuclearWarheadAmmo : Ammo
-{
-Inventory.Amount 1
-Inventory.MaxAmount 1
-Ammo.BackpackAmount 0
-Ammo.BackpackMaxAmount 3
-Tag "Nuclear Warhead"
-Inventory.PickupMessage "Picked up one nuclear warhead."
-Inventory.PickupSound "IPICK"
-Inventory.Icon "NUKAA0"
-	States
-	{
-	Spawn:
-		NUKA B -1
-		Stop
-	}
-}
-
 ACTOR 64NukeSmoke
 {
 Scale 1.5

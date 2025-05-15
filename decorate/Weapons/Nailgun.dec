@@ -225,41 +225,6 @@ Tag "Nailgun"
 	}
 }
 
-Actor 64NailAmmo : Ammo
-{
-Scale 0.7
-Radius 16
-Height 8
-Inventory.PickupMessage "Picked up some nails."
-Inventory.Icon "NBOXA0"
-Inventory.PickupSound "IPICK"
-Inventory.Amount 15
-Inventory.MaxAmount 300
-Tag "Nail Clip"
-Ammo.BackpackAmount 15
-Ammo.BackpackMaxAmount 600
-	States
-	{
-	Spawn:
-		NBOX A -1
-		Stop
-	}
-}
-
-ACTOR 64NailCrate : 64NailAmmo
-{
-Scale 1.0
-Inventory.PickupMessage "Picked up a crate of nails."
-Inventory.Amount 40
-Tag "Nail Box"
-	States
-	{
-	Spawn:
-		NBOX B -1
-		Stop
-	}
-}
-
 Actor 64PlayerNail
 {
 Scale 0.5

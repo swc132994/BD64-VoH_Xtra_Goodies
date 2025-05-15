@@ -508,7 +508,7 @@ Scale 0.82
 		PVIS A 0
 		TNT1 A 3 ACS_NamedExecuteAlways("InfraredNewRandomACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
-		TNT1 A 0 A_Jump(64,"SpawnFlashlight")//(25%)
+		TNT1 A 0 A_Jump(85,"SpawnFlashlight")//(33%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Infrared",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
@@ -516,7 +516,8 @@ Scale 0.82
 		TNT1 A 1 A_SpawnItemEx("64Crucifix",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	SpawnFlashlight:
-		TNT1 A 1 A_SpawnItemEx("FlashlightItem",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
+		TNT1 A 0 A_SpawnItemEx("64Infrared",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
+		TNT1 A 1 A_SpawnItemEx("FlashlightItem")
 		Stop
 	}
 }
