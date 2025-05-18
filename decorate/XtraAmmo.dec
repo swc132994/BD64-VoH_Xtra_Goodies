@@ -135,48 +135,42 @@ Tag "Nail Box"
 //Heatseekers
 Actor HeatSeekerAmmo : Ammo
 {
-Scale 0.2
-Renderstyle Add
-Alpha 1
+Translation  "0:255=%[0,0,0]:[0.75,0,0]"
 Inventory.Amount 1
 Inventory.MaxAmount 60
 Ammo.BackpackAmount 0
 Ammo.BackpackMaxAmount 60
-Inventory.Icon LENRA0
+Inventory.Icon GR3NA0
 Tag "Heatseeker"
 Inventory.PickupMessage "Scavenaged a heatseeker"
 +IGNORESKILL
-+FLOATBOB
 	States
 	{
 	Spawn:
-		LENR A -1
-		Stop
+		GR3N A 2 Light("HellPotion") A_SpawnItemEx("RedFlareSmallItem",0,0,7)
+		Loop
 	}
 }
 
 Actor PestilenceAmmo : Ammo
 {
-Scale 0.2
-Renderstyle Add
-Alpha 1
+Translation  "0:255=%[0,0,0]:[0.5,1,0]"
 Inventory.Amount 1
 Inventory.MaxAmount 30
 Ammo.BackpackAmount 0
 Ammo.BackpackMaxAmount 30
-Inventory.Icon LENGA0
+Inventory.Icon GR3NA0
 Tag "Pestilence Toxin"
 Inventory.PickupMessage "Scavenaged pestilence toxin"
 VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 Inventory.ForbiddenTo "64DoomPlayer"
 +INVENTORY.RESTRICTABSOLUTELY
 +IGNORESKILL
-+FLOATBOB
 	States
 	{
 	Spawn:
-		LENG A -1
-		Stop
+		GR3N A 2 Light("ARMORBONUS") A_SpawnItemEx("GreenFlareSmallItem",0,0,7)
+		Loop
 	}
 }
 
