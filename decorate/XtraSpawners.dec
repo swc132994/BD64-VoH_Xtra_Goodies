@@ -508,7 +508,7 @@ Scale 0.82
 		PVIS A 0
 		TNT1 A 3 ACS_NamedExecuteAlways("InfraredNewRandomACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
-		TNT1 A 0 A_Jump(85,"SpawnFlashlight")//(33%)
+		TNT1 A 0 A_Jump(90,"SpawnFlashlight")//(35%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Infrared",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
