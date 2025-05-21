@@ -221,6 +221,7 @@ BounceSound "Grenadier/Bouncy"
 
 Actor 64NadeLauncherGasnades : 64NightcrawlerGrenade
 {
+Translation  "0:255=%[0,0,0]:[0.5,1,0]"
 Damage 1
 Gravity 0.75
 Speed 10
