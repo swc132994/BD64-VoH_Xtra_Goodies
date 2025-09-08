@@ -5,9 +5,9 @@ Scale 0.82
 Inventory.PickupSound "IPICK"
 Inventory.PickupMessage "Picked up a speedloader."
 Inventory.Amount 6
-Inventory.MaxAmount 25
+Inventory.MaxAmount 30
 Ammo.BackpackAmount 6
-Ammo.BackpackMaxAmount 50
+Ammo.BackpackMaxAmount 60
 Tag "Revolver Speedloader"
 Inventory.Icon "HI04Z0"
 	states
@@ -69,10 +69,10 @@ Scale 0.82
 Inventory.PickupSound "IPICK"
 Inventory.PickupMessage "Picked up 2 Ultra Shells."
 Inventory.Amount 2
-Inventory.MaxAmount 25
+Inventory.MaxAmount 30
 Tag "Blue Shells"
 Ammo.BackpackAmount 2
-Ammo.BackpackMaxAmount 50
+Ammo.BackpackMaxAmount 60
 Inventory.Icon "10GUA0"
 	states
 	{

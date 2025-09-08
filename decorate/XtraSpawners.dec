@@ -247,9 +247,9 @@ Scale 0.82
 		ROCK A 0
 		TNT1 A 3 ACS_NamedExecuteAlways("NukelauncherSpawnerACS")
 //		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
-		TNT1 A 0 A_Jump(3,"SpawnExtra") //(1%)
+		TNT1 A 0 A_Jump(2,"SpawnExtra") //(1%)
 	AltSpawn:
-		TNT1 A 0 A_Jump(3,"SpawnBoth") //(1%)
+		TNT1 A 0 A_Jump(2,"SpawnBoth") //(1%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64RocketAmmo",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
@@ -272,9 +272,9 @@ Scale 0.82
 		BROK A 0
 		TNT1 A 3 ACS_NamedExecuteAlways("NukelauncherSpawnerACS")
 //		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
-		TNT1 A 0 A_Jump(3,"SpawnExtra") //(1%)
+		TNT1 A 0 A_Jump(2,"SpawnExtra") //(1%)
 	AltSpawn:
-		TNT1 A 0 A_Jump(3,"SpawnBoth") //(1%)
+		TNT1 A 0 A_Jump(2,"SpawnBoth") //(1%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Rocketbox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
