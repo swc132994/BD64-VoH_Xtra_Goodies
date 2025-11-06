@@ -404,7 +404,7 @@ Weapon.SisterWeapon "64ProtectaTACTICAL"
 		ASGR ABCDEF 1 Offset(0,32)
 		ASGR F 1 A_PlaySound("inshell",CHAN_AUTO)
 		ASGR GHIJKLM 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY)
-		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKickReloading")
+//		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKickReloading")
 		TNT1 A 0 A_JumpIfInventory("AssaultShotgunAmmo",10,"FinishInsertingShells")
 		TNT1 A 0 A_JumpIfInventory("AssaultShotgunAmmo",1,1)
 		Goto InsertingShells
@@ -530,6 +530,8 @@ Weapon.SisterWeapon "64AssaultShotgunTACTICAL"
 	Ready2:
 		SK16 D 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
+		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
+		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		Loop
 	NoAmmo:
 		SK12 A 10
@@ -646,7 +648,7 @@ Weapon.SisterWeapon "64AssaultShotgunTACTICAL"
 		SK14 JKLMNO 1
 		SK14 P 1 A_PlaySound("Striker-12/InShell",CHAN_AUTO)
 		SK14 QRST 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY)
-		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKickReloading")	//delay for autofiring
+//		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKickReloading")	//delay for autofiring
 		TNT1 A 0 A_JumpIfInventory("ProtectaAmmo",12,"FinishInsertingShells")
 		TNT1 A 0 A_JumpIfInventory("ProtectaAmmo",1,1)
 		Goto InsertingShells

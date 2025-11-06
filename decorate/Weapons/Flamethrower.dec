@@ -93,7 +93,7 @@ Actor 64FlamerFlames
 Scale 0.67
 Radius 2
 Height 4
-Speed 10
+Speed 12
 Damage (0)//damage done by a_explode
 Alpha 0.67
 RenderStyle Add
