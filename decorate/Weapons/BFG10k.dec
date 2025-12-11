@@ -38,7 +38,7 @@ Weapon.SlotNumber 7
 Weapon.SlotPriority 100
 Weapon.Selectionorder 2800
 Weapon.AmmoType "Cell"
-Weapon.AmmoUse 5
+Weapon.AmmoUse 10
 Weapon.AmmoGive 40
 Weapon.Kickback 100
 Inventory.PickupSound "WPICK"
@@ -217,7 +217,7 @@ Weapon.SlotNumber 7
 Weapon.SlotPriority 100
 Weapon.Selectionorder 2800
 Weapon.AmmoType "Cell"
-Weapon.AmmoUse 5
+Weapon.AmmoUse 10
 Weapon.AmmoGive 40
 Weapon.Kickback 100
 Inventory.PickupSound "WPICK"
