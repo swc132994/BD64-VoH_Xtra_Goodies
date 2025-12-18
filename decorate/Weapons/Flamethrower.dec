@@ -118,9 +118,9 @@ PROJECTILE
 		TNT1 A 0 A_JumpIf(waterlevel > 1,"Splash")
 		FRFX HIJ 2 bright A_Explode(2,32,0)
 		TNT1 A 0 A_JumpIf(waterlevel > 1,"Splash")
-		FRFX KLM 2 bright A_Explode(2,32,0)
+		FRFX KLM 2 bright A_Explode(1,32,0)
 		TNT1 A 0 A_JumpIf(waterlevel > 1,"Splash")
-		FRFX NO 1 bright A_Explode(2,32,0)
+		FRFX NO 1 bright A_Explode(1,32,0)
 		Stop
 	Death:
 		TNT1 AAA 0 A_SpawnItemEx("TinyBurningPiece2",random(-25,25),random(-15,15))
