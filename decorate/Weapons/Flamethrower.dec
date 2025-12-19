@@ -93,8 +93,8 @@ Actor 64FlamerFlames
 Scale 0.67
 Radius 2
 Height 4
-Speed 12
-Damage (0)//damage done by a_explode
+Speed 20
+Damage (2)
 Alpha 0.67
 RenderStyle Add
 DamageType "Flames"
@@ -105,34 +105,23 @@ PROJECTILE
 +DONTSPLASH
 +RIPPER
 +NODAMAGETHRUST
-+FORCERADIUSDMG
 +PAINLESS
 	States
 	{
 	Spawn:
-		FRFX A 2 NoDelay A_JumpIf(waterlevel > 1,"Splash")
-		FRFX BCD 2 bright A_Explode(2,32,0)
+		FRFX A 1 NoDelay A_JumpIf(waterlevel > 1,"Splash")
+		FRFX BCD 2 bright A_JumpIf(waterlevel > 1,"Splash")
 		TNT1 A 0 A_LowGravity
-		TNT1 A 0 A_JumpIf(waterlevel > 1,"Splash")
-		FRFX EFG 2 bright A_Explode(2,32,0)
-		TNT1 A 0 A_JumpIf(waterlevel > 1,"Splash")
-		FRFX HIJ 2 bright A_Explode(2,32,0)
-		TNT1 A 0 A_JumpIf(waterlevel > 1,"Splash")
-		FRFX KLM 2 bright A_Explode(1,32,0)
-		TNT1 A 0 A_JumpIf(waterlevel > 1,"Splash")
-		FRFX NO 1 bright A_Explode(1,32,0)
+		FRFX EFGHIJKLMNO 1 bright A_JumpIf(waterlevel > 1,"Splash")
 		Stop
 	Death:
+		TNT1 A 0 A_ChangeFlag("PAINLESS",FALSE)
 		TNT1 AAA 0 A_SpawnItemEx("TinyBurningPiece2",random(-25,25),random(-15,15))
 		TNT1 AAA 0 A_SpawnItemEx("TinyBurningPiece",random(-15,15),random(-15,15))
 		TNT1 A 0 A_CustomMissile("FlamethrowerFireParticles",6,0,random(0,360),2,random(10,90))
 		TNT1 A 0 A_SpawnItemEx("DetectCeilCraterSmall")
 		TNT1 A 0 A_SpawnItemEx("DetectFloorCraterSmallMotherdemon")
-		FRFX HIJ 2 bright
-		TNT1 A 0 A_Explode(2,32,0)
-		FRFX HIJ 2 bright
-		TNT1 A 0 A_Explode(2,32,0)
-		FRFX NO 2 bright
+		FRFX HIJNO 2 bright A_Explode(2,32,0)
 		Stop
 	Splash:
 		TNT1 A 1
@@ -147,9 +136,7 @@ Actor 64FlamerFlamesLessEffects : 64FlamerFlames
 		TNT1 A 0 A_CustomMissile("FlamethrowerFireParticles",6,0,random(0,360),2,random(10,90))
 		TNT1 A 0 A_SpawnItemEx("DetectCeilCraterSmall")
 		TNT1 A 0 A_SpawnItemEx("DetectFloorCraterSmallMotherdemon")
-		FRFX HIJ 2 bright A_Explode(2,32,0)
-		FRFX KLM 2 bright A_Explode(2,32,0)
-		FRFX NO 2 bright A_Explode(2,32,0)
+		FRFX HIJKLMNO 2 bright A_Explode(3,32,0)
 		Stop
 	}
 }
