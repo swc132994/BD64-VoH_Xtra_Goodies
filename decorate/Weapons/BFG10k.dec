@@ -38,7 +38,7 @@ Weapon.SlotNumber 7
 Weapon.SlotPriority 100
 Weapon.Selectionorder 2800
 Weapon.AmmoType "Cell"
-Weapon.AmmoUse 10
+Weapon.AmmoUse 5
 Weapon.AmmoGive 40
 Weapon.Kickback 100
 Inventory.PickupSound "WPICK"
@@ -108,7 +108,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 Actor 64BFG10kShot
 {
 Translation "0:255=%[0,0,0]:[0,1,0]"//GREEN
-Scale 1.5
+Scale 2
 Radius 8
 Height 8
 Speed 80
@@ -117,6 +117,7 @@ Decal "BFGLIGHTNING"
 Renderstyle Normal
 Alpha 0.75
 PROJECTILE
++FORCERADIUSDMG
 	States
 	{
 	Spawn:
@@ -216,7 +217,7 @@ Weapon.SlotNumber 7
 Weapon.SlotPriority 100
 Weapon.Selectionorder 2800
 Weapon.AmmoType "Cell"
-Weapon.AmmoUse 10
+Weapon.AmmoUse 5
 Weapon.AmmoGive 40
 Weapon.Kickback 100
 Inventory.PickupSound "WPICK"
