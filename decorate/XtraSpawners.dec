@@ -68,7 +68,7 @@ Scale 0.82
 	{
 	Spawn:
 		MGUN A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("ChaingunSpawner")
+		TNT1 A 2 ACS_NamedExecuteAlways("ChaingunSpawner")
 		TNT1 A 2 ACS_NamedExecuteAlways("ChaingunExtraSpawner")
 		TNT1 A 0 A_Jump(38,"SpawnLMG") //(15%)
 		TNT1 A 0 A_Jump(85,"SpawnSMG") //(33%)
@@ -95,7 +95,7 @@ Scale 0.82
 	{
 	Spawn:
 		LAUN A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("RLSpawner")
+		TNT1 A 2 ACS_NamedExecuteAlways("RLSpawner")
 		TNT1 A 0 A_Jump(51,"SpawnNadeLauncher") //(20%)
 		TNT1 A 0 A_Jump(51,"SpawnFlamethrower") //(20%)
 		TNT1 A 0 A_Jump(51,"SpawnRevenantLauncher") //(20%)
@@ -121,7 +121,7 @@ Scale 0.82
 	{
 	Spawn:
 		PLAS A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("PlasmaRifleSpawner")
+		TNT1 A 2 ACS_NamedExecuteAlways("PlasmaRifleSpawner")
 		TNT1 A 2 ACS_NamedExecuteAlways("PlasmaRifleExtraSpawner")
 		TNT1 A 0 A_Jump(38,"SpawnRuiner") //(15%)
 		TNT1 A 0 A_Jump(64,"SpawnGaussCannon") //(25%)
@@ -148,7 +148,7 @@ Scale 0.9
 	{
 	Spawn:
 		BFUG A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("BFGSpawner")
+		TNT1 A 2 ACS_NamedExecuteAlways("BFGSpawner")
 		TNT1 A 2 ACS_NamedExecuteAlways("BFGExtraSpawner")
 		TNT1 A 0 A_Jump(38,"SpawnBFG10k") //(15%)
 		TNT1 A 0 A_Jump(85,"SpawnLasergun") //(33%)
@@ -176,7 +176,7 @@ Scale 0.82
 	{
 	Spawn:
 		CLIP A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(38,"SpawnExtra") //(15%)
 	AltSpawn:
 		TNT1 A 0 A_Jump(38,"SpawnBoth") //(15%)
@@ -200,7 +200,7 @@ Scale 0.82
 	{
 	Spawn:
 		SHEL A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(38,"SpawnExtra") //(15%)
 	AltSpawn:
 		TNT1 A 0 A_Jump(38,"SpawnBoth") //(15%)
@@ -224,7 +224,7 @@ Scale 0.82
 	{
 	Spawn:
 		SBOX A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(38,"SpawnExtra") //(15%)
 	AltSpawn:
 		TNT1 A 0 A_Jump(38,"SpawnBoth") //(15%)
@@ -248,8 +248,8 @@ Scale 0.82
 	{
 	Spawn:
 		ROCK A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("NukelauncherSpawnerACS")
-//		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("NukelauncherSpawnerACS")
+//		TNT1 A 2 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(2,"SpawnExtra") //(1%)
 	AltSpawn:
 		TNT1 A 0 A_Jump(2,"SpawnBoth") //(1%)
@@ -273,8 +273,8 @@ Scale 0.82
 	{
 	Spawn:
 		BROK A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("NukelauncherSpawnerACS")
-//		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("NukelauncherSpawnerACS")
+//		TNT1 A 2 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(2,"SpawnExtra") //(1%)
 	AltSpawn:
 		TNT1 A 0 A_Jump(2,"SpawnBoth") //(1%)
@@ -322,7 +322,7 @@ Scale 0.82
 	{
 	Spawn:
 		CELP A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(77,"SpawnExtra")//(30%)
 	AltSpawn:
 		TNT1 A 0 A_Jump(77,"SpawnBoth")//(30%)
@@ -347,7 +347,7 @@ Scale 0.82
 	{
 	Spawn:
 		BPAK A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("ExtraSpheresACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("ExtraSpheresACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Backpack",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -365,10 +365,10 @@ Scale 0.82
 	{
 	Spawn:
 		PINS A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("WpnPowerExtra")
+		TNT1 A 2 ACS_NamedExecuteAlways("WpnPowerExtra")
 		TNT1 A 0 A_Jump(45,"SpawnDemonKey") //(17.5%)
 	PowerupChoose:
-		TNT1 A 3 ACS_NamedExecuteAlways("ExtraSpheresACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("ExtraSpheresACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Blursphere",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -389,10 +389,10 @@ Scale 0.82
 	{
 	Spawn:
 		PSTR A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("WpnPowerExtra")
+		TNT1 A 2 ACS_NamedExecuteAlways("WpnPowerExtra")
 		TNT1 A 0 A_Jump(45,"SpawnDemonKey") //(17.5%)
 	PowerupChoose:
-		TNT1 A 3 ACS_NamedExecuteAlways("ExtraSpheresACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("ExtraSpheresACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Berserk",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -413,13 +413,13 @@ Scale 0.82
 	{
 	Spawn:
 		PINV A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("NukelauncherSpawnerACS_2")
+		TNT1 A 2 ACS_NamedExecuteAlways("NukelauncherSpawnerACS_2")
 		TNT1 A 0 A_Jump(32,"SpawnNukeLauncher") //(12.5%)
 	Spawn2:
-		TNT1 A 3 ACS_NamedExecuteAlways("WpnPowerExtra")
+		TNT1 A 2 ACS_NamedExecuteAlways("WpnPowerExtra")
 		TNT1 A 0 A_Jump(45,"SpawnDemonKey") //(17.5%)
 	PowerupChoose:
-		TNT1 A 3 ACS_NamedExecuteAlways("ExtraSpheresACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("ExtraSpheresACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64InvulnerabilitySphere",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -443,10 +443,10 @@ Scale 0.82
 	{
 	Spawn:
 		PINS A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("WpnPowerExtra")
+		TNT1 A 2 ACS_NamedExecuteAlways("WpnPowerExtra")
 		TNT1 A 0 A_Jump(45,"SpawnDemonKey") //(17.5%)
 	PowerupChoose:
-		TNT1 A 3 ACS_NamedExecuteAlways("ExtraSpheresACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("ExtraSpheresACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64MegaSphere",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -467,7 +467,7 @@ Scale 0.82
 	{
 	Spawn:
 		ARM1 A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("ExtraSpheresACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("ExtraSpheresACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64GreenArmor",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -485,10 +485,10 @@ Scale 0.82
 	{
 	Spawn:
 		SOUL A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("WpnPowerExtra")
+		TNT1 A 2 ACS_NamedExecuteAlways("WpnPowerExtra")
 		TNT1 A 0 A_Jump(45,"SpawnDemonKey") //(17.5%)
 	PowerupChoose:
-		TNT1 A 3 ACS_NamedExecuteAlways("ExtraSpheresACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("ExtraSpheresACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Soulsphere",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -509,7 +509,7 @@ Scale 0.82
 	{
 	Spawn:
 		PVIS A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("InfraredNewRandomACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("InfraredNewRandomACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
 		TNT1 A 0 A_Jump(90,"SpawnFlashlight")//(35%)
 	SpawnNormal:
@@ -532,7 +532,7 @@ Scale 0.82
 	{
 	Spawn:
 		PMAP A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("AllMapNewRandomACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("AllMapNewRandomACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Allmap",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -550,7 +550,7 @@ Scale 0.82
 	{
 	Spawn:
 		ARM2 A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("BlueArmorsNewRandomACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("BlueArmorsNewRandomACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64BlueArmor",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -568,7 +568,7 @@ Scale 0.82
 	{
 	Spawn:
 		PMAP A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("RadsuitNewRandomACS")
+		TNT1 A 2 ACS_NamedExecuteAlways("RadsuitNewRandomACS")
 		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64RadSuit",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
