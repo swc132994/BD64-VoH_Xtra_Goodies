@@ -117,64 +117,65 @@ Script "PlayerDeathScript" Death
 	}
 
 //extra powerups
+
 script "ExtraSpheresACS" (void)
 {
-	static str PowerupType[] =
+	Switch(GetCvar("ExtraSpheres_CVar"))
 	{
-		"SpawnNormal","SpawnExtra"
-	};
+		Case 1: SetActorState(0,"SpawnNormal"); break;
+		Case 2: SetActorState(0,"SpawnExtra"); break;
+	}
 	Delay(1);
-	SetActorState(0,PowerupType[GetCvar("ExtraSpheres_CVar") - 1]);
 }
 
 script "InfraredNewRandomACS" (void)
 {
-	static str PowerupType[] =
+	Switch(GetCvar("Crucifix_Spawner_CVar"))
 	{
-		"SpawnNormal","SpawnExtra"
-	};
+		Case 1: SetActorState(0,"SpawnNormal"); break;
+		Case 2: SetActorState(0,"SpawnExtra"); break;
+	}
 	Delay(1);
-	SetActorState(0,PowerupType[GetCvar("Crucifix_Spawner_CVar") - 1]);
 }
 
 script "AllMapNewRandomACS" (void)
 {
-	static str PowerupType[] =
+	Switch(GetCvar("MapRadar_Spawner_CVar"))
 	{
-		"SpawnNormal","SpawnExtra"
-	};
+		Case 1: SetActorState(0,"SpawnNormal"); break;
+		Case 2: SetActorState(0,"SpawnExtra"); break;
+	}
 	Delay(1);
-	SetActorState(0,PowerupType[GetCvar("MapRadar_Spawner_CVar") - 1]);
 }
 
 script "BlueArmorsNewRandomACS" (void)
 {
-	static str PowerupType[] =
+	Switch(GetCvar("RedArmor_Spawner_CVar"))
 	{
-		"SpawnNormal","SpawnExtra"
-	};
+		Case 1: SetActorState(0,"SpawnNormal"); break;
+		Case 2: SetActorState(0,"SpawnExtra"); break;
+	}
 	Delay(1);
-	SetActorState(0,PowerupType[GetCvar("RedArmor_Spawner_CVar") - 1]);
 }
 
 script "RadsuitNewRandomACS" (void)
 {
-	static str PowerupType[] =
+	Switch(GetCvar("Biosuit_Spawner_CVar"))
 	{
-		"SpawnNormal","SpawnExtra"
-	};
+		Case 1: SetActorState(0,"SpawnNormal"); break;
+		Case 2: SetActorState(0,"SpawnExtra"); break;
+	}
 	Delay(1);
-	SetActorState(0,PowerupType[GetCvar("Biosuit_Spawner_CVar") - 1]);
 }
 
 script "WpnPowerExtra" (void)
 {
-	static str PowerupType[] =
+	Switch(GetCvar("WpnPower_Spawner_Cvar"))
 	{
-		"PowerUpChoose","SpawnDemonKey"
-	};
+		Case 1: SetActorState(0,"PowerUpChoose"); break;
+		Case 2: SetActorState(0,"SpawnDemonKey"); break;
+	}
 	Delay(1);
-	SetActorState(0,PowerupType[GetCvar("WpnPower_Spawner_Cvar") - 1]);
 }
 
 script "ExtraOriginalCvars" (void) net
