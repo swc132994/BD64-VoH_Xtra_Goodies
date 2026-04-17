@@ -391,8 +391,8 @@ Weapon.SisterWeapon "64ProtectaTACTICAL"
 		TNT1 A 0 A_JumpIfInventory("64BlueShell",1,1)
 		Goto Ready
 		ASGG BCDEF 1
-		ASGG F 1 Offset(-4, 36)
-		ASGG F 1 Offset(-11, 38)		
+		ASGG F 1 Offset(-4,36)
+		ASGG F 1 Offset(-11,38)		
 	InsertingShells:
 		TNT1 A 0 A_JumpIfInventory("64BlueShell",1,1)
 		Goto NoAmmo
@@ -400,7 +400,7 @@ Weapon.SisterWeapon "64ProtectaTACTICAL"
 		TNT1 A 0 A_GiveInventory("AssaultShotgunAmmo",1)
 		TNT1 A 0 A_TakeInventory("64BlueShell",1,TIF_NOTAKEINFINITE)
 	InsertShellAnimation:
-		ASGG F 3 Offset(-25, 45)
+		ASGG F 3 Offset(-25,45)
 		ASGR ABCDEF 1 Offset(0,32)
 		ASGR F 1 A_PlaySound("inshell",CHAN_AUTO)
 		ASGR GHIJKLM 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY)
@@ -411,15 +411,15 @@ Weapon.SisterWeapon "64ProtectaTACTICAL"
 		ASGR M 1 A_WeaponReady(WRF_NOBOB)
 		Goto InsertingShells
 	CheckIfFinishReload:
-		ASGG F 1 Offset(-25, 45)
+		ASGG F 1 Offset(-25,45)
 		TNT1 A 0 A_JumpIfInventory("64BlueShell",1,1)
 		Goto PumpNewShell
 		TNT1 A 0 A_Giveinventory("AssaultShotgunAmmo",1)
 		TNT1 A 0 A_Takeinventory("64BlueShell",1,TIF_NOTAKEINFINITE)
 		Goto InsertShellAnimation
 	FinishInsertingShells:
-		ASGG F 1 Offset(-11, 38)
-		ASGG F 1 Offset(-4, 36)		
+		ASGG F 1 Offset(-11,38)
+		ASGG F 1 Offset(-4,36)		
 		ASGG FEDCBA 1 A_WeaponReady
 		Goto Ready
 	PumpNewShell:

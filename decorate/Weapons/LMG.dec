@@ -161,7 +161,7 @@ Inventory.forbiddento "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
 		TNT1 A 0 A_Jump(256,2)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,22)
 		TNT1 A 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-2,2))
-		TNT1 A 0 A_FireBullets(random(0,2),random(0,2),-1,9,"RifleBulletPuff",1)
+		TNT1 A 0 A_FireBullets(3.0,3.0,-1,9,"RifleBulletPuff",1)
 		TNT1 A 0 A_PlaySound("LMG",CHAN_WEAPON,0.9)
 		GLRF BC 1
 		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,4,-16)
@@ -291,19 +291,19 @@ Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 		TNT1 A 0 A_Takeinventory("64HighCaliberBox",1,TIF_NOTAKEINFINITE)
 	ResumeFire:
 		TNT1 A 0 A_JumpIfInventory("Zoomed",1,"FireZoomed")
-		TNT1 A 0 A_SetPitch(pitch-1.4)
 		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0)
 		TNT1 A 0 A_JumpIfInventory("IsCrouching",1,3)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 A 0 A_Jump(256,2)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,22)
 		TNT1 A 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-2,2))
-		GLRF A 1 Bright A_FireBullets(random(0.0,2.0),random(0.0,2.0),-1,9,"RifleBulletPuff",0)
+		GLRF A 1 Bright A_FireBullets(3.0,3.0,-1,9,"RifleBulletPuff",0)
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_PlaySound("LMG",CHAN_WEAPON,0.9)
-		GLRF BC 1 A_SetPitch(pitch+0.5,SPF_INTERPOLATE)
+		GLRF B 1 A_SetPitch(pitch + frandom(-1.2,1.2),SPF_INTERPOLATE)
+		GLRF C 1 A_SetAngle(angle + frandom(-0.6,0.6),SPF_INTERPOLATE)
 		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,4,-16)
-		GLRG A 1 A_SetAngle(angle + random(-1,1))
+		GLRG A 1
 		TNT1 A 0 A_Refire
 		Goto Ready
 	Reload:
@@ -388,12 +388,13 @@ Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 A 0 A_Jump(256,2)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,22)
-		TNT1 A 0 A_FireBullets(0.0,0.0,1,9,"RifleBulletPuff",0)
+		TNT1 A 0 A_FireBullets(0.6,0.6,1,9,"RifleBulletPuff",0)
 		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,4,-10)
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_PlaySound("LMG",CHAN_WEAPON)
-		GL2F A 2 Bright A_SetPitch(-1.0 + pitch)
-		GL2F BC 1 A_SetPitch(0.5 + pitch)
+		GL2F A 2 Bright A_SetPitch(pitch + frandom(-1.0,1.0),SPF_INTERPOLATE)
+		GL2F B 1 A_SetAngle(angle + frandom(-0.5,0.5),SPF_INTERPOLATE)
+		GL2F C 1	
 		TNT1 A 0 A_Refire
 		GLFZ C 1 A_WeaponReady
 		Goto Ready2
@@ -517,7 +518,8 @@ Weapon.SisterWeapon "64LMGTactical"
 		AGFR A 1 Bright A_FireCustomMissile("RocketUpgraded",0,0)
 		AGFR B 1 Bright A_Light2
 		AGFR C 1 A_Light0
-		AGFR D 1
+		TNT1 A 0 A_SetAngle(angle + frandom(-2.0,2.0),SPF_INTERPOLATE)
+		AGFR D 1 A_SetPitch(pitch + frandom(-2.0,2.0),SPF_INTERPOLATE)
 		GLRG A 11
 		TNT1 A 0 A_JumpIfInventory("GLReloading",1,2)
 		Goto Ready
