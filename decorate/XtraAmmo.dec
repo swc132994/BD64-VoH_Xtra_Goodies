@@ -136,8 +136,8 @@ Tag "Nail Box"
 Actor HeatSeekerAmmo : Ammo
 {
 Translation  "0:255=%[0,0,0]:[0.75,0,0]"
-Inventory.Amount 1
-Inventory.MaxAmount 60
+Inventory.Amount 2
+Inventory.MaxAmount 80
 Ammo.BackpackAmount 0
 Ammo.BackpackMaxAmount 60
 Inventory.Icon GR3NA0
@@ -155,8 +155,8 @@ Inventory.PickupMessage "Scavenaged a heatseeker"
 Actor PestilenceAmmo : Ammo
 {
 Translation  "0:255=%[0,0,0]:[0.5,1,0]"
-Inventory.Amount 1
-Inventory.MaxAmount 30
+Inventory.Amount 2
+Inventory.MaxAmount 40
 Ammo.BackpackAmount 0
 Ammo.BackpackMaxAmount 30
 Inventory.Icon GR3NA0
