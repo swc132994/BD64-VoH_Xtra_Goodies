@@ -1,3 +1,4 @@
+/*
 OptionMenu "BD64Menu"
 {
 	Title "BRUTAL DOOM 64 OPTIONS"
@@ -37,6 +38,7 @@ OptionMenu "BD64Menu"
 	StaticText ""
 	Submenu 	"Engine (GZD, Zand) Shortcuts",		"GZDShortcuts"
 }
+*/
 
 OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 {
