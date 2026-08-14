@@ -40,15 +40,15 @@ Scale 0.20
 		Goto Rest1
 	Rest1:
 		CAS6 I 350
-		TNT1 A 0 A_JumpIfInventory("LowGraphicsMode",1,"Stoping")
+		TNT1 A 0 A_JumpIfInventory("LowGraphicsMode",1,"stopping")
 		Loop
 	Rest2:
 		CAS6 J 350
-		TNT1 A 0 A_JumpIfInventory("LowGraphicsMode",1,"Stoping")
+		TNT1 A 0 A_JumpIfInventory("LowGraphicsMode",1,"stopping")
 		Loop
 	Rest3:
 		CAS6 K 350
-		TNT1 A 0 A_JumpIfInventory("LowGraphicsMode",1,"Stoping")
+		TNT1 A 0 A_JumpIfInventory("LowGraphicsMode",1,"stopping")
 		Loop
 	}
 }
