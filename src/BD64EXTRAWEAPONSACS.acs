@@ -1,101 +1,85 @@
 #library "XTRAPACK"
-#include "zcommon.acs"
-#include "ACSFunc.acs"
+#import "zcommon.bcs"
+#include "BCSFunc.acs"
 
+//WEAPON CVAR CHECKERS
 script "ChainsawSpawner" (void)
 {
-	static str WeaponType[] =
-	{
-		"SpawnSaw","SpawnAxe"
-	};
-	Delay(1);
-	SetActorState(0,WeaponType[GetCvar("Chainsaw_Spawner_Cvar") - 1]);
+	SetResultValue(GetCvar("Chainsaw_Spawner_Cvar"));
 }
 
 script "ShotgunSpawner" (void)
 {
-	static str WeaponType[] =
-	{
-		"SpawnShotgun","SpawnRevolver","SpawnSniperRifle"
-	};
-	Delay(1);
-	SetActorState(0,WeaponType[GetCvar("Revolver_Spawner_Cvar") - 1]);
+	SetResultValue(GetCvar("Revolver_Spawner_Cvar"));
 }
 
 script "SSGSpawner" (void)
 {
-	static str WeaponType[] =
-	{
-		"SpawnSSG","SpawnAssaultShotgun","SpawnUltraShotgun"
-	};
-	Delay(1);
-	SetActorState(0,WeaponType[GetCvar("AutoShotgun_Spawner_Cvar") - 1]);
+	SetResultValue(GetCvar("AutoShotgun_Spawner_Cvar"));
 }
 
 script "ChaingunExtraSpawner" (void)
 {
-	if(GetCvar("Chaingun_Spawner_Cvar") == 4) { SetActorState(0,"SpawnLMG"); }
+	SetResultValue(GetCvar("Chaingun_Spawner_Cvar"));
 }
 
 script "RLSpawner" (void)
 {
-	static str WeaponType[] =
-	{
-		"SpawnRocketLauncher","SpawnNadeLauncher",
-		"SpawnFlamethrower","SpawnRevenantLauncher"
-	};
-	Delay(1);
-	SetActorState(0,WeaponType[GetCvar("Immolator_Spawner_Cvar") - 1]);
+	SetResultValue(GetCvar("Immolator_Spawner_Cvar"));
 }
 
 script "PlasmaRifleExtraSpawner" (void)
 {
-	static str ExtraWeaponType[] =
-	{
-		"SpawnRuiner","SpawnNailgun"
-	};
-	Delay(1);
-	SetActorState(0,ExtraWeaponType[GetCvar("GaussCannon_Spawner_Cvar") - 3]);	
+	SetResultValue(GetCvar("GaussCannon_Spawner_Cvar"));
 }
 
 script "BFGExtraSpawner" (void)
 {
-	static str ExtraWeaponType[] =
-	{
-		"SpawnBFG10k"
-	};
-	Delay(1);
-	SetActorState(0,ExtraWeaponType[GetCvar("BFG_Spawner_Cvar") - 4]);
+	SetResultValue(GetCvar("BFG_Spawner_Cvar"));
 }
 
+//AMMO & POWERUP CVAR CHECKERS
 script "ExtraAmmoRandomACS" (void)
 {
-	static str AmmoType[] =
-	{
-		"SpawnNormal","SpawnBoth"
-	};
-	if(GetCvar("ExtraAmmo_Spawner_Cvar") == -1) { SetActorState(0,"AltSpawn"); }	
-	Delay(1);
-	SetActorState(0,AmmoType[GetCvar("ExtraAmmo_Spawner_Cvar") - 1]);
+	SetResultValue(GetCvar("ExtraAmmo_Spawner_Cvar"));
 }
 
 script "NukelauncherSpawnerACS" (void)
 {
-	if(GetCvar("NuclearMissile_Spawner_Cvar") == 0)
-	{
-		SetActorState(0,"PowerUpChoose");
-		SetActorState(0,"SpawnNormal");
-	}
+	SetResultValue(GetCvar("NuclearMissile_Spawner_Cvar"));
 }
 
-script "NukelauncherSpawnerACS_2" (void)
+script "ExtraSpheresACS" (void)
 {
-	if(GetCvar("NuclearMissile_Spawner_Cvar") == 0)
-	{
-		SetActorState(0,"Spawn2");
-	}
+	SetResultValue(GetCvar("ExtraSpheres_CVar"));
 }
 
+script "InfraredNewRandomACS" (void)
+{
+	SetResultValue(GetCvar("Crucifix_Spawner_CVar"));
+}
+
+script "AllMapNewRandomACS" (void)
+{
+	SetResultValue(GetCvar("MapRadar_Spawner_CVar"));
+}
+
+script "BlueArmorsNewRandomACS" (void)
+{
+	SetResultValue(GetCvar("RedArmor_Spawner_CVar"));
+}
+
+script "RadsuitNewRandomACS" (void)
+{
+	SetResultValue(GetCvar("Biosuit_Spawner_CVar"));
+}
+
+script "WpnPowerExtra" (void)
+{
+	SetResultValue(GetCvar("WpnPower_Spawner_Cvar"));
+}
+
+//UTILITY & PRESET SCRIPTS
 script "Striker12ACS" Enter
 {
 	if(GetCvar("Striker12Cvar") == 1)
@@ -103,85 +87,23 @@ script "Striker12ACS" Enter
 		SetActorState(0,"ShowStriker12");
 	}
 
-SetInventory("ProtectaSwitchToken",getcvar("Striker12Cvar"));
-Delay(64);
-Restart;
+	SetInventory("ProtectaSwitchToken",GetCvar("Striker12Cvar"));
+	Delay(64);
+	Restart;
 }
 
-Script "PlayerDeathScript" Death
-	{
+script "PlayerDeathScript" Death
+{
 	Delay(1);
 	TakeInventory("ClassicChainsawToken",1);
 	TakeInventory("ClassicRLToken",1);
 	TakeInventory("ProtectaSwitchToken",1);
-	}
-
-//extra powerups
-
-script "ExtraSpheresACS" (void)
-{
-	Switch(GetCvar("ExtraSpheres_CVar"))
-	{
-		Case 1: SetActorState(0,"SpawnNormal"); break;
-		Case 2: SetActorState(0,"SpawnExtra"); break;
-	}
-	Delay(1);
-}
-
-script "InfraredNewRandomACS" (void)
-{
-	Switch(GetCvar("Crucifix_Spawner_CVar"))
-	{
-		Case 1: SetActorState(0,"SpawnNormal"); break;
-		Case 2: SetActorState(0,"SpawnExtra"); break;
-	}
-	Delay(1);
-}
-
-script "AllMapNewRandomACS" (void)
-{
-	Switch(GetCvar("MapRadar_Spawner_CVar"))
-	{
-		Case 1: SetActorState(0,"SpawnNormal"); break;
-		Case 2: SetActorState(0,"SpawnExtra"); break;
-	}
-	Delay(1);
-}
-
-script "BlueArmorsNewRandomACS" (void)
-{
-	Switch(GetCvar("RedArmor_Spawner_CVar"))
-	{
-		Case 1: SetActorState(0,"SpawnNormal"); break;
-		Case 2: SetActorState(0,"SpawnExtra"); break;
-	}
-	Delay(1);
-}
-
-script "RadsuitNewRandomACS" (void)
-{
-	Switch(GetCvar("Biosuit_Spawner_CVar"))
-	{
-		Case 1: SetActorState(0,"SpawnNormal"); break;
-		Case 2: SetActorState(0,"SpawnExtra"); break;
-	}
-	Delay(1);
-}
-
-script "WpnPowerExtra" (void)
-{
-	Switch(GetCvar("WpnPower_Spawner_Cvar"))
-	{
-		Case 1: SetActorState(0,"PowerUpChoose"); break;
-		Case 2: SetActorState(0,"SpawnDemonKey"); break;
-	}
-	Delay(1);
 }
 
 script "ExtraOriginalCvars" (void) net
 {
 	SetCvar("ExtraSpheres_CVar",1);
-	SetCvar("Crucifix_Spawner_Cvar",1);
+	SetCvar("Crucifix_Spawner_CVar",1);
 	SetCvar("MapRadar_Spawner_CVar",1);
 	SetCvar("Biosuit_Spawner_CVar",1);
 	SetCvar("RedArmor_Spawner_CVar",1);
@@ -198,7 +120,7 @@ script "ExtraOriginalCvars" (void) net
 script "ExtraClassicCvars" (void) net
 {
 	SetCvar("ExtraSpheres_CVar",1);
-	SetCvar("Crucifix_Spawner_Cvar",1);
+	SetCvar("Crucifix_Spawner_CVar",1);
 	SetCvar("MapRadar_Spawner_CVar",1);
 	SetCvar("Biosuit_Spawner_CVar",1);
 	SetCvar("RedArmor_Spawner_CVar",1);
@@ -215,7 +137,7 @@ script "ExtraClassicCvars" (void) net
 script "ExtraEnhancedCvars" (void) net
 {
 	SetCvar("ExtraSpheres_CVar",2);
-	SetCvar("Crucifix_Spawner_Cvar",1);
+	SetCvar("Crucifix_Spawner_CVar",1);
 	SetCvar("MapRadar_Spawner_CVar",2);
 	SetCvar("Biosuit_Spawner_CVar",2);
 	SetCvar("RedArmor_Spawner_CVar",1);
@@ -232,7 +154,7 @@ script "ExtraEnhancedCvars" (void) net
 script "ExtraRandomCvars" (void) net
 {
 	SetCvar("ExtraSpheres_CVar",0);
-	SetCvar("Crucifix_Spawner_Cvar",0);
+	SetCvar("Crucifix_Spawner_CVar",0);
 	SetCvar("MapRadar_Spawner_CVar",0);
 	SetCvar("Biosuit_Spawner_CVar",0);
 	SetCvar("RedArmor_Spawner_CVar",0);

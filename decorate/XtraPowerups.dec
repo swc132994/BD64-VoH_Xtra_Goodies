@@ -271,7 +271,7 @@ Inventory.Pickupmessage "You got the UltraArmour!"
 	Spawn:
 		ARM6 A 1
 	SpawnLoop:
-		"####" A 3  Light("Blursphere") ACS_NamedExecuteAlways("AlphaPickupACS")
+		"####" A 3 Light("Blursphere") ACS_NamedExecuteAlways("AlphaPickupACS")
 	SpawnNormal:
 		ARM6 A 6 Light("Blursphere")
 		ARM6 B 7 bright Light("Blursphere")
