@@ -3,12 +3,12 @@ Actor 64SpeedloaderAmmo : Ammo
 {
 Scale 0.82
 Inventory.PickupSound "IPICK"
-Inventory.PickupMessage "Picked up a speedloader."
+Inventory.PickupMessage "$XT_GOT_SPEEDLOADER"
 Inventory.Amount 6
 Inventory.MaxAmount 30
 Ammo.BackpackAmount 6
 Ammo.BackpackMaxAmount 60
-Tag "Revolver Speedloader"
+Tag "$XT_TAG_SPEEDLOADER"
 Inventory.Icon "HI04Z0"
 	states
 	{

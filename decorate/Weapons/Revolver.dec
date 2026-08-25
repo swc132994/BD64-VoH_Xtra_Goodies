@@ -1,8 +1,8 @@
 Actor RevolverSpawner : CustomInventory
 {
 Scale 0.87
-Tag "Double-Action Revolver"
-Inventory.PickupMessage "You got the Double-Action Revolver! (Slot 2)"
+Tag "$XT_TAG_REVOLVER"
+Inventory.PickupMessage "$XT_GOT_REVOLVER"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -40,9 +40,9 @@ Weapon.SelectionOrder 1300
 Weapon.AmmoUse 1
 Weapon.AmmoGive 6
 Weapon.AmmoType "64SpeedloaderAmmo"
-Inventory.PickupMessage "You got the Double-Action Revolver! (Slot 2)"
-Obituary "%o was picked off by %k's Double-Action Revolver."
-Tag "Double-Action Revolver"
+Inventory.PickupMessage "$XT_GOT_REVOLVER"
+Obituary "$XT_OB_REVOLVER"
+Tag "$XT_TAG_REVOLVER"
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +WEAPON.NOAUTOFIRE
@@ -117,9 +117,9 @@ Weapon.AmmoType1 "64SpeedloaderAmmo"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 0
 Weapon.AmmoType2 "RevolverAmmo"
-Inventory.PickupMessage "You got the Double-Action Revolver! (Slot 2)"
-Obituary "%o was picked off by %k's Double-Action Revolver."
-Tag "Double-Action Revolver"
+Inventory.PickupMessage "$XT_GOT_REVOLVER"
+Obituary "$XT_OB_REVOLVER"
+Tag "$XT_TAG_REVOLVER"
 Inventory.ForbiddenTo "64DoomPlayer"
 VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +WEAPON.NOAUTOFIRE
@@ -180,7 +180,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"TriggerDown")
 		Goto Ready
 	Select:
-		TNT1 A 0 A_Print("Weapon Special Available",1)
+		TNT1 A 0 A_Print("$WM_SPECIAL",1)
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",1,"Select2")
 		TNT1 A 0 A_PlaySound("REVSEL",CHAN_WEAPON)
 		DARD ABCD 1 Offset(0,32)	//empty select
@@ -255,7 +255,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		DARI C 1 Offset(0,35)
 		DARI D 1 Offset(0,36)
 		DARI E 1 Offset(0,37) A_PlaySound("REVCOK1",CHAN_AUTO)
-		DARI F 1 Offset(0,38) A_Print("Cocked",2)
+		DARI F 1 Offset(0,38) A_Print("$WM_COCKED",2)
 		DARI G 1 Offset(0,37)
 		DARI H 1 Offset(0,36)
 		DARI I 1 Offset(0,35)
@@ -268,7 +268,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		DARI H 1 Offset(0,35)
 		DARI G 1 Offset(0,36)
 		DARI F 1 Offset(0,37) A_PlaySound("REVCOK2",CHAN_AUTO)
-		DARI E 1 Offset(0,38) A_Print("Uncocked",2)
+		DARI E 1 Offset(0,38) A_Print("$WM_UNCOCKED",2)
 		DARI D 1 Offset(0,37)
 		DARI C 1 Offset(0,36)
 		DARI B 1 Offset(0,35)
@@ -422,7 +422,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 	FanningFire:
 		TNT1 A 0 A_TakeInventory("WeaponSpecialAction",0)
 		TNT1 A 0 A_JumpIfInventory("PowerStrength",1,2)
-		TNT1 A 0 A_Print("Need Berserk!",2)
+		TNT1 A 0 A_Print("$WM_NEEBERSERK",2)
 		Goto Ready
 		DARN ABCDE 1
 		Goto ActualFanningFire

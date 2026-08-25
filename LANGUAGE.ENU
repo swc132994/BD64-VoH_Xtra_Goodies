@@ -1,0 +1,26 @@
+//=====================================
+//English strings
+//=====================================
+
+[enu default]
+
+///////////////////////////////////////
+//WEAPONS & AMMO
+///////////////////////////////////////
+
+//Revolver ammo
+XT_GOT_SPEEDLOADER = "Picked up a \cpspeedloadER\c-";
+XT_TAG_SPEEDLOADER = "\cpSpeedloader";
+
+//Revolver
+XT_TAG_REVOLVER = "\cmRevolver";
+XT_GOT_REVOLVER = "You got the \cmRevolver\c-! (Slot 2)";
+XT_OB_REVOLVER = "%o was picked off by \cg%k\c-'s \cmrevolver\c-.";
+
+///////////////////////////////////////
+//WEAPON MESSAGES
+///////////////////////////////////////
+
+WM_COCKED = "Cocked";
+WM_UNCOCKED = "Uncocked";
+WM_NEEBERSERK = "Need Berserk!";
