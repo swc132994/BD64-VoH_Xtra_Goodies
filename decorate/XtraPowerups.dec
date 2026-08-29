@@ -151,16 +151,16 @@ Tag "Biological Suit"
 	States
 	{
 	Spawn:
-		BIOS A 1
-	SpawnLoop:
-		"####" "#" 3 Light("Blursphere") ACS_NamedExecuteAlways("AlternativeAmmoPickupSpritesACS")
-	SpawnNormal:
+		BIOS A 0 Bright Light("Blursphere")
+	ACSCheck:
+		"####" "#" 0 A_JumpIf(CallACS("AltAmmoSpritesACS") == 2,"AltSpawn")
+	ShowNormal:
 		BIOS A 6 Bright Light("Blursphere")
 		BIOS B 5 Light("Blursphere")
-		Goto SpawnLoop
+		Goto ACSCheck
 	AltSpawn:
-		BIOS C 5
-		Goto SpawnLoop
+		BIOS C 32
+		Goto ACSCheck
 	Pickup:
 		TNT1 A 0 A_GiveInventory("BioArmor",1)
 		TNT1 A 0 A_GiveInventory("BioSuitFeet",1)
@@ -269,17 +269,17 @@ Inventory.Pickupmessage "You got the UltraArmour!"
 	States
 	{
 	Spawn:
-		ARM6 A 1
-	SpawnLoop:
-		"####" A 3 Light("Blursphere") ACS_NamedExecuteAlways("AlphaPickupACS")
-	SpawnNormal:
+		ARM6 A 0 Light("Blursphere")
+	ACSCheck:
+		"####" "#" 0 A_JumpIf(CallACS("AlphaSpritesACS") == 1,"ShowAlpha")
+	ShowNormal:
 		ARM6 A 6 Light("Blursphere")
-		ARM6 B 7 bright Light("Blursphere")
-		Goto SpawnLoop
-	AlphaSpawn:
+		ARM6 B 7 Bright Light("Blursphere")
+		Goto ACSCheck
+	ShowAlpha:
 		ARM7 A 6 Light("Blursphere")
 		ARM7 B 7 Bright Light("Blursphere")
-		Goto SpawnLoop
+		Goto ACSCheck
 	}
 }
 
