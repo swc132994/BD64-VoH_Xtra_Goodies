@@ -132,7 +132,7 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 	Option "Skip Weapon Reload Sequences (Press \"Apply Changes\") =","NoReloadCvar","YesNo"
 		StaticText "Skip weapon reload animation sequences (tactical/modern modes ONLY).",1
 		StaticText ""
-	Option "Low Ammo SFX =","LowAmmoSFX","YesNo"
+	Option "Low Ammo SFX =","LowAmmoSFXCvar","YesNo"
 		StaticText "Allows you to toggle the sound warning when ammo is too low.",1
 		StaticText "(tactical/modern modes ONLY)",1
 		StaticText ""

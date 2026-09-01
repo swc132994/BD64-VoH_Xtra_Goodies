@@ -34,21 +34,20 @@ Scale 0.20
 	Death:
 		TNT1 A 0 A_Stop
 		TNT1 A 0 ThrustThingZ(0,1,0,1)
-		TNT1 A 0 ACS_NamedExecuteAlways("LowBloodCheckerACS")//Check Effects
 		TNT1 A 0 A_SpawnItemEx("MicroSmokeColumn")
 		TNT1 A 0 A_Jump(256,"Rest1","Rest2","Rest3")
 		Goto Rest1
 	Rest1:
 		CAS6 I 350
-		TNT1 A 0 A_JumpIfInventory("LowGraphicsMode",1,"stopping")
+		TNT1 A 0 A_JumpIf(CallACS("GoreCleanerACS"),"Stopping")
 		Loop
 	Rest2:
 		CAS6 J 350
-		TNT1 A 0 A_JumpIfInventory("LowGraphicsMode",1,"stopping")
+		TNT1 A 0 A_JumpIf(CallACS("GoreCleanerACS"),"Stopping")
 		Loop
 	Rest3:
 		CAS6 K 350
-		TNT1 A 0 A_JumpIfInventory("LowGraphicsMode",1,"stopping")
+		TNT1 A 0 A_JumpIf(CallACS("GoreCleanerACS"),"Stopping")
 		Loop
 	}
 }
