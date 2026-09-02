@@ -131,8 +131,8 @@ PROJECTILE
 		TNT1 AAAA 0 A_CustomMissile("ExplosionParticleGreen",0,0,random(0,360),2,random(0,360))
 		TNT1 A 0 A_SpawnItemEx("DetectFloorCrater")
 		TNT1 A 0 A_SpawnItemEx("DetectCeilCrater")
-		TNT1 AAAA 0 A_SpawnItemEx("TinyBurningPieceGreen2",random(-40,40),random(-40,40),0,0,0,0,0,SXF_NOPOINTERS)
-		TNT1 AAAA 0 A_SpawnItemEx("TinyBurningPieceGreen",random(-15,15),random(-15,15),0,0,0,0,0,SXF_NOPOINTERS)
+		TNT1 AAAA 0 A_SpawnItemEx("10kTinyBurningPiece2",random(-40,40),random(-40,40))
+		TNT1 AAAA 0 A_SpawnItemEx("10kTinyBurningPiece",random(-15,15),random(-15,15))
 		TNT1 A 0 Radius_Quake(3,4,0,150,0)
 		TNT1 A 0 A_PlaySound("Weapons/BFG10KZ",CHAN_ITEM)
 		TNT1 A 0 A_SetScale(0.8,0.8)
@@ -141,6 +141,39 @@ PROJECTILE
 		BFE1 C 2 Bright A_FadeOut(0.142857)
 		BFE1 DEF 1 Bright A_FadeOut(0.142857)
 		Stop
+	}
+}
+
+ACTOR 10kTinyBurningPiece : TinyBurningPiece
+{
+Translation "0:255=%[0,0,0]:[0.00,1.00,0.50]"
+Scale 1.1
+Alpha 0.55
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_JumpIf(waterlevel > 1,"Splash")
+		CFCF ABCDEFG 1 Bright
+		TNT1 A 0 A_Explode(Random(0,2),64)
+		CFCF HIJKLM 1 Bright
+		TNT1 A 0 A_Jump(24,"StopBurning")
+		Loop
+	}
+}
+
+ACTOR 10kTinyBurningPiece2 : TinyBurningPiece
+{
+Translation "0:255=%[0,0,0]:[0.00,1.00,0.50]"
+Scale 0.7
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_JumpIf(waterlevel > 1,"Splash")
+		CFCF ABCDEFG 1 Bright
+		TNT1 A 0 A_Explode(Random(0,1),32)
+		CFCF HIJKLM 1 Bright
+		TNT1 A 0 A_Jump(24,"StopBurning")
+		Loop
 	}
 }
 
