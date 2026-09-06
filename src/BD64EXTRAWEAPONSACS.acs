@@ -80,24 +80,59 @@ script "WpnPowerExtra" (void)
 }
 
 //UTILITY & PRESET SCRIPTS
-script "Striker12ACS" Enter
+script "CheckStriker12CvarACS" (void)
 {
-	if(GetCvar("Striker12Cvar") == 1)
-	{
-		SetActorState(0,"ShowStriker12");
-	}
-
-	SetInventory("ProtectaSwitchToken",GetCvar("Striker12Cvar"));
-	Delay(64);
-	Restart;
+	SetResultValue(GetCvar("Striker12Cvar"));
 }
 
-script "PlayerDeathScript" Death
+script "ProtectaSwitchACS" (int activeIsProtecta,int isTactical)
 {
-	Delay(1);
-	TakeInventory("ClassicChainsawToken",1);
-	TakeInventory("ClassicRLToken",1);
-	TakeInventory("ProtectaSwitchToken",1);
+	int SwitchWeapon = GetCVar("Striker12Cvar");
+
+	if (isTactical) //Tactical class variant
+	{
+		if (!activeIsProtecta && SwitchWeapon)	//from assault to protecta
+		{
+			GiveInventory("64ProtectaTactical",1);
+			SetWeapon("64ProtectaTactical");
+			TakeInventory("64AssaultShotgunTactical",1);
+			SetResultValue(1);
+		}
+		else if (activeIsProtecta && !SwitchWeapon)	//from protecta to assault
+		{
+			int shellCount = CheckInventory("64BlueShell");
+			GiveInventory("64AssaultShotgunTactical",1);
+			SetInventory("64BlueShell",shellCount);
+			SetWeapon("64AssaultShotgunTactical");
+			TakeInventory("64ProtectaTactical",1);
+			SetResultValue(1);
+		}
+		else
+		{
+			SetResultValue(0);
+		}
+	}
+	else //Classic class variant
+	{
+		if (!activeIsProtecta && SwitchWeapon)
+		{
+			GiveInventory("64Protecta",1);
+			SetWeapon("64Protecta");
+			TakeInventory("64AssaultShotgun",1);
+			SetResultValue(1);
+		}
+		else if (activeIsProtecta && !SwitchWeapon)
+		{
+			GiveInventory("64AssaultShotgun",1);
+			SetWeapon("64AssaultShotgun");
+			TakeInventory("64Protecta",1);
+			SetResultValue(1);
+		}
+		else
+		{
+			SetResultValue(0);
+		}
+	}
 }
 
 script "ExtraOriginalCvars" (void) net

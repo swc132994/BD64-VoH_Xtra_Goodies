@@ -124,7 +124,7 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 	Option "Enable Weapon Warm Up Animations =","WeaponsWarmUpCvar","YesNo"
 		StaticText "Show weapon warm up animations on first pickup (tactical/modern modes ONLY).",1
 		StaticText ""
-	Option "Classic Look Chainsaw for Tactical/Modern =","VanillaChainsawCvar","YesNo"
+	Option "Classic Look Chainsaw for Tactical/Modern =","ClassicChainsawCvar","YesNo"
 	Option "Classic Look Chaingun for Tactical/Modern =","ClassicChaingunCvar","YesNo"
 	Option "Classic Look Rocket Launcher for Tactical/Modern =","ClassicRLCvar","YesNo"
 		StaticText "Options to switch between classic or modernised weapons.",1

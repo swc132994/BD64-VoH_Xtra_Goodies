@@ -89,7 +89,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		AXEG AAAA 0 A_FireCustomMissile("ChargeAxeAttack",0,0)
 		Goto FireEndCharge4
 	FireHitBerserk:
-		AXEG G 1 A_SetPitch(pitch+2)
+		AXEG G 1 A_SetPitch(pitch+2.0)
 		AXEG A 0 A_JumpIfInventory("AxeCharge",25,"FireHitBerserkCharge2")
 		AXEG A 0 A_FireCustomMissile("SuperAxeAttack",0,0)
 		Goto FireEnd
@@ -205,10 +205,10 @@ VisibleToPlayerClass "Modern","Tactical64DoomPlayer","Tactical64DoomPlayer_P"
 		TNT1 A 0 A_JumpIfInventory("Stamina",100,"AxeTired")
 		TNT1 A 0 A_Refire
 	FinishHold:
-		AXEG D 1 A_SetPitch(pitch+2)
+		AXEG D 1 A_SetPitch(pitch+2.0)
 		AXEG F 1 A_PlaySound("weapons/axeswing",CHAN_WEAPON)
 		AXEG A 0 A_JumpIfInventory("PowerStrength",1,"FireHitBerserk")
-		AXEG G 1 A_SetPitch(pitch+2)
+		AXEG G 1 A_SetPitch(pitch+2.0)
 		AXEF AB 1 
 		AXEG A 0 A_JumpIfInventory("AxeCharge",25,"FireHitCharge2")
 		AXEG A 0 A_FireCustomMissile("ChargeAxeAttack",0,0)
@@ -228,7 +228,7 @@ VisibleToPlayerClass "Modern","Tactical64DoomPlayer","Tactical64DoomPlayer_P"
 		AXEG AAAA 0 A_FireCustomMissile("ChargeAxeAttack",0,0)
 		Goto FireEnd
 	FireHitBerserk:
-		AXEG G 1 A_SetPitch(pitch+2)
+		AXEG G 1 A_SetPitch(pitch+2.0)
 		AXEG A 0 A_JumpIfInventory("AxeCharge",25,"FireHitBerserkCharge2")
 		AXEG A 0 A_FireCustomMissile("SuperAxeAttack",0,0)
 		Goto FireEnd
@@ -247,13 +247,13 @@ VisibleToPlayerClass "Modern","Tactical64DoomPlayer","Tactical64DoomPlayer_P"
 		AXEG AAAA 0 A_FireCustomMissile("SuperAxeAttack",0,0)
 	FireEnd:
 		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
-		AXEF C 1 A_SetPitch(pitch+2)
+		AXEF C 1 A_SetPitch(pitch+2.0)
 		AXEF D 1
-		AXEF E 1 A_SetPitch(pitch+2)
+		AXEF E 1 A_SetPitch(pitch+2.0)
 		AXEF FG 1
-		TNT1 AA 1 A_SetPitch(pitch+2)
+		TNT1 AA 1 A_SetPitch(pitch+2.0)
 		TNT1 A 2
-		TNT1 AAAA 1 A_SetPitch(pitch-2)
+		TNT1 AAAA 1 A_SetPitch(pitch-2.0)
 		AXES HGFE 1
 		Goto Ready
 	AxeTired:
