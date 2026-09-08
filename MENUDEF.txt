@@ -115,11 +115,8 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 	StaticText "Some changes are not initialized automatically",1
 	StaticText "Press \"Apply Changes\" for the changes to take effect",1
 	Command "Apply Changes","PukeName BD64Respawn"
-	StaticText " "
+	StaticText ""
 	StaticText "---------------------------- Weapons Functions ------------------------------",1
-		StaticText " "
-	Option "Enable Traditional Shotgun/SSG Animations =","VWeaponCvar","YesNo"
-		StaticText "Show classic Doom 64 Shotgun/SSG animations (classical mode).",1
 		StaticText ""
 	Option "Enable Weapon Warm Up Animations =","WeaponsWarmUpCvar","YesNo"
 		StaticText "Show weapon warm up animations on first pickup (tactical/modern modes ONLY).",1

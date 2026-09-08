@@ -16,14 +16,14 @@ Inventory.PickupSound "WPICK"
 		TNT1 A 0 A_GiveInventory("64NadeLauncher",1)
 		Stop
 	Pickup2:
-		TNT1 A 0 A_GiveInventory("64NadeLauncherTACTICAL",1)
+		TNT1 A 0 A_GiveInventory("64NadeLauncherTactical",1)
 		Stop
 	DMSpawn:
 		TNT1 A 0 A_ChangeFlag("THRUACTORS",TRUE)
 	DMSpawnLoop:
 		TNT1 A 0 A_SpawnItemEx("TeleportationFogObject")
 		TNT1 A 0 A_SpawnItemEx("64NadeLauncher",0,0,0,0,0,0,0,SXF_SETMASTER)
-		TNT1 A 0 A_SpawnItemEx("64NadeLauncherTACTICAL",0,0,0,0,0,0,0,SXF_SETMASTER)
+		TNT1 A 0 A_SpawnItemEx("64NadeLauncherTactical",0,0,0,0,0,0,0,SXF_SETMASTER)
 		TNT1 A 1050
 		TNT1 A 0 A_RemoveChildren(TRUE)
 		Loop
@@ -79,7 +79,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 	}
 }
 
-Actor 64NadeLauncherTACTICAL : Brutal64Weapon
+Actor 64NadeLauncherTactical : Brutal64Weapon
 {
 Scale 0.8
 Weapon.SlotNumber 5

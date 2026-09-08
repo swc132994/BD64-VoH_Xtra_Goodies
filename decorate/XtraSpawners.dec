@@ -29,8 +29,7 @@ Scale 0.87
 		TNT1 A 0 A_JumpIf(CallACS("ShotgunSpawner") == 1,"SpawnShotgun")
 		TNT1 A 0 A_JumpIf(CallACS("ShotgunSpawner") == 2,"SpawnRevolver")
 		TNT1 A 0 A_JumpIf(CallACS("ShotgunSpawner") == 3,"SpawnSniperRifle")
-		TNT1 A 0 A_Jump(64,"SpawnRevolver")    //25%
-		TNT1 A 0 A_Jump(64,"SpawnSniperRifle") //25%
+		TNT1 A 0 A_Jump(64,"SpawnRevolver","SpawnSniperRifle") //25%
 		Goto SpawnShotgun
 	SpawnShotgun:
 		TNT1 A 1 A_SpawnItemEx("Shotgunspawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -54,8 +53,8 @@ Scale 0.87
 		TNT1 A 0 A_JumpIf(CallACS("SSGSpawner") == 1,"SpawnSSG")
 		TNT1 A 0 A_JumpIf(CallACS("SSGSpawner") == 2,"SpawnAssaultShotgun")
 		TNT1 A 0 A_JumpIf(CallACS("SSGSpawner") == 3,"SpawnUltraShotgun")
-		TNT1 A 0 A_Jump(38,"SpawnAssaultShotgun") //15%
 		TNT1 A 0 A_Jump(8,"SpawnUltraShotgun")    //3%
+		TNT1 A 0 A_Jump(38,"SpawnAssaultShotgun") //15%
 		Goto SpawnSSG
 	SpawnSSG:
 		TNT1 A 1 A_SpawnItemEx("SuperShotgunSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -80,9 +79,8 @@ Scale 0.82
 		TNT1 A 0 A_JumpIf(CallACS("ChaingunExtraSpawner") == 2,"SpawnRifle")
 		TNT1 A 0 A_JumpIf(CallACS("ChaingunExtraSpawner") == 3,"SpawnSMG")
 		TNT1 A 0 A_JumpIf(CallACS("ChaingunExtraSpawner") == 4,"SpawnLMG")
-		TNT1 A 0 A_Jump(38,"SpawnLMG")   //15%
-		TNT1 A 0 A_Jump(85,"SpawnSMG")   //33%
-		TNT1 A 0 A_Jump(85,"SpawnRifle") //33%
+		TNT1 A 0 A_Jump(38,"SpawnLMG") //15%
+		TNT1 A 0 A_Jump(85,"SpawnSMG","SpawnRifle") //33%
 		Goto SpawnChaingun
 	SpawnChaingun:
 		TNT1 A 1 A_SpawnItemEx("ChaingunSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -110,9 +108,7 @@ Scale 0.82
 		TNT1 A 0 A_JumpIf(CallACS("RLSpawner") == 2,"SpawnNadeLauncher")
 		TNT1 A 0 A_JumpIf(CallACS("RLSpawner") == 3,"SpawnFlamethrower")
 		TNT1 A 0 A_JumpIf(CallACS("RLSpawner") == 4,"SpawnRevenantLauncher")
-		TNT1 A 0 A_Jump(51,"SpawnNadeLauncher")     //20%
-		TNT1 A 0 A_Jump(51,"SpawnFlamethrower")     //20%
-		TNT1 A 0 A_Jump(51,"SpawnRevenantLauncher") //20%
+		TNT1 A 0 A_Jump(51,"SpawnNadeLauncher","SpawnFlamethrower","SpawnRevenantLauncher") //20%
 		Goto SpawnRocketLauncher
 	SpawnRocketLauncher:
 		TNT1 A 1 A_SpawnItemEx("RocketLauncherSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -140,9 +136,8 @@ Scale 0.82
 		TNT1 A 0 A_JumpIf(CallACS("PlasmaRifleExtraSpawner") == 2,"SpawnGaussCannon")
 		TNT1 A 0 A_JumpIf(CallACS("PlasmaRifleExtraSpawner") == 3,"SpawnRuiner")
 		TNT1 A 0 A_JumpIf(CallACS("PlasmaRifleExtraSpawner") == 4,"SpawnNailgun")
-		TNT1 A 0 A_Jump(38,"SpawnRuiner")      //15%
-		TNT1 A 0 A_Jump(64,"SpawnGaussCannon") //25%
-		TNT1 A 0 A_Jump(64,"SpawnNailgun")     //25%
+		TNT1 A 0 A_Jump(38,"SpawnRuiner") //15%
+		TNT1 A 0 A_Jump(64,"SpawnGaussCannon","SpawnNailgun") //25%
 		Goto SpawnPlasmaRifle
 	SpawnPlasmaRifle:
 		TNT1 A 1 A_SpawnItemEx("PlasmaRifleSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -170,9 +165,8 @@ Scale 0.9
 		TNT1 A 0 A_JumpIf(CallACS("BFGExtraSpawner") == 2,"SpawnUnmaker")
 		TNT1 A 0 A_JumpIf(CallACS("BFGExtraSpawner") == 3,"SpawnLasergun")
 		TNT1 A 0 A_JumpIf(CallACS("BFGExtraSpawner") == 4,"SpawnBFG10k")
-		TNT1 A 0 A_Jump(38,"SpawnBFG10k")   //15%
-		TNT1 A 0 A_Jump(85,"SpawnLasergun") //33%
-		TNT1 A 0 A_Jump(85,"SpawnUnmaker")  //33%
+		TNT1 A 0 A_Jump(38,"SpawnBFG10k") //15%
+		TNT1 A 0 A_Jump(85,"SpawnLasergun","SpawnUnmaker") //33%
 		Goto SpawnBFG9000
 	SpawnBFG9000:
 		TNT1 A 1 A_SpawnItemEx("BFG9000Spawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -200,11 +194,10 @@ Scale 0.82
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 1,"SpawnNormal")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 2,"SpawnBoth")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == -1,"AltSpawn")
-		TNT1 A 0 A_Jump(38,"SpawnExtra") //15%
-		TNT1 A 0 A_Jump(38,"SpawnBoth")  //15%
+		TNT1 A 0 A_Jump(38,"SpawnExtra","SpawnBoth") //15%
 		Goto SpawnNormal
 	AltSpawn:
-		TNT1 A 0 A_Jump(38,"SpawnBoth")  //15%
+		TNT1 A 0 A_Jump(38,"SpawnBoth") //15%
 		Goto SpawnNormal
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Clip",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -229,11 +222,10 @@ Scale 0.82
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 1,"SpawnNormal")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 2,"SpawnBoth")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == -1,"AltSpawn")
-		TNT1 A 0 A_Jump(38,"SpawnExtra") //15%
-		TNT1 A 0 A_Jump(38,"SpawnBoth")  //15%
+		TNT1 A 0 A_Jump(38,"SpawnExtra","SpawnBoth") //15%
 		Goto SpawnNormal
 	AltSpawn:
-		TNT1 A 0 A_Jump(38,"SpawnBoth")  //15%
+		TNT1 A 0 A_Jump(38,"SpawnBoth") //15%
 		Goto SpawnNormal
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Shell",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -258,11 +250,11 @@ Scale 0.82
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 1,"SpawnNormal")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 2,"SpawnBoth")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == -1,"AltSpawn")
-		TNT1 A 0 A_Jump(38,"SpawnExtra") //15%
-		TNT1 A 0 A_Jump(38,"SpawnBoth")  //15%
+		TNT1 A 0 A_Jump(38,"SpawnExtra","SpawnBoth") //15%
+
 		Goto SpawnNormal
 	AltSpawn:
-		TNT1 A 0 A_Jump(38,"SpawnBoth")  //15%
+		TNT1 A 0 A_Jump(38,"SpawnBoth") //15%
 		Goto SpawnNormal
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64ShellBox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -288,11 +280,10 @@ Scale 0.82
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 1,"SpawnNormal")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 2,"SpawnBoth")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == -1,"AltSpawn")
-		TNT1 A 0 A_Jump(2,"SpawnExtra") //1% (ONLY if nuke enabled)
-		TNT1 A 0 A_Jump(2,"SpawnBoth")  //1% (ONLY if nuke enabled)
+		TNT1 A 0 A_Jump(2,"SpawnExtra","SpawnBoth") //1% (ONLY if nuke enabled)
 		Goto SpawnNormal
 	AltSpawn:
-		TNT1 A 0 A_Jump(2,"SpawnBoth")  //1% (ONLY if nuke enabled)
+		TNT1 A 0 A_Jump(2,"SpawnBoth") //1% (ONLY if nuke enabled)
 		Goto SpawnNormal
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64RocketAmmo",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -318,11 +309,10 @@ Scale 0.82
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 1,"SpawnNormal")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 2,"SpawnBoth")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == -1,"AltSpawn")
-		TNT1 A 0 A_Jump(2,"SpawnExtra") //1% (ONLY if nuke enabled)
-		TNT1 A 0 A_Jump(2,"SpawnBoth")  //1% (ONLY if nuke enabled)
+		TNT1 A 0 A_Jump(2,"SpawnExtra","SpawnBoth") //1% (ONLY if nuke enabled)
 		Goto SpawnNormal
 	AltSpawn:
-		TNT1 A 0 A_Jump(2,"SpawnBoth")  //1% (ONLY if nuke enabled)
+		TNT1 A 0 A_Jump(2,"SpawnBoth") //1% (ONLY if nuke enabled)
 		Goto SpawnNormal
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Rocketbox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -347,11 +337,10 @@ Scale 0.82
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 1,"SpawnNormal")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 2,"SpawnBoth")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == -1,"AltSpawn")
-		TNT1 A 0 A_Jump(77,"SpawnExtra") //30%
-		TNT1 A 0 A_Jump(77,"SpawnBoth")  //30%
+		TNT1 A 0 A_Jump(77,"SpawnExtra","SpawnBoth") //30%
 		Goto SpawnNormal
 	AltSpawn:
-		TNT1 A 0 A_Jump(77,"SpawnBoth")  //30%
+		TNT1 A 0 A_Jump(77,"SpawnBoth") //30%
 		Goto SpawnNormal
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Cell",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -376,11 +365,10 @@ Scale 0.82
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 1,"SpawnNormal")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == 2,"SpawnBoth")
 		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS") == -1,"AltSpawn")
-		TNT1 A 0 A_Jump(77,"SpawnExtra") //30%
-		TNT1 A 0 A_Jump(77,"SpawnBoth")  //30%
+		TNT1 A 0 A_Jump(77,"SpawnExtra","SpawnBoth") //30%
 		Goto SpawnNormal
 	AltSpawn:
-		TNT1 A 0 A_Jump(77,"SpawnBoth")  //30%
+		TNT1 A 0 A_Jump(77,"SpawnBoth") //30%
 		Goto SpawnNormal
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64CellPack",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -425,7 +413,7 @@ Scale 0.82
 		PINS A 0
 		TNT1 A 0 A_JumpIf(CallACS("WpnPowerExtra") == 1,"PowerupChoose")	//Disabled
 		TNT1 A 0 A_JumpIf(CallACS("WpnPowerExtra") >= 2,"SpawnDemonKey")	//Forced On
-		TNT1 A 0 A_Jump(13,"SpawnDemonKey")	//5%
+		TNT1 A 0 A_Jump(13,"SpawnDemonKey") //5%
 		Goto PowerupChoose
 	PowerupChoose:
 		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS") == 1,"SpawnNormal")
@@ -453,7 +441,7 @@ Scale 0.82
 		PSTR A 0
 		TNT1 A 0 A_JumpIf(CallACS("WpnPowerExtra") == 1,"PowerupChoose")	//Disabled
 		TNT1 A 0 A_JumpIf(CallACS("WpnPowerExtra") >= 2,"SpawnDemonKey")	//Forced On
-		TNT1 A 0 A_Jump(13,"SpawnDemonKey")	//5%
+		TNT1 A 0 A_Jump(13,"SpawnDemonKey") //5%
 		Goto PowerupChoose
 	PowerupChoose:
 		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS") == 1,"SpawnNormal")
@@ -484,7 +472,7 @@ Scale 0.82
 	Spawn2:
 		TNT1 A 0 A_JumpIf(CallACS("WpnPowerExtra") == 1,"PowerupChoose")	//Disabled
 		TNT1 A 0 A_JumpIf(CallACS("WpnPowerExtra") >= 2,"SpawnDemonKey")	//Forced On
-		TNT1 A 0 A_Jump(26,"SpawnDemonKey")	//10%
+		TNT1 A 0 A_Jump(26,"SpawnDemonKey") //10%
 		Goto PowerupChoose
 	PowerupChoose:
 		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS") == 1,"SpawnNormal")
@@ -563,7 +551,7 @@ Scale 0.82
 		SOUL A 0
 		TNT1 A 0 A_JumpIf(CallACS("WpnPowerExtra") == 1,"PowerupChoose")	//Disabled
 		TNT1 A 0 A_JumpIf(CallACS("WpnPowerExtra") >= 2,"SpawnDemonKey")	//Forced On
-		TNT1 A 0 A_Jump(13,"SpawnDemonKey")	//5%
+		TNT1 A 0 A_Jump(13,"SpawnDemonKey") //5%
 		Goto PowerupChoose
 	PowerupChoose:
 		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS") == 1,"SpawnNormal")
