@@ -1,4 +1,4 @@
-Actor NukerSpawner : CustomInventory
+Actor NukeLauncherSpawner : CustomInventory
 {
 Scale 1.2
 Tag "Nuclear Missile Launcher"
@@ -7,30 +7,38 @@ Inventory.PickupSound "WPICK"
 	States
 	{
 	Spawn:
-		NUKW A 0 NoDelay A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMSpawn")
 		NUKW A -1
 		Stop
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
 		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
-		TNT1 A 0 A_GiveInventory("64NuclearMissileLauncher",1)
+		TNT1 A 0 A_GiveInventory("64NukeLauncher",1)
+		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
 	Pickup2:
-		TNT1 A 0 A_GiveInventory("64NuclearMissileLauncherTactical",1)
+		TNT1 A 0 A_GiveInventory("64NukeLauncherTactical",1)
+		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
-	DMSpawn:
-		TNT1 A 0 A_ChangeFlag("THRUACTORS",TRUE)
-	DMSpawnLoop:
-		TNT1 A 0 A_SpawnItemEx("TeleportationFogObject")
-		TNT1 A 0 A_SpawnItemEx("64NuclearMissileLauncher",0,0,0,0,0,0,0,SXF_SETMASTER)
-		TNT1 A 0 A_SpawnItemEx("64NuclearMissileLauncherTactical",0,0,0,0,0,0,0,SXF_SETMASTER)
-		TNT1 A 6300
-		TNT1 A 0 A_RemoveChildren(TRUE)
-		Loop
+	DMRespawn:
+		TNT1 A 0 A_SpawnItemEx("DMNukeLauncherRespawner")
+		Stop
 	}
 }
 
-ACTOR 64NuclearMissileLauncher : Weapon
+Actor DMNukeLauncherRespawner
+{
++NOINTERACTION
+	States
+	{
+	Spawn:
+		TNT1 A 6300
+		TNT1 A 0 A_SpawnItemEx("TeleportationFogObject")
+		TNT1 A 1 A_SpawnItemEx("NukeLauncherSpawner")
+		Stop
+	}
+}
+
+ACTOR 64NukeLauncher : Weapon
 {
 Scale 1.2
 Weapon.SlotNumber 0
@@ -114,7 +122,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 	}
 }
 
-Actor 64NuclearMissileLauncherTactical : Brutal64Weapon
+Actor 64NukeLauncherTactical : Brutal64Weapon
 {
 Scale 1.2
 Weapon.SlotNumber 0

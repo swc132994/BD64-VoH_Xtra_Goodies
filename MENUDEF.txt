@@ -191,7 +191,7 @@ OptionValue "Immolator_Spawner_Value"
 	1,"Rocket Launcher"
 	2,"Grenade Launcher"
 	3,"Flamethrower"
-	4,"Homing Missiles"
+	4,"Heat Seekers"
 }
 
 OptionValue "PlasmaRifle_Spawner_Value_Extra"
