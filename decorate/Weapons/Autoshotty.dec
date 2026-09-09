@@ -7,31 +7,25 @@ Inventory.PickupSound "WPICK"
 	States
 	{
 	Spawn:
-		ASGP A 0 NoDelay A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMSpawn")
-	SpawnLoop:
-		TNT1 A 0 A_JumpIf(CallACS("CheckStriker12CvarACS") == 1,"ShowStriker12")
+		ASGP A 0 A_JumpIf(CallACS("CheckStriker12CvarACS") == 1,"ShowStriker12")
 		ASGP A 105
 		Loop
 	ShowStriker12:
 		SK12 F 105
-		Goto SpawnLoop
+		Goto Spawn
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
 		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
 		TNT1 A 0 A_GiveInventory("64AssaultShotgun",1)
+		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
 	Pickup2:
 		TNT1 A 0 A_GiveInventory("64AssaultShotgunTactical",1)
+		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
-	DMSpawn:
-		TNT1 A 0 A_ChangeFlag("THRUACTORS",TRUE)
-	DMSpawnLoop:
-		TNT1 A 0 A_SpawnItemEx("TeleportationFogObject")
-		TNT1 A 0 A_SpawnItemEx("64AssaultShotgun",0,0,0,0,0,0,0,SXF_SETMASTER)
-		TNT1 A 0 A_SpawnItemEx("64AssaultShotgunTactical",0,0,0,0,0,0,0,SXF_SETMASTER)
-		TNT1 A 1050
-		TNT1 A 0 A_RemoveChildren(TRUE)
-		Loop
+	DMRespawn:
+		TNT1 A 0 A_SpawnItemEx("SuperShotgunRespawnerDM")
+		Stop
 	}
 }
 

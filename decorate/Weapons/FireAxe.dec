@@ -7,26 +7,21 @@ Inventory.PickupSound "WPICK"
 	States
 	{
 	Spawn:
-		AXEP A 0 NoDelay A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMSpawn")
 		AXEP A -1
 		Stop
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
 		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
 		TNT1 A 0 A_GiveInventory("64FireAxe",1)
+		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
 	Pickup2:
-		TNT1 A 0 A_GiveInventory("64FireAxeModern",1)
+		TNT1 A 0 A_GiveInventory("64FireAxeTactical",1)
+		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
-	DMSpawn:
-		TNT1 A 0 A_ChangeFlag("THRUACTORS",TRUE)
-	DMSpawnLoop:
-		TNT1 A 0 A_SpawnItemEx("TeleportationFogObject")
-		TNT1 A 0 A_SpawnItemEx("64FireAxe",0,0,0,0,0,0,0,SXF_SETMASTER)
-		TNT1 A 0 A_SpawnItemEx("64FireAxeModern",0,0,0,0,0,0,0,SXF_SETMASTER)
-		TNT1 A 1050
-		TNT1 A 0 A_RemoveChildren(TRUE)
-		Loop
+	DMRespawn:
+		TNT1 A 0 A_SpawnItemEx("ChainsawRespawnerDM")
+		Stop
 	}
 }
 
@@ -134,7 +129,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 	}
 }
 
-ACTOR 64FireAxeModern : Brutal64Weapon
+ACTOR 64FireAxeTactical : Brutal64Weapon
 {
 Scale 0.8
 Weapon.SlotNumber 1
