@@ -1,0 +1,13 @@
+[eng uk au]
+
+//WEAPONS & AMMO (TAGS, PICKUPS, OBITUARIES)
+XT_OB_NUKEEXPLOSION		= "%o was atomised by a nuclear explosion.";
+
+//Red armour (+300 armour + flame resistance)
+XT_GOTPWR_REDARM		= "You got the Ultra Armour!";
+XT_TAGPWR_REDARM		= "Red Armour";
+
+//MENU DEFINITIONS
+XT_MNU_SPAWN_ARMOR		= "Armour Spawner =";
+XT_MNU_REDARMOR_DESC	= "(Red armour = 300 armour & protection from flame damage)";
+XT_MNU_ARMOR_DEF		= "Default = Blue Armour";

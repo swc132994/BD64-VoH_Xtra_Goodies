@@ -66,10 +66,10 @@ Actor 64BlueShell : Ammo
 {
 Scale 0.82
 Inventory.PickupSound "IPICK"
-Inventory.PickupMessage "Picked up 2 Ultra Shells."
+Inventory.PickupMessage "$XT_GOT_BLUESHELLS"
 Inventory.Amount 2
 Inventory.MaxAmount 30
-Tag "Blue Shells"
+Tag "$XT_TAG_BLUESHELLS"
 Ammo.BackpackAmount 2
 Ammo.BackpackMaxAmount 60
 Inventory.Icon "10GUA0"
@@ -84,9 +84,9 @@ Inventory.Icon "10GUA0"
 Actor 64BlueShellBox : 64BlueShell
 {
 Scale 1.0
-Inventory.PickupMessage "Picked up a box of Ultra Shells."
+Inventory.PickupMessage "$XT_GOT_BLUESHELLBOX"
 Inventory.Amount 10
-Tag "Blue Shell Box"
+Tag "$XT_TAG_BLUESHELLBOX"
 	states
 	{
 	Spawn:
@@ -101,12 +101,12 @@ Actor 64NailAmmo : Ammo
 Scale 0.7
 Radius 16
 Height 8
-Inventory.PickupMessage "Picked up some nails."
+Inventory.PickupMessage "$XT_GOT_NAILS"
 Inventory.Icon "NBOXA0"
 Inventory.PickupSound "IPICK"
 Inventory.Amount 15
 Inventory.MaxAmount 300
-Tag "Nail Clip"
+Tag "$XT_TAG_NAILS"
 Ammo.BackpackAmount 15
 Ammo.BackpackMaxAmount 600
 	States
@@ -120,9 +120,9 @@ Ammo.BackpackMaxAmount 600
 ACTOR 64NailCrate : 64NailAmmo
 {
 Scale 1.0
-Inventory.PickupMessage "Picked up a crate of nails."
+Inventory.PickupMessage "$XT_GOT_NAILBOX"
 Inventory.Amount 40
-Tag "Nail Box"
+Tag "$XT_TAG_NAILBOX"
 	States
 	{
 	Spawn:
@@ -140,8 +140,8 @@ Inventory.MaxAmount 80
 Ammo.BackpackAmount 0
 Ammo.BackpackMaxAmount 60
 Inventory.Icon GR3NA0
-Tag "Heatseeker"
-Inventory.PickupMessage "Scavenaged a heatseeker"
+Tag "$XT_TAG_HSEEKER"
+Inventory.PickupMessage "$XT_GOT_HSEEKER"
 +IGNORESKILL
 	States
 	{
@@ -159,8 +159,8 @@ Inventory.MaxAmount 40
 Ammo.BackpackAmount 0
 Ammo.BackpackMaxAmount 30
 Inventory.Icon GR3NA0
-Tag "Pestilence Toxin"
-Inventory.PickupMessage "Scavenaged pestilence toxin"
+Tag "$XT_TAG_TSEEKER"
+Inventory.PickupMessage "$XT_GOT_TSEEKER"
 VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 Inventory.ForbiddenTo "64DoomPlayer"
 +INVENTORY.RESTRICTABSOLUTELY
@@ -180,8 +180,8 @@ Inventory.Amount 1
 Inventory.MaxAmount 1
 Ammo.BackpackAmount 0
 Ammo.BackpackMaxAmount 3
-Tag "Nuclear Warhead"
-Inventory.PickupMessage "Picked up one nuclear warhead."
+Tag "$XT_TAG_NUKE"
+Inventory.PickupMessage "$XT_GOT_NUKE"
 Inventory.PickupSound "IPICK"
 Inventory.Icon "NUKAA0"
 	States

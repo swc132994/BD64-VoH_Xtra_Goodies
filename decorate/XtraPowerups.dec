@@ -22,9 +22,9 @@ Scale 0.82
 Powerup.Duration -30
 Powerup.Type "PowerInfiniteAmmo"
 Powerup.Color "EF EA 4A",0.2
-Inventory.PickupMessage "Infinite Ammo!"
+Inventory.PickupMessage "$XT_GOTPWR_ARSE"
 Inventory.PickupSound "misc/p_pkup"
-Tag "Arsenal Sphere"
+Tag "$XT_TAGPWR_ARSE"
 +INVENTORY.AUTOACTIVATE
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
@@ -46,9 +46,9 @@ Powerup.Duration -60
 Actor 64Quadsphere : CustomInventory
 {
 Scale 0.82
-Inventory.PickupMessage "QUAD DAMAGE!"
+Inventory.PickupMessage "$XT_GOTPWR_QUAD"
 Inventory.PickupSound "misc/p_pkup"
-Tag "Quad Damage Sphere"
+Tag "$XT_TAGPWR_QUAD"
 +INVENTORY.BIGPOWERUP
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
@@ -67,9 +67,9 @@ Tag "Quad Damage Sphere"
 Actor 64Ghastsphere : CustomInventory
 {
 Scale 0.82
-Inventory.PickupMessage "Shadowy Speed!"
+Inventory.PickupMessage "$XT_GOTPWR_GHAST"
 Inventory.PickupSound "misc/p_pkup"
-Tag "Ghast Sphere"
+Tag "$XT_TAGPWR_GHAST"
 +INVENTORY.BIGPOWERUP
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
@@ -89,9 +89,9 @@ Tag "Ghast Sphere"
 Actor 64Titansphere : CustomInventory
 {
 Scale 0.9
-Inventory.PickupMessage "IMMORTALITY!"
+Inventory.PickupMessage "$XT_GOTPWR_TITAN"
 Inventory.PickupSound "misc/p_pkup"
-Tag "Titan Sphere"
+Tag "$XT_TAGPWR_TITAN"
 +INVENTORY.ALWAYSPICKUP
 +INVENTORY.BIGPOWERUP
 +COUNTITEM
@@ -110,9 +110,9 @@ Tag "Titan Sphere"
 Actor 64Crucifix : CustomInventory
 {
 Scale 0.7
-Inventory.PickupMessage "Holy Crucifix"
+Inventory.PickupMessage "$XT_GOTPWR_HOLY"
 Inventory.PickupSound "misc/p_pkup"
-Tag "Crucifix"
+Tag "$XT_TAGPWR_HOLY"
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
 +FLOATBOB
@@ -143,8 +143,8 @@ Actor 64BioSuit : CustomInventory
 {
 Scale 0.82
 Inventory.MaxAmount 0
-Inventory.PickupMessage "You got a Bio-Suit"
-Tag "Biological Suit"
+Inventory.PickupMessage "$XT_GOTPWR_BIO"
+Tag "$XT_TAGPWR_BIO"
 +INVENTORY.ALWAYSPICKUP
 +INVENTORY.AUTOACTIVATE
 +COUNTITEM
@@ -235,9 +235,9 @@ Inventory.MaxAmount 300
 ACTOR 64UltraSphere : CustomInventory
 {
 Scale 0.82
-Inventory.PickupMessage "ULTRASPHERE!!!"
+Inventory.PickupMessage "$XT_GOTPWR_ULTRA"
 Inventory.PickupSound "misc/p_pkup"
-Tag "Ultra Sphere"
+Tag "$XT_TAGPWR_ULTRA"
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
 	States
@@ -262,10 +262,10 @@ Scale 0.92
 DamageFactor "Flames",0.125
 Armor.SavePercent 66.66666
 Armor.Saveamount 300
-Tag "Red Armour"
+Tag "$XT_TAGPWR_REDARM"
 Inventory.Icon "ARM6A0"
 Inventory.PickupSound "ARMOR"
-Inventory.Pickupmessage "You got the UltraArmour!"
+Inventory.Pickupmessage "$XT_GOTPWR_REDARM"
 	States
 	{
 	Spawn:
@@ -309,9 +309,9 @@ Inventory.MaxAmount 300
 ACTOR 64Minisphere : CustomInventory
 {
 Scale 0.64
-Inventory.PickupMessage "Minisphere!"
+Inventory.PickupMessage "$XT_GOTPWR_MINI"
 Inventory.PickupSound "misc/p_pkup"
-Tag "Mini Sphere"
+Tag "$XT_TAGPWR_MINI"
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
 	States
@@ -332,8 +332,6 @@ ACTOR HyperHealth : Health
 Scale 0.7
 Inventory.Amount 200
 Inventory.MaxAmount 300
-Inventory.PickupMessage "HYPERCHARGE!!"
-Inventory.PickupSound "misc/p_pkup"
 +INVENTORY.AUTOACTIVATE
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
@@ -348,9 +346,9 @@ Inventory.PickupSound "misc/p_pkup"
 Actor 64HyperSphere : CustomInventory
 {
 Scale 0.7
-Inventory.PickupMessage "HYPERCHARGE!!"
+Inventory.PickupMessage "$XT_GOTPWR_HYPE"
 Inventory.PickupSound "misc/p_pkup"
-Tag "Hyper Sphere"
+Tag "$XT_TAGPWR_HYPE"
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
 	States

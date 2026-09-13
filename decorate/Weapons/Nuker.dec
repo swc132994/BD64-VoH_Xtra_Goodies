@@ -1,8 +1,8 @@
 Actor NukeLauncherSpawner : CustomInventory
 {
 Scale 1.2
-Tag "Nuclear Missile Launcher"
-Inventory.PickupMessage "Remember - Duck and Cover (Slot 0)."
+Tag "$XT_TAG_NUKELAUNCHER"
+Inventory.PickupMessage "$XT_GOT_NUKELAUNCHER"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -46,9 +46,8 @@ Weapon.SlotPriority 10
 Weapon.AmmoType "64NuclearWarheadAmmo"
 Weapon.AmmoGive 1
 Weapon.AmmoUse 1
-Obituary "%o was atomized by %k's Nuclear Missile."
-Tag "Nuclear Missile Launcher"
-Inventory.PickupMessage "Remember - Duck and Cover (Slot 0)."
+Tag "$XT_TAG_NUKELAUNCHER"
+Inventory.PickupMessage "$XT_GOT_NUKELAUNCHER"
 Inventory.PickupSound "WPICK"
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
@@ -73,7 +72,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 	Fire:
 		TNT1 A 0 A_JumpIfInventory("64NuclearWarheadAmmo",1,"TacticalNuke")
 		TNT1 A 0 A_PlaySound("nuker/DryFire",CHAN_WEAPON)
-		TNT1 A 0 A_Print("<!> WARNING - AMMUNITION DEPLETED <!>",1)
+		TNT1 A 0 A_Print("$WM_NOTENOUGHAMMO",1)
 		Goto Ready
 	TacticalNuke:
 		TNT1 A 0 A_PlaySound("nuker/CountdownOfDeath",CHAN_WEAPON)
@@ -130,9 +129,8 @@ Weapon.SlotPriority 10
 Weapon.AmmoType "64NuclearWarheadAmmo"
 Weapon.AmmoGive 1
 Weapon.AmmoUse 1
-Obituary "%o was atomized by %k's Nuclear Missile."
-Tag "Nuclear Missile Launcher"
-Inventory.PickupMessage "Remember - Duck and Cover (Slot 0)."
+Tag "$XT_TAG_NUKELAUNCHER"
+Inventory.PickupMessage "$XT_GOT_NUKELAUNCHER"
 Inventory.PickupSound "WPICK"
 +INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.NOAUTOAIM
@@ -167,7 +165,7 @@ Inventory.PickupSound "WPICK"
 	Fire:
 		TNT1 A 0 A_JumpIfInventory("64NuclearWarheadAmmo",1,"TacticalNuke")
 		TNT1 A 0 A_PlaySound("nuker/DryFire",CHAN_WEAPON)
-		TNT1 A 0 A_Print("<!> WARNING - AMMUNITION DEPLETED <!>",1)
+		TNT1 A 0 A_Print("$WM_NOTENOUGHAMMO",1)
 		Goto Ready
 	TacticalNuke:
 		TNT1 A 0 A_PlaySound("nuker/CountdownOfDeath",CHAN_WEAPON)
@@ -242,7 +240,7 @@ Speed 35
 Damage 256
 DamageType "Flames"
 DeathSound "weapons/nuclearmissileexplode"
-Obituary "%o was atomized by a Nuclear Explosion."
+Obituary "$XT_OB_NUKEEXPLOSION"
 PROJECTILE
 +STRIFEDAMAGE
 +NOTARGET
@@ -389,7 +387,7 @@ Speed 20
 Damage 5
 DamageType "Plasma"
 DamageType "Flames"
-Obituary "%o was charred by a Nuclear Heatwave."
+Obituary "$XT_OB_NUKEHEATWAVE"
 +MISSILE
 +NOBLOCKMAP
 +DROPOFF
@@ -442,7 +440,7 @@ Radius 6
 Height 4
 Damage 1
 DamageType "Plasma"
-Obituary "%o died of radiation poisoning."
+Obituary "$XT_OB_RADIATION"
 +NOBLOCKMAP
 +THRUGHOST
 +NODAMAGETHRUST

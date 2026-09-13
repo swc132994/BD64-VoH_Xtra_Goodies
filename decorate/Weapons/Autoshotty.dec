@@ -1,8 +1,8 @@
 Actor AssaultShotgunSpawner : CustomInventory
 {
 Scale 0.87
-Tag "Assault Shotgun"
-Inventory.PickupMessage "You got the Assault Shotgun! (Slot 3)"
+Tag "$XT_TAG_ASSAULTSHOTGUN"
+Inventory.PickupMessage "$XT_GOT_ASSAULTSHOTGUN"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -43,10 +43,10 @@ Weapon.SelectionOrder 1350
 Weapon.AmmoType "64BlueShell"
 Weapon.AmmoUse 1
 Weapon.AmmoGive 10
-Obituary "%o got shot into pieces by %k's Assault Shotgun"
-Tag "Assault Shotgun"
+Obituary "$XT_OB_ASSAULTSHOTGUN"
+Tag "$XT_TAG_ASSAULTSHOTGUN"
 VisibleToPlayerClass "64DoomPlayer"
-Inventory.PickupMessage "You got the Assault Shotgun! (Slot 3)"
+Inventory.PickupMessage "$XT_GOT_ASSAULTSHOTGUN"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
 	States
@@ -110,10 +110,10 @@ Weapon.SelectionOrder 1350
 Weapon.AmmoType "64BlueShell"
 Weapon.AmmoUse 1
 Weapon.AmmoGive 0
-Obituary "%o got shot into pieces by %k's Striker-12"
-Tag "Striker-12"
+Obituary "$XT_OB_STRIKER12"
+Tag "$XT_TAG_STRIKER12"
 VisibleToPlayerClass "64DoomPlayer"
-Inventory.PickupMessage "You got the Striker-12! (Slot 3)"
+Inventory.PickupMessage "$XT_GOT_STRIKER12"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
 	States
@@ -179,9 +179,9 @@ Weapon.AmmoGive1 10
 Weapon.AmmoType2 "AssaultShotgunAmmo"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 0
-Inventory.PickupMessage "You got the Assault Shotgun! (Slot 3)"
-Obituary "%o got shot into pieces by %k's Assault Shotgun"
-Tag "Assault Shotgun"
+Inventory.PickupMessage "$XT_GOT_ASSAULTSHOTGUN"
+Obituary "$XT_OB_ASSAULTSHOTGUN"
+Tag "$XT_TAG_ASSAULTSHOTGUN"
 +INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.NOAUTOFIRE
 +WEAPON.NOALERT
@@ -424,7 +424,7 @@ Tag "Assault Shotgun"
 		TNT1 A 0 SetPlayerProperty(0,0,0)
 		Goto InsertingShells
 	Tired:
-		TNT1 A 0 A_Print("Not Enough Stamina!",1)
+		TNT1 A 0 A_Print("$WM_NOSTAMINA",1)
 		TNT1 A 0 A_PlaySound("Tired",CHAN_VOICE)
 		ASGG F 15
 		Goto Ready
@@ -453,9 +453,9 @@ Weapon.AmmoGive1 0
 Weapon.AmmoType2 "ProtectaAmmo"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 0
-Inventory.PickupMessage "You got the Striker-12! (Slot 3)"
-Obituary "$OB_MPSHOTGUN"
-Tag "Striker-12"
+Inventory.PickupMessage "$XT_GOT_STRIKER12"
+Obituary "$XT_OB_STRIKER12"
+Tag "$XT_TAG_STRIKER12"
 +INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.NOAUTOFIRE
 +WEAPON.NOALERT
@@ -655,7 +655,7 @@ Tag "Striker-12"
 		TNT1 A 0 SetPlayerProperty(0,0,0)
 		Goto InsertingShells
 	Tired:
-		TNT1 A 0 A_Print("Not Enough Stamina!",1)
+		TNT1 A 0 A_Print("$WM_NOSTAMINA",1)
 		TNT1 A 0 A_PlaySound("Tired",CHAN_VOICE)
 		SK14 I 15
 		Goto Ready

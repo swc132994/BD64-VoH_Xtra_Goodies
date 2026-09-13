@@ -1,155 +1,145 @@
-/*
-OptionMenu "BD64Menu"
-{
-	Title "BRUTAL DOOM 64 OPTIONS"
-	StaticText "Some changes are not initialized automatically", 1
-	StaticText "Press \"Apply Changes\" for the changes to take effect",1
-	Command "Apply Changes","PukeName BD64Respawn"
-	StaticText " "
-	StaticText "-------------------------------- Presets -------------------------------------",1
-	StaticText "You must be inside a level before pressing the buttons",1
-	StaticText "You also have to exit the menu each time you apply a preset",1
-	TextField "Last Preset Used =", "BD64_Preset"
-	StaticText "Option above is purely a confirmation of the preset successfully applying",1
-	StaticText "it does nothing",1
-	StaticText " "
-	SafeCommand "Default", "pukename DefaultCvars"
-	StaticText "The mod's default options",1
-	SafeCommand "Classical", "pukename ClassicalCvars"
-	StaticText "Tweaks the settings to be as vanilla as possible",1	
-	SafeCommand "SWC's Vision", "pukename StevenCvars"
-	StaticText "Adds new monsters and weapons with balanced settings, how the creator plays his own mod",1
-	StaticText " "
-	StaticText "To set all monster/weapon/item spawners to random, press this",1
-	SafeCommand "Spawner Randomiser", "pukename RandomCvars"
-	StaticText " "
-	StaticText "-------------------------------- Options -------------------------------------",1
-	StaticText " "
-	Submenu "Other Item/Weapon Options",		"BrutalDoom64Item/WeaponOptions"
-	Submenu "Other Monster Options",			"BrutalDoom64OptionsOtherMonster"
-	Submenu "Performance & Misc. Options",		"BrutalDoom64OptionsPerformance"
-	Submenu "Map Options",						"BD64MapOptions"
-	StaticText " "
-	StaticText "-------------------------------- Gameplay -------------------------------------",1
-	StaticText " "
-	Submenu "Item/Weapon Spawner Options",		"BrutalDoom64OptionsItem/WeaponSpawner"	
-	Submenu "Monster Spawner Options",			"BrutalDoom64OptionsMonsterSpawner"	
-	StaticText " "
-	StaticText ""
-	Submenu 	"Engine (GZD, Zand) Shortcuts",		"GZDShortcuts"
-}
-*/
-
 OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 {
-	Title "Item/Weapon Spawner Options"
-	StaticText "Some changes are not initialized automatically", 1
-	StaticText "Press \"Apply Changes\" for the changes to take effect",1
-	Command "Apply Changes","PukeName BD64Respawn"
-		StaticText " "
-		StaticText "Options to choose replacements of weapons and power-ups",1
-		StaticText "or set to appear randomly",1
-		StaticText ""
-	Option "Power-up spawner =","WpnPower_Spawner_Cvar","WpnPower_Spawner_Value"
-		StaticText "Power-up by Default",1
-		StaticText "(For D64 maps it is recommended to leave set to Power-ups)",1
-		StaticText ""
-		StaticText "Extra Power-ups Options",1
-		StaticText ""
-	Option "Bonuses Spawner =","BonusRandomCvar","BonusRandomValue"
-		StaticText "Bonus by Default",1
-		StaticText "(hell potions are combined armour/health pickups)",1
-		StaticText ""
-	Option "Sphere Spawner =","ExtraSpheres_CVar","ExtraSpheres_Value"
-		StaticText "Classic Spheres by Default",1
-		StaticText ""
-	Option "Infrared Spawner =","Crucifix_Spawner_Cvar","Crucifix_Spawner_Value"
-		StaticText "Infrared by Default",1
-		StaticText ""
-	Option "Allmap Spawner =","MapRadar_Spawner_CVar","MapRadar_Spawner_Value"
-		StaticText "AllMap by Default",1
-		StaticText ""
-	Option "Radsuit Spawner =","Biosuit_Spawner_CVar","Biosuit_Spawner_Value"
-		StaticText "RadSuit by Default",1
-		StaticText ""
-		StaticText "Extra Weapons Options",1
-		StaticText ""
-	Option "Armour Spawner =","RedArmor_Spawner_CVar","RedArmor_Spawner_Value"
-		StaticText "Blue Armour by Default",1
-		StaticText ""
-		StaticText "(Red armour = 300 armour & protection from fire damage)",1
-		StaticText ""
-	Option "Chainsaw Spawner =","Chainsaw_Spawner_Cvar","ChainsawNew_Spawner_Value"
-		StaticText "Chainsaw by Default",1
-		StaticText ""
-	Option "Chaingun Spawner =","Chaingun_Spawner_Cvar","Chaingun_Spawner_Value_Extra"
-		StaticText "Chaingun by Default",1
-		StaticText ""
-	Option "Shotgun Spawner =","Revolver_Spawner_Cvar","Revolver_Spawner_Value"
-		StaticText "Shotgun by Default",1
-		StaticText ""
-	Option "Super Shotgun Spawner =","AutoShotgun_Spawner_Cvar","AutoShotgun_Spawner_Value"
-		StaticText "Super Shotgun by Default",1
-		StaticText ""
-	Option "Rocket Launcher Spawner =","Immolator_Spawner_Cvar","Immolator_Spawner_Value"
-		StaticText "Rocket Luancher by Default",1
-		StaticText ""
-	Option "Plasmagun Spawner =","GaussCannon_Spawner_Cvar","PlasmaRifle_Spawner_Value_Extra"
-		StaticText "Plasmagun by Default",1
-		StaticText ""
-	Option "BFG9000 Spawner =","BFG_Spawner_Cvar","BFG_Spawner_Value_Extra"
-		StaticText "BFG9000 by Default",1
-		StaticText ""
-	Option "Extra Ammo Spawner =","ExtraAmmo_Spawner_Cvar","ExtraAmmo_Spawner_Value"
-		StaticText "Spawn Normal Only by Default",1
-		StaticText ""
-		StaticText "Enable Nuke Launchers to spawn alongside Invulnerability",1
-		StaticText "and Nuclear Warheads alongside Rockets/Rocket Crates",1
-		StaticText ""
-	Option "Enable NukeLauncher =","NuclearMissile_Spawner_Cvar","YesNo"
+	Title "$FO_64MNU_ITEMS_WEAPONS_SPAWN"
+
+	StaticText "$FO_64SYSTEM_AUTO",1
+	StaticText "$FO_64SYSTEM_APPLY",1
+	Command "$FO_64SYSTEM_APPLIED","PukeName BD64Respawn"
+
+	StaticText " "
+	StaticText "$FO_64MNU_ITEMS_WEAPONS_SPAWN_TXT1",1
+	StaticText "$FO_64MNU_ITEMS_WEAPONS_SPAWN_TXT2",1
+	StaticText ""
+
+	Option "$64MNU_POWERUP_SPAWNER","WpnPower_Spawner_Cvar","WpnPower_Spawner_Value"
+	StaticText "$FO_64MNU_POWERUP",1
+	StaticText "$FO_64MNU_POWERUP_NOTE",1
+	StaticText ""
+
+	StaticText "$XT_MNU_POWERUPS_OPTIONS"
+	StaticText ""
+
+	Option "$64MNU_BONUSSPAWNER","BonusRandomCvar","BonusRandomValue"
+	StaticText "$FO_64MNU_BONUS",1
+	StaticText "$FO_64MNU_BONUS_TXT",1
+	StaticText ""
+
+	Option "$XT_MNU_SPAWNER_SPHERES","ExtraSpheres_CVar","ExtraSpheres_Value"
+	StaticText "$XT_MNU_SPHERE_DEF",1
+	StaticText ""
+
+	Option "$XT_MNU_SPAWNER_INFRARED","Crucifix_Spawner_Cvar","Crucifix_Spawner_Value"
+	StaticText "$XT_MNU_INFRARED_DEF",1
+	StaticText ""
+
+	Option "$XT_MNU_SPAWNER_ALLMAP","MapRadar_Spawner_CVar","MapRadar_Spawner_Value"
+	StaticText "$XT_MNU_ALLMAP_DEF",1
+	StaticText ""
+
+	Option "$XT_MNU_SPAWNER_RADSUIT","Biosuit_Spawner_CVar","Biosuit_Spawner_Value"
+	StaticText "$XT_MNU_SUIT_DEF",1
+	StaticText ""
+
+	StaticText "$XT_MNU_WEAPONS_OPTIONS"
+	StaticText ""
+
+	Option "$XT_MNU_SPAWNER_ARMOR","RedArmor_Spawner_CVar","RedArmor_Spawner_Value"
+	StaticText "$XT_MNU_ARMOR_DEF",1
+	StaticText "$XT_MNU_REDARMOR_DESC",1
+	StaticText ""
+
+	Option "$XT_MNU_SPAWNER_CHAINSAW","Chainsaw_Spawner_Cvar","ChainsawNew_Spawner_Value"
+	StaticText "$XT_MNU_CHAINSAW_DEF",1
+	StaticText ""
+
+	Option "$64MNU_CHAINGUNSPAWNER","Chaingun_Spawner_Cvar","Chaingun_Spawner_Value_Extra"
+	StaticText "$FO_64MNU_CHAINGUN",1
+	StaticText ""
+
+	Option "$XT_MNU_SPAWNER_SHOTGUN","Revolver_Spawner_Cvar","Revolver_Spawner_Value"
+	StaticText "$XT_MNU_SHOTGUN_DEF",1
+	StaticText ""
+
+	Option "$XT_MNU_SPAWNER_SSG","AutoShotgun_Spawner_Cvar","AutoShotgun_Spawner_Value"
+	StaticText "$XT_MNU_SSG_DEF",1
+	StaticText ""
+
+	Option "$XT_MNU_SPAWNER_RL","Immolator_Spawner_Cvar","Immolator_Spawner_Value"
+	StaticText "$XT_MNU_RLAUNCHER_DEF",1
+	StaticText ""
+
+	Option "$64MNU_PLASMASPAWNER","GaussCannon_Spawner_Cvar","PlasmaRifle_Spawner_Value_Extra"
+	StaticText "$FO_64MNU_PLASMA",1
+	StaticText ""
+
+	Option "$64MNU_BFGSPAWNER","BFG_Spawner_Cvar","BFG_Spawner_Value_Extra"
+	StaticText "$FO_64MNU_BFG",1
+	StaticText ""
+
+	Option "$XT_MNU_SPAWNER_EXTRAAMMO","ExtraAmmo_Spawner_Cvar","ExtraAmmo_Spawner_Value"
+	StaticText "$XT_MNU_AMMO_DEF",1
+	StaticText ""
+
+	StaticText "$XT_MNU_NUKE_DESC1",1
+	StaticText "$XT_MNU_NUKE_DESC2",1
+	StaticText ""
+
+	Option "$XT_MNU_ENABLE_NUKE","NuclearMissile_Spawner_Cvar","YesNo"
 }
 
 OptionMenu "BrutalDoom64Item/WeaponOptions"
 {
-	Title "Other Item/Weapon Options"
-	StaticText "Some changes are not initialized automatically",1
-	StaticText "Press \"Apply Changes\" for the changes to take effect",1
-	Command "Apply Changes","PukeName BD64Respawn"
+	Title "$FO_64MNU_OTHER_ITEMS"
+
+	StaticText "$FO_64SYSTEM_AUTO",1
+	StaticText "$FO_64SYSTEM_APPLY",1
+	Command "$FO_64SYSTEM_APPLIED","PukeName BD64Respawn"
+
 	StaticText ""
-	StaticText "---------------------------- Weapons Functions ------------------------------",1
-		StaticText ""
-	Option "Enable Weapon Warm Up Animations =","WeaponsWarmUpCvar","YesNo"
-		StaticText "Show weapon warm up animations on first pickup (tactical/modern modes ONLY).",1
-		StaticText ""
-	Option "Classic Look Chainsaw for Tactical/Modern =","ClassicChainsawCvar","YesNo"
-	Option "Classic Look Chaingun for Tactical/Modern =","ClassicChaingunCvar","YesNo"
-	Option "Classic Look Rocket Launcher for Tactical/Modern =","ClassicRLCvar","YesNo"
-		StaticText "Options to switch between classic or modernised weapons.",1
-		StaticText ""
-	Option "Skip Weapon Reload Sequences (Press \"Apply Changes\") =","NoReloadCvar","YesNo"
-		StaticText "Skip weapon reload animation sequences (tactical/modern modes ONLY).",1
-		StaticText ""
-	Option "Low Ammo SFX =","LowAmmoSFXCvar","YesNo"
-		StaticText "Allows you to toggle the sound warning when ammo is too low.",1
-		StaticText "(tactical/modern modes ONLY)",1
-		StaticText ""
-	Option "Switch to Fists on Berserk Pickup =","BerserkSwitchFistsCvar","YesNo"
-		StaticText "Option to disable switching to fists on berserk pickup.",1
-		StaticText ""
-	Option "Striker-12 as Alternative of Assault Shotgun =","Striker12Cvar","YesNo"
-		StaticText "Switch between Stiker-12 or Assault Shotgun"
-		StaticText ""
-		StaticText "--------------------------- Weapons & Items Skins -----------------------------",1
-		StaticText ""
-	Option "Alternative Laser Skin =","AlternativeLaserSkinCvar","YesNo"
-	Option "Item Sprites Pickups =","AlternativeAmmoPickupSpritesCvar","AlternativeAmmoPickupSpritesValue"
-	Option "Alternative Healing Kits & Berserk Pickups =","CensoredHealing_Cvar","CensoredHealing_Value"
-	Option "Alpha Build Item Pickups =","AlphaPickupCvar","YesNo"
-		StaticText "Options for alternative or some alpha build looks for items & weapons.",1
-		StaticText ""
-		StaticText "-------------------------------------- Other -----------------------------------",1
-		StaticText ""
-	Option "Start with Flashlight/Torch =","FlashlightStartCvar","YesNo"
+	StaticText "$FO_64MNU_WEAPON_FUNCTION",1
+	StaticText ""
+
+	Option "$FO_64MNU_WARMUP","WeaponsWarmUpCvar","YesNo"
+	StaticText "$FO_64MNU_WARMUP_TXT",1
+	StaticText ""
+
+	Option "$FO_64MNU_CLASSIC_CHAINSAW","ClassicChainsawCvar","YesNo"
+	Option "$FO_64MNU_CLASSIC_CHAINGUN","ClassicChaingunCvar","YesNo"
+	Option "$FO_64MNU_CLASSIC_ROCKET","ClassicRLCvar","YesNo"
+	StaticText "$FO_64MNU_CLASSIC_SWITCH",1
+	StaticText ""
+
+	Option "$FO_64MNU_SKIP_RELOAD","NoReloadCvar","YesNo"
+	StaticText "$FO_64MNU_SKIP_RELOAD_TXT",1
+	StaticText ""
+
+	Option "$FO_64MNU_LOWAMMO","LowAmmoSFXCvar","YesNo"
+	StaticText "$FO_64MNU_LOWAMMO_TXT1",1
+	StaticText "$FO_64MNU_LOWAMMO_TXT2",1
+	StaticText ""
+
+	Option "$FO_64MNU_SWITCH_FIST","BerserkSwitchFistsCvar","YesNo"
+	StaticText "$FO_64MNU_SWITCH_FIST_TXT",1
+	StaticText ""
+
+	Option "$XT_MNU_STRIKER","Striker12Cvar","YesNo"
+	StaticText "$XT_MNU_STRIKER_DESC",1
+	StaticText ""
+
+	StaticText "$FO_64MNU_SKINS",1
+	StaticText ""
+
+	Option "$FO_64MNU_SKIN_LASER","AlternativeLaserSkinCvar","YesNo"
+	Option "$FO_64MNU_SKIN_ITEM","AlternativeAmmoPickupSpritesCvar","AlternativeAmmoPickupSpritesValue"
+	Option "$FO_64MNU_SKIN_HEALTH","CensoredHealing_Cvar","CensoredHealing_Value"
+	Option "$FO_64MNU_SKIN_ALPHA","AlphaPickupCvar","YesNo"
+	StaticText "$FO_64MNU_SKIN_ALPHA_TXT",1
+	StaticText ""
+
+	StaticText "$FO_64MNU_OTHER",1
+	StaticText ""
+
+	Option "$FO_64MNU_FLASHLIGHT","FlashlightStartCvar","YesNo"
 }
 
 //XTRA WEAPON & AMMO VALUES
@@ -157,7 +147,7 @@ OptionValue "ChainsawNew_Spawner_Value"
 {
 	0,"Random"
 	1,"Chainsaw"
-	2,"Fire Axe"
+	2,"Axe"
 }
 
 OptionValue "Revolver_Spawner_Value"
@@ -206,10 +196,10 @@ OptionValue "PlasmaRifle_Spawner_Value_Extra"
 OptionValue "BFG_Spawner_Value_Extra"
 {
 	0,"Random"
-	1,"BFG9k"
+	1,"BFG 9000"
 	2,"Unmaker"
-	3,"Lasergun"
-	4,"BFG10k"
+	3,"Laser Rifle"
+	4,"BFG 10000"
 }
 
 OptionValue "ExtraAmmo_Spawner_Value"
@@ -232,14 +222,14 @@ OptionValue "Crucifix_Spawner_Value"
 {
 	0,"Random"
 	1,"Infrared"
-	2,"Crucifix"
+	2,"Holy Cross"
 }
 
 OptionValue "MapRadar_Spawner_Value"
 {
 	0,"Random"
 	1,"Area Map"
-	2,"Advanced Scanner"
+	2,"Advanced Area Scanner"
 }
 
 OptionValue "Biosuit_Spawner_Value"
@@ -252,6 +242,6 @@ OptionValue "Biosuit_Spawner_Value"
 OptionValue "RedArmor_Spawner_Value"
 {
 	0,"Random"
-	1,"Blue Armour"
-	2,"Red Armour"
+	1,"Blue Armor"
+	2,"Red Armor"
 }
