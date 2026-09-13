@@ -1,26 +1,107 @@
-//=====================================
-//English strings
-//=====================================
-
 [enu default]
 
-///////////////////////////////////////
-//WEAPONS & AMMO
-///////////////////////////////////////
+//=====================================
+//WEAPONS & AMMO (TAGS, PICKUPS, OBITUARIES)
+//=====================================
 
 //Revolver ammo
-XT_GOT_SPEEDLOADER = "Picked up a \cpspeedloadER\c-";
-XT_TAG_SPEEDLOADER = "\cpSpeedloader";
+XT_GOT_SPEEDLOADER		= "Picked up a Speedloader";
+XT_TAG_SPEEDLOADER		= "Speedloader";
 
 //Revolver
-XT_TAG_REVOLVER = "\cmRevolver";
-XT_GOT_REVOLVER = "You got the \cmRevolver\c-! (Slot 2)";
-XT_OB_REVOLVER = "%o was picked off by \cg%k\c-'s \cmrevolver\c-.";
+XT_TAG_REVOLVER			= "Revolver";
+XT_GOT_REVOLVER			= "You got the Revolver! (Slot 2)";
+XT_OB_REVOLVER			= "%o was picked off by %k's Revolver.";
 
-///////////////////////////////////////
-//WEAPON MESSAGES
-///////////////////////////////////////
+//Ultra Shotgun / Quad Shotgun
+XT_TAG_QUADSHOTGUN		= "Ultra Shotgun";
+XT_GOT_QUADSHOTGUN		= "You got the Ultra Shotgun! (Slot 3)";
+XT_OB_QUADSHOTGUN		= "%o was obliterated by %k's Ultra Shotgun.";
 
-WM_COCKED = "Cocked";
-WM_UNCOCKED = "Uncocked";
-WM_NEEBERSERK = "Need Berserk!";
+//Assault Shotgun & Striker-12
+XT_TAG_ASSAULTSHOTGUN	= "Assault Shotgun";
+XT_GOT_ASSAULTSHOTGUN	= "You got the Assault Shotgun! (Slot 3)";
+XT_OB_ASSAULTSHOTGUN	= "%o got shot into pieces by %k's Assault Shotgun.";
+
+XT_TAG_STRIKER12		= "Striker-12";
+XT_GOT_STRIKER12		= "You got the Striker-12! (Slot 3)";
+XT_OB_STRIKER12			= "%o got shot into pieces by %k's Striker-12.";
+
+//Sniper Rifle
+XT_TAG_SNIPERRIFLE		= "Sniper Rifle";
+XT_GOT_SNIPERRIFLE		= "You got The Sniper Rifle! (Slot 4)";
+XT_OB_SNIPERRIFLE		= "%o's brain was splattered by %k's Sniper Rifle.";
+
+//Light Machinegun
+XT_TAG_LMG				= "Light Machinegun";
+XT_GOT_LMG				= "You got the Light Machinegun! (Slot 4)";
+XT_OB_LMG				= "%o was gunned down by %k's Light Machinegun.";
+XT_OB_LMGGREN			= "%o was blown up by %k's LMG Grenade.";
+
+//Grenade Launcher
+XT_TAG_NADELAUNCHER		= "Grenade Launcher";
+XT_GOT_NADELAUNCHER		= "You got the Grenade Launcher! (Slot 5)";
+XT_OB_NADE				= "%o caught %k's grenade.";
+XT_OB_GASNADE			= "%o was gassed by %k.";
+
+//Nailgun
+XT_TAG_NAILGUN			= "Nailgun";
+XT_GOT_NAILGUN			= "You got the Nailgun! (Slot 6)";
+XT_OB_NAIL				= "%o was nailed by %k.";
+XT_OB_HOTNAIL			= "%o was tortured by %k's flaming nails.";
+
+//BFG 10000
+XT_TAG_BFG10K			= "BFG 10000";
+XT_GOT_BFG10K			= "You got the BFG10000! Kaching! (Slot 7)";
+XT_OB_BFG10K			= "%o was blasted by %k's BFG10K.";
+
+//Ruiner
+XT_TAG_RUINER			= "Ruiner";
+XT_GOT_RUINER			= "You feel like it's watching you... (Slot 8)";
+
+//Heatseeker Launchers
+XT_TAG_HEATSEEKER		= "Heatseeker Launchers";
+XT_GOT_HEATSEEKER		= "You got the Heatseeker Launchers! (Slot 9)";
+
+//Flamethrower
+XT_TAG_FLAMETHROWER		= "Flamethrower";
+XT_GOT_FLAMETHROWER		= "You got the Flamethrower! (Slot 9)";
+XT_OB_FLAMETHROWER		= "%o was cremated by %k's flamethrower.";
+XT_OB_FLAMESHOT			= "%o was burnt by %k's flame shot.";
+
+//Tactical Nuke Launcher
+XT_TAG_NUKELAUNCHER		= "Tactical Nuke Launcher";
+XT_GOT_NUKELAUNCHER		= "Remember - Duck and Cover (Slot 0).";
+XT_OB_NUKEEXPLOSION		= "%o was atomized by a nuclear Explosion.";
+XT_OB_NUKEHEATWAVE		= "%o was charred by a nuclear Heatwave.";
+XT_OB_RADIATION			= "%o died of radiation poisoning.";
+
+//FireAxe
+XT_TAG_FIREAXE			= "FireAxe";
+XT_GOT_FIREAXE			= "An Axe! Time to split! (Slot 1)";
+XT_OB_FIREAXE			= "%k was slashed by %o axe!";
+XT_OB_AXEPUSH			= "%o was beaten up by %k.";
+XT_OB_AXEFUCKOFF		= "%o got fucked off.";
+
+
+//=====================================
+//WEAPON MESSAGES & NOTIFICATIONS
+//=====================================
+
+//Standard Weapon Actions & Prompts
+WM_COCKED				= "Cocked";					//revolver
+WM_UNCOCKED				= "Uncocked";				//revolver
+WM_NEEBERSERK			= "Need Berserk!";
+WM_MAGICSEAL			= "It is locked with a magic seal...";
+
+//Resource / Ammo Warnings
+WM_NOTENOUGHNAILS		= "Not Enough Nails!";
+WM_WARNAMMODEPLETED		= "<!> WARNING - AMMUNITION DEPLETED <!>";
+
+//Weapon Fire / Firing Modes
+WM_UNGUIDEDMISSILES		= "Unguided Missiles!";
+WM_GUIDEDMISSILES		= "Guided Missiles!";
+WM_BULLETMODE			= "Bullet Mode";
+WM_GRENADEMODE			= "Grenade Mode";
+WM_INCENDIARYMODE		= "Incendiary Mode!";
+WM_NORMALMODE			= "Normal Mode!";
