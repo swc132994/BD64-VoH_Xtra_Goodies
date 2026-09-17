@@ -1,0 +1,208 @@
+[fr]	//French
+
+//=====================================
+//WEAPONS & AMMO (TAGS, PICKUPS, OBITUARIES)
+//=====================================
+
+//Revolver ammo
+XT_GOT_SPEEDLOADER		= "Vous avez ramassé un chargeur rapide";
+XT_TAG_SPEEDLOADER		= "Chargeur rapide";
+
+//Blue shell ammo
+XT_GOT_BLUESHELLS		= "Vous avez ramassé 2 cartouches bleues";
+XT_TAG_BLUESHELLS		= "Cartouches bleues";
+XT_GOT_BLUESHELLBOX		= "Vous avez ramassé une boîte de cartouches bleues";
+XT_TAG_BLUESHELLBOX		= "Boîte de cartouches bleues";
+
+//Nail ammo
+XT_GOT_NAILS			= "Vous avez ramassé des clous";
+XT_TAG_NAILS			= "Chargeur de clous";
+XT_GOT_NAILBOX			= "Vous avez ramassé une boîte de clous";
+XT_TAG_NAILBOX			= "Boîte de clous";
+
+//Seeker ammo
+XT_GOT_HSEEKER			= "Vous avez trouvé des têtes chercheuses thermiques";
+XT_TAG_HSEEKER			= "Têtes chercheuses thermiques";
+XT_GOT_TSEEKER			= "Vous avez trouvé des têtes chercheuses toxiques";
+XT_TAG_TSEEKER			= "Têtes chercheuses toxiques";
+
+//Nuke ammo
+XT_GOT_NUKE				= "Vous avez ramassé une ogive nucléaire";
+XT_TAG_NUKE				= "Ogive nucléaire";
+
+//Revolver
+XT_TAG_REVOLVER			= "Revolver";
+XT_GOT_REVOLVER			= "Vous avez le Revolver ! (Emplacement 2)";
+XT_OB_REVOLVER			= "%o a été abattu par le Revolver de %k.";
+
+//Ultra shotgun / Quad shotgun
+XT_TAG_QUADSHOTGUN		= "Ultra-fusil à pompe";
+XT_GOT_QUADSHOTGUN		= "Vous avez l'Ultra-fusil à pompe ! (Emplacement 3)";
+XT_OB_QUADSHOTGUN		= "%o a été pulvérisé par l'Ultra-fusil à pompe de %k.";
+
+//Assault shotgun & Striker-12
+XT_TAG_ASSAULTSHOTGUN	= "Fusil à pompe d'assaut";
+XT_GOT_ASSAULTSHOTGUN	= "Vous avez le Fusil à pompe d'assaut ! (Emplacement 3)";
+XT_OB_ASSAULTSHOTGUN	= "%o a été réduit en miettes par le Fusil à pompe d'assaut de %k.";
+
+XT_TAG_STRIKER12		= "Striker-12";
+XT_GOT_STRIKER12		= "Vous avez le Striker-12 ! (Emplacement 3)";
+XT_OB_STRIKER12			= "%o a été réduit en miettes par le Striker-12 de %k.";
+
+//Sniper rifle
+XT_TAG_SNIPERRIFLE		= "Fusil de précision";
+XT_GOT_SNIPERRIFLE		= "Vous avez le Fusil de précision ! (Emplacement 4)";
+XT_OB_SNIPERRIFLE		= "Le cerveau de %o a été éparpillé par le Fusil de précision de %k.";
+
+//Light machinegun
+XT_TAG_LMG				= "Mitrailleuse légère";
+XT_GOT_LMG				= "Vous avez la Mitrailleuse légère ! (Emplacement 4)";
+XT_OB_LMG				= "%o a été fauché par la Mitrailleuse légère de %k.";
+XT_OB_LMGGREN			= "%o a été explosé par la grenade de %k.";
+
+//Grenade launcher
+XT_TAG_NADELAUNCHER		= "Lance-grenades";
+XT_GOT_NADELAUNCHER		= "Vous avez le Lance-grenades ! (Emplacement 5)";
+XT_OB_NADE				= "%o a reçu la grenade de %k de plein fouet.";
+XT_OB_GASNADE			= "%o a été gazé par %k.";
+
+//Nailgun
+XT_TAG_NAILGUN			= "Lance-clous";
+XT_GOT_NAILGUN			= "Vous avez le Lance-clous ! (Emplacement 6)";
+XT_OB_NAIL				= "%o a été cloué par %k.";
+XT_OB_HOTNAIL			= "%o a été torturé par les clous enragés de %k.";
+
+//BFG 10000
+XT_TAG_BFG10K			= "BFG 10000";
+XT_GOT_BFG10K			= "Vous avez le BFG10000 ! Et voilà le travail ! (Emplacement 7)";
+XT_OB_BFG10K			= "%o a été désintégré par le BFG10K de %k.";
+
+//Ruiner
+XT_TAG_RUINER			= "Ruineur";
+XT_GOT_RUINER			= "Vous avez l'impression qu'il vous observe... (Emplacement 8)";
+
+//Heatseeker launchers
+XT_TAG_HEATSEEKER		= "Lance-missiles thermiques";
+XT_GOT_HEATSEEKER		= "Vous avez les Lance-missiles thermiques ! (Emplacement 9)";
+
+//Flamethrower
+XT_TAG_FLAMETHROWER		= "Lance-flammes";
+XT_GOT_FLAMETHROWER		= "Vous avez le Lance-flammes ! (Emplacement 9)";
+XT_OB_FLAMETHROWER		= "%o a été incinéré par le lance-flammes de %k.";
+XT_OB_FLAMESHOT			= "%o a été brûlé par le tir enflammé de %k.";
+
+//Tactical nuke launcher
+XT_TAG_NUKELAUNCHER		= "Lance-missiles nucléaire tactique";
+XT_GOT_NUKELAUNCHER		= "Rappelez-vous : baissez-vous et couvrez-vous (Emplacement 0).";
+XT_OB_NUKEEXPLOSION		= "%o a été atomisé par une explosion nucléaire.";
+XT_OB_NUKEHEATWAVE		= "%o a été calciné par une vague de chaleur nucléaire.";
+XT_OB_RADIATION			= "%o est mort d'un empoisonnement aux radiations.";
+
+//Axe
+XT_TAG_FIREAXE			= "Hache";
+XT_GOT_FIREAXE			= "Une hache ! C'est l'heure de tout fendre ! (Emplacement 1)";
+XT_OB_FIREAXE			= "%o s'est fait trancher par la hache de %k !";
+XT_OB_AXEPUSH			= "%o s'est fait passer à tabac par %k.";
+XT_OB_AXEFUCKOFF		= "%o s'est fait envoyer balader.";
+
+
+//=====================================
+//WEAPON MESSAGES & NOTIFICATIONS
+//=====================================
+
+//Standard weapon actions & prompts
+WM_COCKED				= "Armé";					//revolver
+WM_UNCOCKED				= "Désarmé";				//revolver
+WM_NEEBERSERK			= "Berserk requis !";
+WM_MAGICSEAL			= "C'est verrouillé par un sceau magique...";
+
+//Weapon fire / firing modes
+WM_UNGUIDEDMISSILES		= "Missiles non guidés !";
+WM_GUIDEDMISSILES		= "Missiles guidés !";
+WM_BULLETMODE			= "Mode Balle";
+WM_GRENADEMODE			= "Mode Grenade";
+WM_INCENDIARYMODE		= "Mode Incendiaire !";
+WM_NORMALMODE			= "Mode Normal !";
+
+//=====================================
+//POWER-UPS
+//=====================================
+
+//Arsenal sphere
+XT_GOTPWR_ARSE			= "Munitions infinies !";
+XT_TAGPWR_ARSE			= "Sphère d'Arsenal";
+
+//Quad sphere
+XT_GOTPWR_QUAD			= "Dégâts quadruplés !";
+XT_TAGPWR_QUAD			= "Sphère Quad";
+
+//Nightmare sphere (speed + partial invisibility)
+XT_GOTPWR_GHAST			= "Pouvoir du Cauchemar !";
+XT_TAGPWR_GHAST			= "Sphère Nocturne";
+
+//Undying sphere (vampirism + undying)
+XT_GOTPWR_TITAN			= "Immortalité !";
+XT_TAGPWR_TITAN			= "Sphère d'Immortalité";
+
+//Holy cross (infrared + monster fright)
+XT_GOTPWR_HOLY			= "Lumière de Dieu !";
+XT_TAGPWR_HOLY			= "Sainte Croix";
+
+//Bio suit (rad suit + poison, plasma & BFG resistance)
+XT_GOTPWR_BIO			= "Vous avez une Combinaison Biologique";
+XT_TAGPWR_BIO			= "Combinaison Biologique";
+
+//Giga sphere (+300 HP/red armour)
+XT_GOTPWR_ULTRA			= "Gigasphère !!";
+XT_TAGPWR_ULTRA			= "Gigasphère";
+
+//Red armour (+300 armour + flame resistance)
+XT_GOTPWR_REDARM		= "Vous avez l'Ultra-armure !";
+XT_TAGPWR_REDARM		= "Armure Rouge";
+
+//Demi sphere (+50 HP/armour)
+XT_GOTPWR_MINI			= "Démisphère !";
+XT_TAGPWR_MINI			= "Démisphère";
+
+//Hyper sphere (+200 HP)
+XT_GOTPWR_HYPE			= "Hypercharge !!";
+XT_TAGPWR_HYPE			= "Hypersphère";
+
+//=====================================
+//MENU DEFINITIONS (XTRAGOODIES)
+//=====================================
+
+XT_MNU_POWERUPS_OPTIONS		= "\c[Orange]---------- Options des Power-ups Extra ----------";
+XT_MNU_WEAPONS_OPTIONS		= "\c[Orange]---------- Options des Armes Extra ----------";
+
+XT_MNU_SPAWNER_SPHERES		= "Générateur de Sphères";
+XT_MNU_SPAWNER_INFRARED		= "Générateur d'Infrarouges";
+XT_MNU_SPAWNER_ALLMAP		= "Générateur de Cartes de zone";
+XT_MNU_SPAWNER_RADSUIT		= "Générateur de Combinaisons anti-radiations";
+XT_MNU_SPAWNER_ARMOR		= "Générateur d'Armures";
+XT_MNU_REDARMOR_DESC		= "(Armure rouge = 300 d'armure et protection contre le feu)";
+
+XT_MNU_SPHERE_DEF			= "Par défaut = Sphères Classiques";
+XT_MNU_INFRARED_DEF			= "Par défaut = Infrarouge";
+XT_MNU_ALLMAP_DEF			= "Par défaut = Carte de zone";
+XT_MNU_SUIT_DEF				= "Par défaut = Combinaison anti-radiations";
+XT_MNU_ARMOR_DEF			= "Par défaut = Armure Bleue";
+XT_MNU_CHAINSAW_DEF			= "Par défaut = Tronçonneuse";
+XT_MNU_SHOTGUN_DEF			= "Par défaut = Fusil à pompe";
+XT_MNU_SSG_DEF				= "Par défaut = Super Fusil à pompe";
+XT_MNU_RLAUNCHER_DEF		= "Par défaut = Lance-roquettes";
+XT_MNU_PLASMA_DEF			= "Par défaut = Fusil à plasma";
+XT_MNU_AMMO_DEF				= "Par défaut = Munitions Normales Uniquement";
+
+XT_MNU_SPAWNER_CHAINSAW		= "Générateur de Tronçonneuses";
+XT_MNU_SPAWNER_SHOTGUN		= "Générateur de Fusils à pompe";
+XT_MNU_SPAWNER_SSG			= "Générateur de Super Fusils à pompe";
+XT_MNU_SPAWNER_RL			= "Générateur de Lance-roquettes";
+XT_MNU_SPAWNER_EXTRAAMMO	= "Générateur de Munitions Extra";
+
+XT_MNU_ENABLE_NUKE			= "Activer le Lance-missiles nucléaire";
+XT_MNU_NUKE_DESC1			= "Permet aux Lance-missiles nucléaires d'apparaître à côté de l'Invulnérabilité";
+XT_MNU_NUKE_DESC2			= "et aux Ogives nucléaires d'apparaître à côté des Roquettes/Caisses de roquettes";
+
+XT_MNU_STRIKER				= "Striker-12 comme alternative au Fusil à pompe d'assaut =";
+XT_MNU_STRIKER_DESC			= "Basculer entre le Striker-12 ou le Fusil à pompe d'assaut";

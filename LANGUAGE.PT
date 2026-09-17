@@ -1,0 +1,208 @@
+[ptg pt]	//Portuguese (Brasil)
+
+//=====================================
+//WEAPONS & AMMO (TAGS, PICKUPS, OBITUARIES)
+//=====================================
+
+//Revolver ammo
+XT_GOT_SPEEDLOADER		= "Você pegou um carregador rápido";
+XT_TAG_SPEEDLOADER		= "Carregador Rápido";
+
+//Blue shell ammo
+XT_GOT_BLUESHELLS		= "Você pegou 2 cartuchos azuis";
+XT_TAG_BLUESHELLS		= "Cartuchos Azuis";
+XT_GOT_BLUESHELLBOX		= "Você pegou uma caixa de cartuchos azuis";
+XT_TAG_BLUESHELLBOX		= "Caixa de Cartuchos Azuis";
+
+//Nail ammo
+XT_GOT_NAILS			= "Você pegou alguns pregos";
+XT_TAG_NAILS			= "Carregador de Pregos";
+XT_GOT_NAILBOX			= "Você pegou uma caixa de pregos";
+XT_TAG_NAILBOX			= "Caixa de Pregos";
+
+//Seeker ammo
+XT_GOT_HSEEKER			= "Você encontrou perseguidores térmicos";
+XT_TAG_HSEEKER			= "Perseguidores Térmicos";
+XT_GOT_TSEEKER			= "Você encontrou perseguidores tóxicos";
+XT_TAG_TSEEKER			= "Perseguidores Tóxicos";
+
+//Nuke ammo
+XT_GOT_NUKE				= "Você pegou uma ogiva nuclear";
+XT_TAG_NUKE				= "Ogiva Nuclear";
+
+//Revolver
+XT_TAG_REVOLVER			= "Revólver";
+XT_GOT_REVOLVER			= "Você pegou o Revólver! (Slot 2)";
+XT_OB_REVOLVER			= "%o foi abatido pelo Revólver de %k.";
+
+//Ultra shotgun / Quad shotgun
+XT_TAG_QUADSHOTGUN		= "Ultra Escopeta";
+XT_GOT_QUADSHOTGUN		= "Você pegou a Ultra Escopeta! (Slot 3)";
+XT_OB_QUADSHOTGUN		= "%o foi obliterado pela Ultra Escopeta de %k.";
+
+//Assault shotgun & Striker-12
+XT_TAG_ASSAULTSHOTGUN	= "Escopeta de Assalto";
+XT_GOT_ASSAULTSHOTGUN	= "Você pegou a Escopeta de Assalto! (Slot 3)";
+XT_OB_ASSAULTSHOTGUN	= "%o foi despedaçado pela Escopeta de Assalto de %k.";
+
+XT_TAG_STRIKER12		= "Striker-12";
+XT_GOT_STRIKER12		= "Você pegou a Striker-12! (Slot 3)";
+XT_OB_STRIKER12			= "%o foi despedaçado pela Striker-12 de %k.";
+
+//Sniper rifle
+XT_TAG_SNIPERRIFLE		= "Fuzil de Precisão";
+XT_GOT_SNIPERRIFLE		= "Você pegou o Fuzil de Precisão! (Slot 4)";
+XT_OB_SNIPERRIFLE		= "O cérebro de %o foi espalhado pelo Fuzil de Precisão de %k.";
+
+//Light machinegun
+XT_TAG_LMG				= "Metralhadora Leve";
+XT_GOT_LMG				= "Você pegou a Metralhadora Leve! (Slot 4)";
+XT_OB_LMG				= "%o foi fuzilado pela Metralhadora Leve de %k.";
+XT_OB_LMGGREN			= "%o foi pelos ares pela granada da Metralhadora Leve de %k.";
+
+//Grenade launcher
+XT_TAG_NADELAUNCHER		= "Lança-Granadas";
+XT_GOT_NADELAUNCHER		= "Você pegou o Lança-Granadas! (Slot 5)";
+XT_OB_NADE				= "%o pegou a granada de %k.";
+XT_OB_GASNADE			= "%o foi sufocado pelo gás de %k.";
+
+//Nailgun
+XT_TAG_NAILGUN			= "Lança-Pregos";
+XT_GOT_NAILGUN			= "Você pegou o Lança-Pregos! (Slot 6)";
+XT_OB_NAIL				= "%o foi pregado por %k.";
+XT_OB_HOTNAIL			= "%o foi torturado pelos pregos em chamas de %k.";
+
+//BFG 10000
+XT_TAG_BFG10K			= "BFG 10000";
+XT_GOT_BFG10K			= "Você pegou a BFG10000! Toma essa! (Slot 7)";
+XT_OB_BFG10K			= "%o foi pulverizado pela BFG10K de %k.";
+
+//Ruiner
+XT_TAG_RUINER			= "Arruinador";
+XT_GOT_RUINER			= "Você sente que aquilo está te observando... (Slot 8)";
+
+//Heatseeker launchers
+XT_TAG_HEATSEEKER		= "Lançadores Teleguiados";
+XT_GOT_HEATSEEKER		= "Você pegou os Lançadores Teleguiados! (Slot 9)";
+
+//Flamethrower
+XT_TAG_FLAMETHROWER		= "Lança-Chamas";
+XT_GOT_FLAMETHROWER		= "Você pegou o Lança-Chamas! (Slot 9)";
+XT_OB_FLAMETHROWER		= "%o foi cremado pelo lança-chamas de %k.";
+XT_OB_FLAMESHOT			= "%o foi queimado pelo tiro de chamas de %k.";
+
+//Tactical nuke launcher
+XT_TAG_NUKELAUNCHER		= "Lançador Nuclear Tático";
+XT_GOT_NUKELAUNCHER		= "Lembre-se: Abaixe-se e Proteja-se (Slot 0).";
+XT_OB_NUKEEXPLOSION		= "%o foi atomizado por uma explosão nuclear.";
+XT_OB_NUKEHEATWAVE		= "%o foi carbonizado por uma onda de calor nuclear.";
+XT_OB_RADIATION			= "%o morreu envenenado por radiação.";
+
+//Axe
+XT_TAG_FIREAXE			= "Machado";
+XT_GOT_FIREAXE			= "Um Machado! Hora de rachar tudo! (Slot 1)";
+XT_OB_FIREAXE			= "%o foi retalhado pelo machado de %k!";
+XT_OB_AXEPUSH			= "%o levou uma surra de %k.";
+XT_OB_AXEFUCKOFF		= "%o foi mandado para o inferno.";
+
+
+//=====================================
+//WEAPON MESSAGES & NOTIFICATIONS
+//=====================================
+
+//Standard weapon actions & prompts
+WM_COCKED				= "Engatilhado";					//revolver
+WM_UNCOCKED				= "Desengatilhado";				//revolver
+WM_NEEBERSERK			= "Precisa de Berserk!";
+WM_MAGICSEAL			= "Está trancado com um selo mágico...";
+
+//Weapon fire / firing modes
+WM_UNGUIDEDMISSILES		= "Mísseis Não Guiados!";
+WM_GUIDEDMISSILES		= "Mísseis Guiados!";
+WM_BULLETMODE			= "Modo Bala";
+WM_GRENADEMODE			= "Modo Granada";
+WM_INCENDIARYMODE		= "Modo Incendiário!";
+WM_NORMALMODE			= "Modo Normal!";
+
+//=====================================
+//POWER-UPS
+//=====================================
+
+//Arsenal sphere
+XT_GOTPWR_ARSE			= "Munição Infinita!";
+XT_TAGPWR_ARSE			= "Esfera de Arsenal";
+
+//Quad sphere
+XT_GOTPWR_QUAD			= "Dano Quádruplo!";
+XT_TAGPWR_QUAD			= "Esfera Quádrupla";
+
+//Nightmare sphere (speed + partial invisibility)
+XT_GOTPWR_GHAST			= "Poder do Pesadelo!";
+XT_TAGPWR_GHAST			= "Esfera da Noite";
+
+//Undying sphere (vampirism + undying)
+XT_GOTPWR_TITAN			= "Imortalidade!";
+XT_TAGPWR_TITAN			= "Esfera Imortal";
+
+//Holy cross (infrared + monster fright)
+XT_GOTPWR_HOLY			= "Luz de Deus!";
+XT_TAGPWR_HOLY			= "Cruz Sagrada";
+
+//Bio suit (rad suit + poison, plasma & BFG resistance)
+XT_GOTPWR_BIO			= "Você pegou um Traje Biológico";
+XT_TAGPWR_BIO			= "Traje Biológico";
+
+//Giga sphere (+300 HP/red armour)
+XT_GOTPWR_ULTRA			= "Gigaesfera!!";
+XT_TAGPWR_ULTRA			= "Gigaesfera";
+
+//Red armour (+300 armour + flame resistance)
+XT_GOTPWR_REDARM		= "Você pegou a Ultra Armadura!";
+XT_TAGPWR_REDARM		= "Armadura Vermelha";
+
+//Demi sphere (+50 HP/armour)
+XT_GOTPWR_MINI			= "Demiesfera!";
+XT_TAGPWR_MINI			= "Demiesfera";
+
+//Hyper sphere (+200 HP)
+XT_GOTPWR_HYPE			= "Hipercarga!!";
+XT_TAGPWR_HYPE			= "Hiperesfera";
+
+//=====================================
+//MENU DEFINITIONS (XTRAGOODIES)
+//=====================================
+
+XT_MNU_POWERUPS_OPTIONS		= "\c[Orange]---------- Opções de Power-ups Extras ----------";
+XT_MNU_WEAPONS_OPTIONS		= "\c[Orange]---------- Opções de Armas Extras ----------";
+
+XT_MNU_SPAWNER_SPHERES		= "Gerador de Esferas";
+XT_MNU_SPAWNER_INFRARED		= "Gerador de Infravermelho";
+XT_MNU_SPAWNER_ALLMAP		= "Gerador de Mapa da Área";
+XT_MNU_SPAWNER_RADSUIT		= "Gerador de Traje Antirradiação";
+XT_MNU_SPAWNER_ARMOR		= "Gerador de Armaduras";
+XT_MNU_REDARMOR_DESC		= "(Armadura vermelha = 300 de armadura e proteção contra dano de fogo)";
+
+XT_MNU_SPHERE_DEF			= "Padrão = Esferas Clássicas";
+XT_MNU_INFRARED_DEF			= "Padrão = Infravermelho";
+XT_MNU_ALLMAP_DEF			= "Padrão = Mapa da Área";
+XT_MNU_SUIT_DEF				= "Padrão = Traje Antirradiação";
+XT_MNU_ARMOR_DEF			= "Padrão = Armadura Azul";
+XT_MNU_CHAINSAW_DEF			= "Padrão = Motosserra";
+XT_MNU_SHOTGUN_DEF			= "Padrão = Escopeta";
+XT_MNU_SSG_DEF				= "Padrão = Super Escopeta";
+XT_MNU_RLAUNCHER_DEF		= "Padrão = Lança-Foguetes";
+XT_MNU_PLASMA_DEF			= "Padrão = Fuzil de Plasma";
+XT_MNU_AMMO_DEF				= "Padrão = Gerar Apenas Normal";
+
+XT_MNU_SPAWNER_CHAINSAW		= "Gerador de Motosserra";
+XT_MNU_SPAWNER_SHOTGUN		= "Gerador de Escopeta";
+XT_MNU_SPAWNER_SSG			= "Gerador de Super Escopeta";
+XT_MNU_SPAWNER_RL			= "Gerador de Lança-Foguetes";
+XT_MNU_SPAWNER_EXTRAAMMO	= "Gerador de Munição Extra";
+
+XT_MNU_ENABLE_NUKE			= "Ativar Lança-Bombas Nucleares";
+XT_MNU_NUKE_DESC1			= "Permite que os Lança-Bombas Nucleares apareçam junto com a Invulnerabilidade";
+XT_MNU_NUKE_DESC2			= "e as Ogivas Nucleares junto com Foguetes/Caixas de Foguetes";
+
+XT_MNU_STRIKER				= "Striker-12 como alternativa para a Escopeta de Assalto =";
+XT_MNU_STRIKER_DESC			= "Alternar entre Striker-12 ou Escopeta de Assalto";

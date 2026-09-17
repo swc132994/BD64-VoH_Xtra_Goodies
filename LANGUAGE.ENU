@@ -9,26 +9,26 @@ XT_GOT_SPEEDLOADER		= "Picked up a Speedloader";
 XT_TAG_SPEEDLOADER		= "Speedloader";
 
 //Blue shell ammo
-XT_GOT_BLUESHELLS		= "Picked up 2 Blue Shells"
-XT_TAG_BLUESHELLS		= "Blue Shells"
-XT_GOT_BLUESHELLBOX		= "Picked up a box of Blue Shells"
-XT_TAG_BLUESHELLBOX		= "Blue Shell Box"
+XT_GOT_BLUESHELLS		= "Picked up 2 Blue Shells";
+XT_TAG_BLUESHELLS		= "Blue Shells";
+XT_GOT_BLUESHELLBOX		= "Picked up a box of Blue Shells";
+XT_TAG_BLUESHELLBOX		= "Blue Shell Box";
 
 //Nail ammo
-XT_GOT_NAILS			= "Picked up some nails"
-XT_TAG_NAILS			= "Nail magazine"
-XT_GOT_NAILBOX			= "Picked up a box of nails"
-XT_TAG_NAILBOX			= "Nail Box"
+XT_GOT_NAILS			= "Picked up some nails";
+XT_TAG_NAILS			= "Nail magazine";
+XT_GOT_NAILBOX			= "Picked up a box of nails";
+XT_TAG_NAILBOX			= "Nail Box";
 
 //Seeker ammo
-XT_GOT_HSEEKER			= "Scavenaged some heat seekers"
-XT_TAG_HSEEKER			= "Heat Seekers"
-XT_GOT_TSEEKER			= "Scavenaged some toxic seekers"
-XT_TAG_TSEEKER			= "Toxic Seekers"
+XT_GOT_HSEEKER			= "Scavenged some heat seekers";
+XT_TAG_HSEEKER			= "Heat Seekers";
+XT_GOT_TSEEKER			= "Scavenged some toxic seekers";
+XT_TAG_TSEEKER			= "Toxic Seekers";
 
 //Nuke ammo
-XT_GOT_NUKE				= "Picked up a nuclear warhead"
-XT_TAG_NUKE				= "Nuclear Warhead"
+XT_GOT_NUKE				= "Picked up a nuclear warhead";
+XT_TAG_NUKE				= "Nuclear Warhead";
 
 //Revolver
 XT_TAG_REVOLVER			= "Revolver";
@@ -101,7 +101,7 @@ XT_OB_RADIATION			= "%o died of radiation poisoning.";
 //Axe
 XT_TAG_FIREAXE			= "Axe";
 XT_GOT_FIREAXE			= "An Axe! Time to split! (Slot 1)";
-XT_OB_FIREAXE			= "%k was slashed by %o axe!";
+XT_OB_FIREAXE			= "%o was slashed by %k's axe!";
 XT_OB_AXEPUSH			= "%o was beaten up by %k.";
 XT_OB_AXEFUCKOFF		= "%o got fucked off.";
 
