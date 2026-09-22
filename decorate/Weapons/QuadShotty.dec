@@ -1,26 +1,23 @@
 Actor QuadShotgunSpawner : CustomInventory
 {
-scale 0.9
+Scale 0.9
 Tag "$XT_TAG_QUADSHOTGUN"
-inventory.pickupmessage "$XT_GOT_QUADSHOTGUN"
+Inventory.PickupMessage "$XT_GOT_QUADSHOTGUN"
 Inventory.PickupSound "WPICK"
++INVENTORY.NEVERRESPAWN
 	States
 	{
 	Spawn:
+		QSGP A 0 NoDelay A_SpawnItemEx("SuperShotgunRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		QSGP A -1
 		Stop
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
 		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
 		TNT1 A 0 A_GiveInventory("64QuadShotgun",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
 	Pickup2:
 		TNT1 A 0 A_GiveInventory("64QuadShotgunTactical",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
-		Stop
-	DMRespawn:
-		TNT1 A 0 A_SpawnItemEx("SuperShotgunRespawnerDM")
 		Stop
 	}
 }

@@ -177,14 +177,12 @@ XT_MNU_WEAPONS_OPTIONS		= "\c[Orange]---------- Extra Weapon Options ----------"
 
 XT_MNU_SPAWNER_SPHERES		= "Sphere Spawner";
 XT_MNU_SPAWNER_INFRARED		= "Infrared Spawner";
-XT_MNU_SPAWNER_ALLMAP		= "Allmap Spawner";
 XT_MNU_SPAWNER_RADSUIT		= "Radsuit Spawner";
 XT_MNU_SPAWNER_ARMOR		= "Armor Spawner";
 XT_MNU_REDARMOR_DESC		= "(Red armor = 300 armor & protection from flame damage)";
 
 XT_MNU_SPHERE_DEF			= "Default = Classic Spheres";
 XT_MNU_INFRARED_DEF			= "Default = Infrared";
-XT_MNU_ALLMAP_DEF			= "Default = Area Map";
 XT_MNU_SUIT_DEF				= "Default = Radsuit";
 XT_MNU_ARMOR_DEF			= "Default = Blue Armor";
 XT_MNU_CHAINSAW_DEF			= "Default = Chainsaw";

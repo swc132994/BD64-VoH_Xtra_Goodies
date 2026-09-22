@@ -177,14 +177,12 @@ XT_MNU_WEAPONS_OPTIONS		= "\c[Orange]---------- Opções de Armas Extras -------
 
 XT_MNU_SPAWNER_SPHERES		= "Gerador de Esferas";
 XT_MNU_SPAWNER_INFRARED		= "Gerador de Infravermelho";
-XT_MNU_SPAWNER_ALLMAP		= "Gerador de Mapa da Área";
 XT_MNU_SPAWNER_RADSUIT		= "Gerador de Traje Antirradiação";
 XT_MNU_SPAWNER_ARMOR		= "Gerador de Armaduras";
 XT_MNU_REDARMOR_DESC		= "(Armadura vermelha = 300 de armadura e proteção contra dano de fogo)";
 
 XT_MNU_SPHERE_DEF			= "Padrão = Esferas Clássicas";
 XT_MNU_INFRARED_DEF			= "Padrão = Infravermelho";
-XT_MNU_ALLMAP_DEF			= "Padrão = Mapa da Área";
 XT_MNU_SUIT_DEF				= "Padrão = Traje Antirradiação";
 XT_MNU_ARMOR_DEF			= "Padrão = Armadura Azul";
 XT_MNU_CHAINSAW_DEF			= "Padrão = Motosserra";

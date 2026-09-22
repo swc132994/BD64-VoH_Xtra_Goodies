@@ -1,26 +1,23 @@
 Actor RuinerSpawner : CustomInventory
 {
-scale 0.8
+Scale 0.8
 Tag "$XT_TAG_RUINER"
 Inventory.PickupMessage "$XT_GOT_RUINER"
 Inventory.PickupSound "WPICK"
++INVENTORY.NEVERRESPAWN
 	States
 	{
 	Spawn:
+		WSBO A 0 NoDelay A_SpawnItemEx("PlasmaRifleRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		WSBO A -1
 		Stop
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
 		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
 		TNT1 A 0 A_GiveInventory("64Ruiner",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
 	Pickup2:
 		TNT1 A 0 A_GiveInventory("64RuinerTactical",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
-		Stop
-	DMRespawn:
-		TNT1 A 0 A_SpawnItemEx("PlasmaRifleRespawnerDM")
 		Stop
 	}
 }

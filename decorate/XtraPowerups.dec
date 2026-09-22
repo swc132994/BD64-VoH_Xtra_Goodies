@@ -51,10 +51,13 @@ Inventory.PickupSound "misc/p_pkup"
 Tag "$XT_TAGPWR_QUAD"
 +INVENTORY.BIGPOWERUP
 +INVENTORY.ALWAYSPICKUP
++INVENTORY.NEVERRESPAWN
 +COUNTITEM
 	States
 	{
 	Spawn:
+		QUAD A 0 NoDelay A_SpawnItemEx("BerserkRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+	Idle:
 		QUAD ABCD 6 Bright
 		Loop
 	Pickup:
@@ -72,10 +75,13 @@ Inventory.PickupSound "misc/p_pkup"
 Tag "$XT_TAGPWR_GHAST"
 +INVENTORY.BIGPOWERUP
 +INVENTORY.ALWAYSPICKUP
++INVENTORY.NEVERRESPAWN
 +COUNTITEM
 	States
 	{
 	Spawn:
+		GHTS A 0 NoDelay A_SpawnItemEx("BlurSphereRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+	Idle:
 		GHTS ABCD 3 Bright
 		Loop
 	Pickup:
@@ -94,10 +100,13 @@ Inventory.PickupSound "misc/p_pkup"
 Tag "$XT_TAGPWR_TITAN"
 +INVENTORY.ALWAYSPICKUP
 +INVENTORY.BIGPOWERUP
++INVENTORY.NEVERRESPAWN
 +COUNTITEM
 	States
 	{
 	Spawn:
+		BLST A 0 NoDelay A_SpawnItemEx("InvulnerabilityRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+	Idle:
 		BLST ABCDCB 6 Bright
 		Loop
 	Pickup:
@@ -114,11 +123,14 @@ Inventory.PickupMessage "$XT_GOTPWR_HOLY"
 Inventory.PickupSound "misc/p_pkup"
 Tag "$XT_TAGPWR_HOLY"
 +INVENTORY.ALWAYSPICKUP
++INVENTORY.NEVERRESPAWN
 +COUNTITEM
 +FLOATBOB
 	States
 	{
 	Spawn:
+		CRFX A 0 NoDelay A_SpawnItemEx("InfraredRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+	Idle:
 		CRFX A 4 BRIGHT
 		Loop
 	Pickup:
@@ -147,11 +159,12 @@ Inventory.PickupMessage "$XT_GOTPWR_BIO"
 Tag "$XT_TAGPWR_BIO"
 +INVENTORY.ALWAYSPICKUP
 +INVENTORY.AUTOACTIVATE
++INVENTORY.NEVERRESPAWN
 +COUNTITEM
 	States
 	{
 	Spawn:
-		BIOS A 0 Bright Light("Blursphere")
+		BIOS A 0 NoDelay A_SpawnItemEx("RadSuitRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 	ACSCheck:
 		"####" "#" 0 A_JumpIf(CallACS("AltAmmoSpritesACS") == 2,"AltSpawn")
 	ShowNormal:
@@ -239,10 +252,13 @@ Inventory.PickupMessage "$XT_GOTPWR_ULTRA"
 Inventory.PickupSound "misc/p_pkup"
 Tag "$XT_TAGPWR_ULTRA"
 +INVENTORY.ALWAYSPICKUP
++INVENTORY.NEVERRESPAWN
 +COUNTITEM
 	States
 	{
 	Spawn:
+		ULTR A 0 NoDelay A_SpawnItemEx("MegasphereRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+	Idle:
 		ULTR ABCD 6 Bright Light("WEAPONPOWERTEAL")
 		ULTR D 96 Bright Light("WEAPONPOWERTEAL")
 		ULTR DCBA 6 Bright Light("WEAPONPOWERTEAL")
@@ -266,12 +282,13 @@ Tag "$XT_TAGPWR_REDARM"
 Inventory.Icon "ARM6A0"
 Inventory.PickupSound "ARMOR"
 Inventory.Pickupmessage "$XT_GOTPWR_REDARM"
++INVENTORY.NEVERRESPAWN
 	States
 	{
 	Spawn:
-		ARM6 A 0 Light("Blursphere")
+		ARM6 A 0 NoDelay A_SpawnItemEx("BlueArmorRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 	ACSCheck:
-		"####" "#" 0 A_JumpIf(CallACS("AlphaSpritesACS") == 1,"ShowAlpha")
+		TNT1 A 0 A_JumpIf(CallACS("AlphaSpritesACS") == 1,"ShowAlpha")
 	ShowNormal:
 		ARM6 A 6 Light("Blursphere")
 		ARM6 B 7 Bright Light("Blursphere")
@@ -313,10 +330,13 @@ Inventory.PickupMessage "$XT_GOTPWR_MINI"
 Inventory.PickupSound "misc/p_pkup"
 Tag "$XT_TAGPWR_MINI"
 +INVENTORY.ALWAYSPICKUP
++INVENTORY.NEVERRESPAWN
 +COUNTITEM
 	States
 	{
 	Spawn:
+		MINI A 0 NoDelay A_SpawnItemEx("GreenArmorRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+	Idle:
 		MINI ABCDCB 6 Bright Light("MEGASPHERE")
 		Loop
 	Pickup:
@@ -350,10 +370,13 @@ Inventory.PickupMessage "$XT_GOTPWR_HYPE"
 Inventory.PickupSound "misc/p_pkup"
 Tag "$XT_TAGPWR_HYPE"
 +INVENTORY.ALWAYSPICKUP
++INVENTORY.NEVERRESPAWN
 +COUNTITEM
 	States
 	{
 	Spawn:
+		HYPE A 0 NoDelay A_SpawnItemEx("SoulsphereRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+	Idle:
 		HYPE ABCD 6 Bright Light("INVULN")
 		Loop
 	Pickup:

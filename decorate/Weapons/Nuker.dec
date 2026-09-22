@@ -13,27 +13,9 @@ Inventory.PickupSound "WPICK"
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
 		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
 		TNT1 A 0 A_GiveInventory("64NukeLauncher",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
 	Pickup2:
 		TNT1 A 0 A_GiveInventory("64NukeLauncherTactical",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
-		Stop
-	DMRespawn:
-		TNT1 A 0 A_SpawnItemEx("DMNukeLauncherRespawner")
-		Stop
-	}
-}
-
-Actor DMNukeLauncherRespawner
-{
-+NOINTERACTION
-	States
-	{
-	Spawn:
-		TNT1 A 6300
-		TNT1 A 0 A_SpawnItemEx("TeleportationFogObject")
-		TNT1 A 1 A_SpawnItemEx("NukeLauncherSpawner")
 		Stop
 	}
 }

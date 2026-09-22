@@ -1,26 +1,23 @@
 Actor BFG10kSpawner : CustomInventory
 {
 Scale 1.0
- Tag "$XT_TAG_BFG10K"
+Tag "$XT_TAG_BFG10K"
 Inventory.Pickupmessage "$XT_GOT_BFG10K"
 Inventory.PickupSound "WPICK"
++INVENTORY.NEVERRESPAWN
 	States
 	{
 	Spawn:
+		10KP Z 0 NoDelay A_SpawnItemEx("BFG9000RespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		10KP Z -1
 		Stop
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
 		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
 		TNT1 A 0 A_GiveInventory("64BFG10K",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
 	Pickup2:
 		TNT1 A 0 A_GiveInventory("64BFG10KTactical",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
-		Stop
-	DMRespawn:
-		TNT1 A 0 A_SpawnItemEx("BFG9000RespawnerDM")
 		Stop
 	}
 }

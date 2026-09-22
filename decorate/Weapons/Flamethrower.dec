@@ -1,26 +1,23 @@
 Actor FlamethrowerSpawner : CustomInventory
 {
-scale 0.7
+Scale 0.7
 Tag "$XT_TAG_FLAMETHROWER"
 Inventory.PickupMessage "$XT_GOT_FLAMETHROWER"
 Inventory.PickupSound "WPICK"
++INVENTORY.NEVERRESPAWN
 	States
 	{
 	Spawn:
+		WFLM A 0 NoDelay A_SpawnItemEx("RocketLauncherRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		WFLM A -1
 		Stop
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
 		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
 		TNT1 A 0 A_GiveInventory("64Flamethrower",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
 	Pickup2:
 		TNT1 A 0 A_GiveInventory("64FlamethrowerTactical",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
-		Stop
-	DMRespawn:
-		TNT1 A 0 A_SpawnItemEx("RocketLauncherRespawnerDM")
 		Stop
 	}
 }

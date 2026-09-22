@@ -1,26 +1,23 @@
 Actor NailgunSpawner : CustomInventory
 {
-scale 0.82
+Scale 0.82
 Tag "$XT_TAG_NAILGUN"
 Inventory.PickupMessage "$XT_GOT_NAILGUN"
 Inventory.PickupSound "WPICK"
++INVENTORY.NEVERRESPAWN
 	States
 	{
 	Spawn:
+		NLMG I 0 NoDelay A_SpawnItemEx("PlasmaRifleRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		NLMG I -1
 		Stop
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
 		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
 		TNT1 A 0 A_GiveInventory("64Nailgun",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
 	Pickup2:
 		TNT1 A 0 A_GiveInventory("64NailgunTactical",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
-		Stop
-	DMRespawn:
-		TNT1 A 0 A_SpawnItemEx("PlasmaRifleRespawnerDM")
 		Stop
 	}
 }

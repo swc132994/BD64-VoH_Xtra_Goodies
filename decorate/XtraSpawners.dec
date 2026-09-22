@@ -596,26 +596,6 @@ Scale 0.82
 	}
 }
 
-Actor XtraAllMapReplacer Replaces Allmap
-{
-Scale 0.82
-	States
-	{
-	Spawn:
-		PMAP A 0
-		TNT1 A 0 A_JumpIf(CallACS("AllMapNewRandomACS") == 1,"SpawnNormal")
-		TNT1 A 0 A_JumpIf(CallACS("AllMapNewRandomACS") == 2,"SpawnExtra")
-		TNT1 A 0 A_Jump(45,"SpawnExtra") //17.5%
-		Goto SpawnNormal
-	SpawnNormal:
-		TNT1 A 1 A_SpawnItemEx("64Allmap",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID|SXF_NOCHECKPOSITION,0,tid)
-		Stop
-	SpawnExtra:
-		TNT1 A 1 A_SpawnItemEx("64Scanner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID|SXF_NOCHECKPOSITION,0,tid)
-		Stop
-	}
-}
-
 Actor XtraBlueArmorReplacer Replaces BlueArmor
 {
 Scale 0.82

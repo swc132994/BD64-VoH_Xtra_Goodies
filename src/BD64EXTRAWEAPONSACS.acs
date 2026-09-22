@@ -59,11 +59,6 @@ script "InfraredNewRandomACS" (void)
 	SetResultValue(GetCvar("Crucifix_Spawner_CVar"));
 }
 
-script "AllMapNewRandomACS" (void)
-{
-	SetResultValue(GetCvar("MapRadar_Spawner_CVar"));
-}
-
 script "BlueArmorsNewRandomACS" (void)
 {
 	SetResultValue(GetCvar("RedArmor_Spawner_CVar"));
@@ -139,7 +134,6 @@ script "ExtraOriginalCvars" (void) net
 {
 	SetCvar("ExtraSpheres_CVar",1);
 	SetCvar("Crucifix_Spawner_CVar",1);
-	SetCvar("MapRadar_Spawner_CVar",1);
 	SetCvar("Biosuit_Spawner_CVar",1);
 	SetCvar("RedArmor_Spawner_CVar",1);
 	SetCvar("Chainsaw_Spawner_Cvar",1);
@@ -156,7 +150,6 @@ script "ExtraClassicCvars" (void) net
 {
 	SetCvar("ExtraSpheres_CVar",1);
 	SetCvar("Crucifix_Spawner_CVar",1);
-	SetCvar("MapRadar_Spawner_CVar",1);
 	SetCvar("Biosuit_Spawner_CVar",1);
 	SetCvar("RedArmor_Spawner_CVar",1);
 	SetCvar("Chainsaw_Spawner_Cvar",1);
@@ -173,7 +166,6 @@ script "ExtraEnhancedCvars" (void) net
 {
 	SetCvar("ExtraSpheres_CVar",2);
 	SetCvar("Crucifix_Spawner_CVar",1);
-	SetCvar("MapRadar_Spawner_CVar",2);
 	SetCvar("Biosuit_Spawner_CVar",2);
 	SetCvar("RedArmor_Spawner_CVar",1);
 	SetCvar("Chainsaw_Spawner_Cvar",1);
@@ -190,7 +182,6 @@ script "ExtraRandomCvars" (void) net
 {
 	SetCvar("ExtraSpheres_CVar",0);
 	SetCvar("Crucifix_Spawner_CVar",0);
-	SetCvar("MapRadar_Spawner_CVar",0);
 	SetCvar("Biosuit_Spawner_CVar",0);
 	SetCvar("RedArmor_Spawner_CVar",0);
 	SetCvar("Chainsaw_Spawner_Cvar",0);

@@ -6,7 +6,7 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 	StaticText "$FO_64SYSTEM_APPLY",1
 	Command "$FO_64SYSTEM_APPLIED","PukeName BD64Respawn"
 
-	StaticText " "
+	StaticText ""
 	StaticText "$FO_64MNU_ITEMS_WEAPONS_SPAWN_TXT1",1
 	StaticText "$FO_64MNU_ITEMS_WEAPONS_SPAWN_TXT2",1
 	StaticText ""
@@ -30,10 +30,6 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 
 	Option "$XT_MNU_SPAWNER_INFRARED","Crucifix_Spawner_Cvar","Crucifix_Spawner_Value"
 	StaticText "$XT_MNU_INFRARED_DEF",1
-	StaticText ""
-
-	Option "$XT_MNU_SPAWNER_ALLMAP","MapRadar_Spawner_CVar","MapRadar_Spawner_Value"
-	StaticText "$XT_MNU_ALLMAP_DEF",1
 	StaticText ""
 
 	Option "$XT_MNU_SPAWNER_RADSUIT","Biosuit_Spawner_CVar","Biosuit_Spawner_Value"
@@ -223,13 +219,6 @@ OptionValue "Crucifix_Spawner_Value"
 	0,"Random"
 	1,"Infrared"
 	2,"Holy Cross"
-}
-
-OptionValue "MapRadar_Spawner_Value"
-{
-	0,"Random"
-	1,"Area Map"
-	2,"Advanced Area Scanner"
 }
 
 OptionValue "Biosuit_Spawner_Value"

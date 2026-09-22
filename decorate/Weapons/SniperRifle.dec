@@ -4,23 +4,20 @@ Scale 0.82
 Tag "$XT_TAG_SNIPERRIFLE"
 Inventory.PickupMessage "$XT_GOT_SNIPERRIFLE"
 Inventory.PickupSound "WPICK"
++INVENTORY.NEVERRESPAWN
 	States
 	{
 	Spawn:
+		SNIP A 0 NoDelay A_SpawnItemEx("ShotgunRespawnerDM",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		SNIP A -1
 		Stop
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
 		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
 		TNT1 A 0 A_GiveInventory("64SniperRifle",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
 		Stop
 	Pickup2:
 		TNT1 A 0 A_GiveInventory("64SniperRifleTactical",1)
-		TNT1 A 0 A_JumpIf(CallACS("DM_SpawnACS") == 1,"DMRespawn")
-		Stop
-	DMRespawn:
-		TNT1 A 0 A_SpawnItemEx("ShotgunRespawnerDM")
 		Stop
 	}
 }

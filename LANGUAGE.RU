@@ -177,14 +177,12 @@ XT_MNU_WEAPONS_OPTIONS		= "\c[Orange]---------- Доп. опции оружия 
 
 XT_MNU_SPAWNER_SPHERES		= "Спавнер сфер";
 XT_MNU_SPAWNER_INFRARED		= "Спавнер ИК-визора";
-XT_MNU_SPAWNER_ALLMAP		= "Спавнер карты местности";
 XT_MNU_SPAWNER_RADSUIT		= "Спавнер костюма";
 XT_MNU_SPAWNER_ARMOR		= "Спавнер брони";
 XT_MNU_REDARMOR_DESC		= "(Красная броня = 300 брони и защита от огня)";
 
 XT_MNU_SPHERE_DEF			= "По умолчанию = Классические сферы";
 XT_MNU_INFRARED_DEF			= "По умолчанию = ИК-визор";
-XT_MNU_ALLMAP_DEF			= "По умолчанию = Карта местности";
 XT_MNU_SUIT_DEF				= "По умолчанию = Костюм";
 XT_MNU_ARMOR_DEF			= "По умолчанию = Синяя броня";
 XT_MNU_CHAINSAW_DEF			= "По умолчанию = Бензопила";
