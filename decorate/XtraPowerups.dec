@@ -2,12 +2,22 @@
 ACTOR 64Vampirism : PowerDrain
 {
 powerup.color "C4 00 00",0.2
-Powerup.Duration -60
+Powerup.Duration -30
 }
 
 ACTOR 64Undying : PowerInvulnerable
 {
-powerup.color "DB B9 53",0.2
+Powerup.Duration -30
+//powerup.color "DB B9 53",0.2
+}
+
+Actor 64TitanStrength : PowerupGiver
+{
+Powerup.Type "PowerMeleeStrengthUnmaker"
+Powerup.Duration -30
+Inventory.MaxAmount 0
++INVENTORY.AUTOACTIVATE
++INVENTORY.ALWAYSPICKUP
 }
 
 ACTOR 64SuperSpeed : PowerSpeed
@@ -110,6 +120,7 @@ Tag "$XT_TAGPWR_TITAN"
 		BLST ABCDCB 6 Bright
 		Loop
 	Pickup:
+		TNT1 A 0 A_GiveInventory("64TitanStrength")
 		TNT1 A 0 A_GiveInventory("64Vampirism")
 		TNT1 A 0 A_GiveInventory("64Undying")
 		Stop
