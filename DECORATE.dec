@@ -30,3 +30,10 @@ DropItem "DemonEssenceSpawner"
 DropItem "HeatSeekerAmmo"
 DropItem "HeatSeekerAmmo"
 }
+
+ACTOR 64ImpalerXtra : 64Impaler Replaces 64Impaler
+{
+DropItem "DemonEssenceSpawner"
+DropItem "64NailAmmo",32
+DropItem "64NailAmmo",32
+}
