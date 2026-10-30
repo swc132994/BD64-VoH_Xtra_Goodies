@@ -107,8 +107,8 @@ PROJECTILE
 		Stop
 	Death:
 		TNT1 A 0 A_ChangeFlag("PAINLESS",FALSE)
-		TNT1 AAA 0 A_SpawnItemEx("TinyBurningPiece2",random(-25,25),random(-15,15))
-		TNT1 AAA 0 A_SpawnItemEx("TinyBurningPiece",random(-15,15),random(-15,15))
+		TNT1 AAA 0 A_SpawnItemEx("FlamerTinyBurningPiece2",random(-25,25),random(-15,15))
+		TNT1 AAA 0 A_SpawnItemEx("FlamerTinyBurningPiece",random(-15,15),random(-15,15))
 		TNT1 A 0 A_CustomMissile("FlamethrowerFireParticles",6,0,random(0,360),2,random(10,90))
 		TNT1 A 0 A_SpawnItemEx("DetectCeilCraterSmall")
 		TNT1 A 0 A_SpawnItemEx("DetectFloorCraterSmallMotherdemon")
@@ -164,8 +164,8 @@ Obituary "$XT_OB_FLAMESHOT"
 		TNT1 AAAAAAAAAAAAAAAAAA 0 A_CustomMissile("ExplosionParticleHeavy",0,0,random(0,360),2,random(0,360))
 		TNT1 AAAAAAAAA 0 A_CustomMissile("ExplosionParticleVeryFast",0,0,random(0,360),2,random(0,360))
 		TNT1 AAAAAAAAAA 0 A_CustomMissile("BarrelExplosionFire",0,0,random(0,360),2,random(0,360))
-		TNT1 AA 0 A_SpawnItemEx("TinyBurningPiece2",random(-25,25),random(-15,15))
-		TNT1 AA 0 A_SpawnItemEx("TinyBurningPiece",random(-15,15),random(-15,15))
+		TNT1 AA 0 A_SpawnItemEx("FlamerTinyBurningPiece2",random(-25,25),random(-15,15))
+		TNT1 AA 0 A_SpawnItemEx("FlamerTinyBurningPiece",random(-15,15),random(-15,15))
 		TNT1 AAAAA 0 A_CustomMissile("ExplosionSmokeFast22",0,0,random(0,360),2,random(0,360))
 		TNT1 A 0 A_SpawnItemEx("ExplosionAirDisplacementEffect")
 		TNT1 A 0 A_PlaySound("EXPLOSIO3",CHAN_VOICE)
@@ -291,5 +291,36 @@ Inventory.ForbiddenTo "64DoomPlayer"
 		FR4M J 2
 		FR4M IHGF 1
 		Stop
+	}
+}
+
+ACTOR FlamerTinyBurningPiece : TinyBurningPiece
+{
+Scale 1.1
+Alpha 0.55
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_JumpIf(waterlevel > 1,"Splash")
+		CFCF ABCDEFG 1 Bright
+		TNT1 A 0 A_Explode(Random(0,2),64)
+		CFCF HIJKLM 1 Bright
+		TNT1 A 0 A_Jump(24,"StopBurning")
+		Loop
+	}
+}
+
+ACTOR FlamerTinyBurningPiece2 : TinyBurningPiece
+{
+Scale 0.7
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_JumpIf(waterlevel > 1,"Splash")
+		CFCF ABCDEFG 1 Bright
+		TNT1 A 0 A_Explode(Random(0,1),32)
+		CFCF HIJKLM 1 Bright
+		TNT1 A 0 A_Jump(24,"StopBurning")
+		Loop
 	}
 }
