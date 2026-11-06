@@ -195,11 +195,6 @@ Tag "$XT_TAG_LMG"
 Obituary "$XT_OB_LMG"
 Inventory.PickupMessage "$XT_GOT_LMG"
 Inventory.PickupSound "WPICK"
-Inventory.forbiddento "64DoomPlayer"
-VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
-+INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOALERT
-+WEAPON.NOAUTOFIRE
 Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 	States
 	{
@@ -417,14 +412,9 @@ Weapon.AmmoGive1 6
 Weapon.AmmoType2 "ARGrenade"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 0
-Inventory.forbiddento "64DoomPlayer"
-VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
-+INVENTORY.RESTRICTABSOLUTELY
 +INVENTORY.UNDROPPABLE
 +INVENTORY.UNTOSSABLE
-+WEAPON.AMMO_OPTIONAL
-+WEAPON.NOALERT
-+WEAPON.NOAUTOFIRE
++WEAPON.AMMO_OPTIONAL	//check
 +WEAPON.EXPLOSIVE
 +POWERED_UP
 Weapon.SisterWeapon "64LMGTactical"

@@ -111,11 +111,6 @@ Weapon.AmmoType2 "RevolverAmmo"
 Inventory.PickupMessage "$XT_GOT_REVOLVER"
 Obituary "$XT_OB_REVOLVER"
 Tag "$XT_TAG_REVOLVER"
-Inventory.ForbiddenTo "64DoomPlayer"
-VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
-+WEAPON.NOAUTOFIRE
-+WEAPON.NOALERT
-+INVENTORY.RESTRICTABSOLUTELY
 	States
 	{
 	MineThrowFlash:

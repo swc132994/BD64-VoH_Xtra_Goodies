@@ -137,11 +137,7 @@ Inventory.Icon "AXEPA0"
 Inventory.PickupMessage "$XT_GOT_FIREAXE"
 Tag "$XT_TAG_FIREAXE"
 Obituary "$XT_OB_FIREAXE"
-Inventory.forbiddento "64DoomPlayer"
-VisibleToPlayerClass "Modern","Tactical64DoomPlayer","Tactical64DoomPlayer_P"
-+INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.MELEEWEAPON
-+WEAPON.NOALERT
 +WEAPON.AMMO_OPTIONAL
 	States
 	{

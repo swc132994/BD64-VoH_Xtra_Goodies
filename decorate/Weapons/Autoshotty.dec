@@ -180,9 +180,6 @@ Weapon.AmmoGive2 0
 Inventory.PickupMessage "$XT_GOT_ASSAULTSHOTGUN"
 Obituary "$XT_OB_ASSAULTSHOTGUN"
 Tag "$XT_TAG_ASSAULTSHOTGUN"
-+INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOAUTOFIRE
-+WEAPON.NOALERT
 	States
 	{
 	NullState:
@@ -454,9 +451,6 @@ Weapon.AmmoGive2 0
 Inventory.PickupMessage "$XT_GOT_STRIKER12"
 Obituary "$XT_OB_STRIKER12"
 Tag "$XT_TAG_STRIKER12"
-+INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOAUTOFIRE
-+WEAPON.NOALERT
 	States
 	{
 	NullState:	//reached with ACSCall to cleanly terminate state for weapon swap

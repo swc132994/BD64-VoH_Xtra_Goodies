@@ -85,8 +85,6 @@ Weapon.AmmoGive2 0
 Inventory.PickupSound "WPICK"
 Inventory.PickupMessage "$XT_GOT_NADELAUNCHER"
 Tag "$XT_TAG_NADELAUNCHER"
-+INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOAUTOFIRE
 	States
 	{
 	Spawn:

@@ -191,9 +191,6 @@ Weapon.AmmoUse 1
 Inventory.PickupMessage "$XT_GOT_FLAMETHROWER"
 Inventory.PickupSound "WPICK"
 Tag "$XT_TAG_FLAMETHROWER"
-VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
-Inventory.ForbiddenTo "64DoomPlayer"
-+INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.ALT_USES_BOTH
 -WEAPON.AMMO_CHECKBOTH
 	States

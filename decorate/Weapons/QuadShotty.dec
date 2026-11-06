@@ -159,8 +159,6 @@ Weapon.AmmoGive2 0
 Tag "$XT_TAG_QUADSHOTGUN"
 obituary "$XT_OB_QUADSHOTGUN"
 inventory.pickupmessage "$XT_GOT_QUADSHOTGUN"
-+INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOAUTOFIRE
 	states
 	{
 	MineThrowFlash:
