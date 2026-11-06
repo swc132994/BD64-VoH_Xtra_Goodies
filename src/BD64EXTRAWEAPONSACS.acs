@@ -2,133 +2,26 @@
 #import "zcommon.bcs"
 #include "BCSFunc.acs"
 
-//WEAPON CVAR CHECKERS
-script "ChainsawSpawner" (void)
-{
-	SetResultValue(GetCvar("Chainsaw_Spawner_Cvar"));
-}
+//WEAPON SPAWNER CVAR CHECKERS
+script "ChainsawSpawner" (void)			{ SetResultValue(GetCvar("Chainsaw_Spawner_Cvar"));}
+script "ShotgunSpawner" (void)			{ SetResultValue(GetCvar("Revolver_Spawner_Cvar"));}
+script "SSGSpawner" (void)				{ SetResultValue(GetCvar("AutoShotgun_Spawner_Cvar"));}
+script "ChaingunExtraSpawner" (void)	{ SetResultValue(GetCvar("Chaingun_Spawner_Cvar"));}
+script "RLSpawner" (void)				{ SetResultValue(GetCvar("Immolator_Spawner_Cvar"));}
+script "PlasmaRifleExtraSpawner" (void)	{ SetResultValue(GetCvar("GaussCannon_Spawner_Cvar"));}
+script "BFGExtraSpawner" (void)			{ SetResultValue(GetCvar("BFG_Spawner_Cvar"));}
 
-script "ShotgunSpawner" (void)
-{
-	SetResultValue(GetCvar("Revolver_Spawner_Cvar"));
-}
-
-script "SSGSpawner" (void)
-{
-	SetResultValue(GetCvar("AutoShotgun_Spawner_Cvar"));
-}
-
-script "ChaingunExtraSpawner" (void)
-{
-	SetResultValue(GetCvar("Chaingun_Spawner_Cvar"));
-}
-
-script "RLSpawner" (void)
-{
-	SetResultValue(GetCvar("Immolator_Spawner_Cvar"));
-}
-
-script "PlasmaRifleExtraSpawner" (void)
-{
-	SetResultValue(GetCvar("GaussCannon_Spawner_Cvar"));
-}
-
-script "BFGExtraSpawner" (void)
-{
-	SetResultValue(GetCvar("BFG_Spawner_Cvar"));
-}
-
-//AMMO & POWERUP CVAR CHECKERS
-script "ExtraAmmoRandomACS" (void)
-{
-	SetResultValue(GetCvar("ExtraAmmo_Spawner_Cvar"));
-}
-
-script "NukelauncherSpawnerACS" (void)
-{
-	SetResultValue(GetCvar("NuclearMissile_Spawner_Cvar"));
-}
-
-script "ExtraSpheresACS" (void)
-{
-	SetResultValue(GetCvar("ExtraSpheres_CVar"));
-}
-
-script "InfraredNewRandomACS" (void)
-{
-	SetResultValue(GetCvar("Crucifix_Spawner_CVar"));
-}
-
-script "BlueArmorsNewRandomACS" (void)
-{
-	SetResultValue(GetCvar("RedArmor_Spawner_CVar"));
-}
-
-script "RadsuitNewRandomACS" (void)
-{
-	SetResultValue(GetCvar("Biosuit_Spawner_CVar"));
-}
-
-script "WpnPowerExtra" (void)
-{
-	SetResultValue(GetCvar("WpnPower_Spawner_Cvar"));
-}
+//AMMO & POWERUP SPAWNER CVAR CHECKERS
+script "ExtraAmmoRandomACS" (void)		{ SetResultValue(GetCvar("ExtraAmmo_Spawner_Cvar"));}
+script "NukelauncherSpawnerACS" (void)	{ SetResultValue(GetCvar("NuclearMissile_Spawner_Cvar"));}
+script "ExtraSpheresACS" (void)			{ SetResultValue(GetCvar("ExtraSpheres_CVar"));}
+script "InfraredNewRandomACS" (void)	{ SetResultValue(GetCvar("Crucifix_Spawner_CVar"));}
+script "BlueArmorsNewRandomACS" (void)	{ SetResultValue(GetCvar("RedArmor_Spawner_CVar"));}
+script "RadsuitNewRandomACS" (void)		{ SetResultValue(GetCvar("Biosuit_Spawner_CVar"));}
+script "WpnPowerExtra" (void)			{ SetResultValue(GetCvar("WpnPower_Spawner_Cvar"));}
 
 //UTILITY & PRESET SCRIPTS
-script "CheckStriker12CvarACS" (void)
-{
-	SetResultValue(GetCvar("Striker12Cvar"));
-}
-
-script "ProtectaSwitchACS" (int activeIsProtecta,int isTactical)
-{
-	int SwitchWeapon = GetCVar("Striker12Cvar");
-
-	if (isTactical) //Tactical class variant
-	{
-		if (!activeIsProtecta && SwitchWeapon)	//from assault to protecta
-		{
-			GiveInventory("64ProtectaTactical",1);
-			SetWeapon("64ProtectaTactical");
-			TakeInventory("64AssaultShotgunTactical",1);
-			SetResultValue(1);
-		}
-		else if (activeIsProtecta && !SwitchWeapon)	//from protecta to assault
-		{
-			int shellCount = CheckInventory("64BlueShell");
-			GiveInventory("64AssaultShotgunTactical",1);
-			SetInventory("64BlueShell",shellCount);
-			SetWeapon("64AssaultShotgunTactical");
-			TakeInventory("64ProtectaTactical",1);
-			SetResultValue(1);
-		}
-		else
-		{
-			SetResultValue(0);
-		}
-	}
-	else //Classic class variant
-	{
-		if (!activeIsProtecta && SwitchWeapon)
-		{
-			GiveInventory("64Protecta",1);
-			SetWeapon("64Protecta");
-			TakeInventory("64AssaultShotgun",1);
-			SetResultValue(1);
-		}
-		else if (activeIsProtecta && !SwitchWeapon)
-		{
-			GiveInventory("64AssaultShotgun",1);
-			SetWeapon("64AssaultShotgun");
-			TakeInventory("64Protecta",1);
-			SetResultValue(1);
-		}
-		else
-		{
-			SetResultValue(0);
-		}
-	}
-}
+script "CheckStriker12CvarACS" (void)	{ SetResultValue(GetCvar("Striker12Cvar"));}
 
 script "ExtraOriginalCvars" (void) net
 {

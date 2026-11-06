@@ -44,7 +44,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		GLAU A -1
 		Stop
 	Ready:
-		GRLG A 1 A_WeaponReady
+		GRLG A 2 A_WeaponReady
 		Loop
 	Deselect:
 		GRLG A 1 A_Lower
@@ -85,8 +85,6 @@ Weapon.AmmoGive2 0
 Inventory.PickupSound "WPICK"
 Inventory.PickupMessage "$XT_GOT_NADELAUNCHER"
 Tag "$XT_TAG_NADELAUNCHER"
-+INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOAUTOFIRE
 	States
 	{
 	Spawn:
@@ -108,7 +106,7 @@ Tag "$XT_TAG_NADELAUNCHER"
 		Wait
 	v1Ready:
 	Ready:
-		GRLG A 1 A_WeaponReady(WRF_ALLOWZOOM)
+		GRLG A 2 A_WeaponReady(WRF_ALLOWZOOM)
 		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")

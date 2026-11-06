@@ -136,7 +136,7 @@ Inventory.forbiddento "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
 		GLRD B -1
 		Stop
 	Ready:
-		GLRG A 1 A_WeaponReady
+		GLRG A 2 A_WeaponReady
 		Loop
 	Select:
 		GLRG A 1 A_Raise
@@ -195,11 +195,6 @@ Tag "$XT_TAG_LMG"
 Obituary "$XT_OB_LMG"
 Inventory.PickupMessage "$XT_GOT_LMG"
 Inventory.PickupSound "WPICK"
-Inventory.forbiddento "64DoomPlayer"
-VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
-+INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.NOALERT
-+WEAPON.NOAUTOFIRE
 Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 	States
 	{
@@ -208,14 +203,13 @@ Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 		Stop
 	v1Ready:
 	Ready:
-		GLRG A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
+		GLRG A 2 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"GoToGrenadeMode")
 		Loop
 	NoAmmo:
-		GLRG A 1
 		GLRG A 10 A_PlaySound("DRYFIRE",CHAN_WEAPON)
 		Goto Ready
 	Select:
@@ -368,7 +362,7 @@ Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 		TNT1 A 0 A_ZoomFactor(1.0)
 		Goto Ready
 	Ready2:
-		GL2G A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		GL2G A 2 A_WeaponReady(WRF_ALLOWRELOAD)
 		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
@@ -417,14 +411,9 @@ Weapon.AmmoGive1 6
 Weapon.AmmoType2 "ARGrenade"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 0
-Inventory.forbiddento "64DoomPlayer"
-VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
-+INVENTORY.RESTRICTABSOLUTELY
 +INVENTORY.UNDROPPABLE
 +INVENTORY.UNTOSSABLE
 +WEAPON.AMMO_OPTIONAL
-+WEAPON.NOALERT
-+WEAPON.NOAUTOFIRE
 +WEAPON.EXPLOSIVE
 +POWERED_UP
 Weapon.SisterWeapon "64LMGTactical"
@@ -435,14 +424,13 @@ Weapon.SisterWeapon "64LMGTactical"
 		Stop
 	v1Ready:
 	Ready:
-		GLRG A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		GLRG A 2 A_WeaponReady(WRF_ALLOWRELOAD)
 		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"GoToBulletMode")
 		Loop
 	NoAmmo:
-		GLRG A 1
 		GLRG A 10 A_PlaySound("DRYFIRE",CHAN_WEAPON)
 		Goto Ready
 	Select:
